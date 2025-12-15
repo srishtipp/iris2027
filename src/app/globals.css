@@ -7,14 +7,14 @@
 /* Theme Font - Indiverse */
 @font-face {
   font-family: "Saman";
-  src: url("https://iris.cdn.jyotirmoysaha.co.in/fonts/Saman.ttf") format("truetype");
+  src: url("/fonts/Saman.ttf") format("truetype");
   font-display: swap;
 }
 
 /* Title Font */
 @font-face {
   font-family: "Langar-Regular";
-  src: url("https://iris.cdn.jyotirmoysaha.co.in/fonts/Langar-Regular.ttf") format("truetype");
+  src: url("/fonts/Langar-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
