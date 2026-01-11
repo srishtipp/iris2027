@@ -638,7 +638,7 @@
   gap: 1rem;
   align-items: center;
   white-space: nowrap;
-  /* padding: 2rem 1rem; */
+  padding: 1rem 1rem;
 }
 
 /* Hide scrollbars but keep scroll */
