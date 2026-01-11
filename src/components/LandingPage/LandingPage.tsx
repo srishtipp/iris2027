@@ -11,16 +11,16 @@ export default function LandingPage() {
   const [isStarsPaused, setIsStarsPaused] = useState(false);
   const starsRafRef = useRef<number | null>(null);
   const sponsors = [
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s1.png", alt: "HP", title: "Platinum Sponsor" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s2.png", alt: "SBI", title: "Platinum Sponsor" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s1.png", alt: "HP", title: "Trinity Sponsor" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s2.png", alt: "SBI", title: "Banking Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s3.png", alt: "Lifestyle", title: "Fashion Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s4.png", alt: "Unstop", title: "Platform Partner" },
-
-    // repeated items preserved to match original output/order
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s5.png", alt: "Business  Standard", title: "Media Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s6.png", alt: "Safexpress", title: "Logistics Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s7.png", alt: "SheKunj", title: "Community Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s8.png", alt: "Jyesta", title: "Career Accelerator Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s6.png", alt: "The Hindu", title: "Media Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s7.png", alt: "Safexpress", title: "Logistics Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s8.png", alt: "SheKunj", title: "Community Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s9.png", alt: "Grant Thornton", title: "Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s10.png", alt: "Hilary Rhoda", title: "Partner" },
   ];
   const SCROLL_STEP = 260; // same scroll step as original
   const scrollToStart = (el: HTMLDivElement) => el.scrollTo({ left: 0, behavior: "smooth" });
