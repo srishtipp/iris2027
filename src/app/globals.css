@@ -7,14 +7,14 @@
 /* Theme Font - Indiverse */
 @font-face {
   font-family: "Saman";
-  src: url("https://iris.cdn.jyotirmoysaha.co.in/fonts/Saman.ttf") format("truetype");
+  src: url("/fonts/Saman.ttf") format("truetype");
   font-display: swap;
 }
 
 /* Title Font */
 @font-face {
   font-family: "Langar-Regular";
-  src: url("https://iris.cdn.jyotirmoysaha.co.in/fonts/Langar-Regular.ttf") format("truetype");
+  src: url("/fonts/Langar-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -26,7 +26,6 @@
   --secondary-gold: #d69b65;
   --accent-gold: rgb(208, 176, 99);
   --brown-wood: #7f5934;
-  --paper-texture: url(https://iris.cdn.jyotirmoysaha.co.in/images/paper-texture.webp);
 
   --font-indiverse: "Saman", sans-serif;
   --font-title: "Langar-Regular", serif;
@@ -52,7 +51,6 @@ body { background: var(--background); color: var(--foreground); font-family: var
 @keyframes scaleIn { from { transform:scale(0); opacity:0 } to { transform:scale(1); opacity:1 } }
 
 /* Utility Classes */
-.paper-texture { background: url('https://iris.cdn.jyotirmoysaha.co.in/images/paper-texture.webp') repeat; opacity: 0.05; }
 .sepia-filter { filter: sepia() saturate(4.5) hue-rotate(-10deg); }
 .glow-gold { box-shadow: 0 0 24px var(--primary-gold); border: 0.2vw solid var(--primary-gold); }
 .title { font-family: var(--font-title); }
