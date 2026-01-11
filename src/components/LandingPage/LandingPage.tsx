@@ -15,12 +15,12 @@ export default function LandingPage() {
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s2.png", alt: "SBI", title: "Banking Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s3.png", alt: "Lifestyle", title: "Fashion Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s4.png", alt: "Unstop", title: "Platform Partner" },
-    { src: "/images/sponsors/s5.png", alt: "Business  Standard", title: "Media Partner" },
-    { src: "/images/sponsors/s6.png", alt: "The Hindu", title: "Media Partner" },
-    { src: "/images/sponsors/s7.png", alt: "Safexpress", title: "Logistics Partner" },
-    { src: "/images/sponsors/s8.png", alt: "SheKunj", title: "Community Partner" },
-    { src: "/images/sponsors/s9.png", alt: "Grant Thornton", title: "Partner" },
-    { src: "/images/sponsors/s10.png", alt: "Hilary Rhoda", title: "Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s5.png", alt: "Business  Standard", title: "Media Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s6.png", alt: "The Hindu", title: "Media Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s7.png", alt: "Safexpress", title: "Logistics Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s8.png", alt: "SheKunj", title: "Community Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s9.png", alt: "Grant Thornton", title: "Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s10.png", alt: "Hilary Rhoda", title: "Partner" },
   ];
   const SCROLL_STEP = 260; // same scroll step as original
   const scrollToStart = (el: HTMLDivElement) => el.scrollTo({ left: 0, behavior: "smooth" });
