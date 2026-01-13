@@ -16,7 +16,7 @@ export default function LandingPage() {
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s3.png", alt: "Lifestyle", title: "Fashion Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s4.png", alt: "Unstop", title: "Platform Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s5.png", alt: "Business  Standard", title: "Media Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s6.png", alt: "The Hindu", title: "Media Partner" },
+    //{ src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s6.png", alt: "The Hindu", title: "Media Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s7.png", alt: "Safexpress", title: "Logistics Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s8.png", alt: "SheKunj", title: "Community Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s9.png", alt: "Grant Thornton", title: "Partner" },
