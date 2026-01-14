@@ -783,7 +783,7 @@
 .proShowsSection {
   padding: 1.25rem 1.5rem 2.5rem;
   backdrop-filter: blur(6px);
-  background: linear-gradient(180deg, rgba(18,18,18,0.65) 0%, rgba(12,12,12,0.7) 100%);
+  background: rgba(26, 26, 26, 0.65);
   text-align: center;
   z-index: 0;
   position: relative;
@@ -836,7 +836,7 @@
 }
 
 .proShowsMainPoster {
-  width: 340px;
+  width: 375px;
   max-width: 100%;
   border-radius: 18px;
   object-fit: cover;
@@ -888,11 +888,11 @@
   pointer-events: none;
   z-index: -1;
   border: 4px solid transparent;
-  box-shadow: 
-    0 0 0 2px rgba(242,221,124,0.3),
-    0 0 20px rgba(255,215,0,0.2),
-    inset 0 0 20px rgba(242,221,124,0.1);
+  /* Removed heavy box-shadow from rotation to improve performance */
   animation: frameRotate 8s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 /* Flower petals effect */
@@ -939,8 +939,8 @@
 
 /* Frame rotation animation */
 @keyframes frameRotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg) translateZ(0); }
+  100% { transform: rotate(360deg) translateZ(0); }
 }
 
 /* Petal glow animation */
@@ -1222,7 +1222,12 @@
 /* Pulsing gold outline (desktop only) */
 @media (min-width: 769px) {
   .proShowsMainPoster { box-shadow: 0 12px 30px rgba(0,0,0,0.45); }
-  .proShowsMainPoster:hover { animation: none; }
+  .proShowsMainPoster:hover { 
+    /* Pause floating animation on hover if desired, or keep it. 
+       Removing animation: none; to prevent jumpiness on hover unless intended */
+    /* animation: none; */ 
+    transform: scale(1.02); /* Simple scale instead */
+  }
   .proShowsMainPoster::after {
     content: "";
     position: absolute;
