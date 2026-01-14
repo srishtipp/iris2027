@@ -291,6 +291,18 @@ export default function LandingPage() {
               </div>
             {/* </div> */}
 
+            <section className={styles.proShowsSection}>
+            
+              <h2 className={styles.sectionTitle}>PRO SHOWS</h2>
+
+              {/* Row 1 – Two main posters */}
+              <div className={styles.proShowsMainRow}>
+                <img src="https://iris.cdn.jyotirmoysaha.co.in/images/stars/main1.png" alt="Main Star 1" className={styles.proShowsMainPoster} />
+                <img src="https://iris.cdn.jyotirmoysaha.co.in/images/stars/main2.png" alt="Main Star 2" className={styles.proShowsMainPoster} />
+              </div>
+
+            </section>
+
             <section className={styles.sponsorsSection}>
               <h2 className={styles.sectionTitle}>ASSOCIATIONS</h2>
 
