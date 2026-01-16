@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import styles from "./LandingPage.module.css";
 import CountdownTimer from "./CountdownTimer";
 
@@ -132,7 +132,7 @@ export default function LandingPage() {
   const [proPaused, setProPaused] = useState(false);
   const [posterAR, setPosterAR] = useState<Record<string, number>>({});
 
-  const wrap = (i: number) => (i + proShows.length) % proShows.length;
+  const wrap = useCallback((i: number) => (i + proShows.length) % proShows.length, [proShows.length]);
 
   useEffect(() => {
     if (proShows.length <= 1) return;
@@ -143,7 +143,7 @@ export default function LandingPage() {
     }, 2500);
 
     return () => window.clearInterval(id);
-  }, [proPaused, proShows.length]);
+  }, [proPaused, proShows.length, wrap]);
 
   const prevPro = () => setProIndex((p) => wrap(p - 1));
   const nextPro = () => setProIndex((p) => wrap(p + 1));
@@ -266,11 +266,11 @@ export default function LandingPage() {
                           key={url}
                           className={`${styles.proCard} ${posKey ? styles[posKey] : ""}`}
                           style={{
-                            ["--poster" as any]: `url(${url})`,
-                            ["--ar" as any]: posterAR[url] ?? 0.75, // fallback ~3:4
+                            "--poster": `url(${url})`,
+                            "--ar": posterAR[url] ?? 0.75, // fallback ~3:4
                             opacity: isHidden ? 0 : undefined,
                             pointerEvents: isHidden ? "none" : undefined,
-                          }}
+                          } as React.CSSProperties}
                         >
                           <div className={styles.proPosterBg} />
                           <div className={styles.proPosterOverlay} />
