@@ -835,86 +835,6 @@
   perspective: 1200px;
 }
 
-.proShowsMainPoster {
-  width: 375px;
-  max-width: 100%;
-  border-radius: 18px;
-  object-fit: cover;
-  display: block;
-  position: relative;
-  transform-origin: center center;
-  transition: transform 420ms cubic-bezier(.2,.9,.2,1), box-shadow 420ms ease, filter 420ms ease;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
-  border: 4px solid transparent;
-  background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-              conic-gradient(from 0deg, 
-                transparent 0%, 
-                transparent 85%, 
-                rgba(255,215,0,0.1) 88%, 
-                rgba(255,215,0,0.3) 91%, 
-                rgba(242,221,124,0.6) 94%, 
-                rgba(242,221,124,0.9) 97%, 
-                rgba(255,215,0,0.5) 99%, 
-                transparent 100%) border-box;
-  will-change: transform, box-shadow, filter;
-  animation: posterFloat 8s ease-in-out infinite, posterFlipIn 0.5s ease-out forwards, goldenPulse 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-  animation-delay: 0s, 0.5s, 1s;
-}
-
-/* Decorative Golden Flower Frame */
-.proShowsMainPoster::before {
-  content: "";
-  position: absolute;
-  inset: -20px;
-  border-radius: 30px;
-  padding: 3px;
-  background: conic-gradient(from 0deg, 
-    transparent 20%, 
-    rgba(242,221,124,0.4) 25%, 
-    rgba(255,215,0,0.6) 30%, 
-    rgba(242,221,124,0.8) 35%, 
-    rgba(255,215,0,0.9) 40%, 
-    rgba(242,221,124,0.6) 45%, 
-    transparent 50%, 
-    rgba(242,221,124,0.4) 55%, 
-    rgba(255,215,0,0.7) 60%, 
-    rgba(242,221,124,0.8) 65%, 
-    rgba(255,215,0,0.9) 70%, 
-    rgba(242,221,124,0.5) 75%, 
-    transparent 80%);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: xor;
-  -webkit-mask-composite: xor;
-  pointer-events: none;
-  z-index: -1;
-  border: 4px solid transparent;
-  /* Removed heavy box-shadow from rotation to improve performance */
-  animation: frameRotate 8s linear infinite;
-  will-change: transform;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-/* Flower petals effect */
-.proShowsMainPoster::after {
-  content: "✦ ❋ ✦ ❋ ✦ ❋ ✦ ❋ ✦ ❋ ✦ ❋";
-  position: absolute;
-  inset: -35px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 12px;
-  color: rgba(242,221,124,0.7);
-  pointer-events: none;
-  z-index: -1;
-  text-shadow: 0 0 8px rgba(255,215,0,0.5);
-  animation: petalGlow 3s ease-in-out infinite alternate;
-}
-
-/* slight phase offset for multiple posters */
-.proShowsMainPoster:nth-child(odd) { animation-delay: 0s; }
-.proShowsMainPoster:nth-child(even) { animation-delay: 1.2s; }
-
 @keyframes posterFloat {
   0% { transform: translateY(0) rotateX(0deg); }
   50% { transform: translateY(-6px) rotateX(0.6deg); }
@@ -939,8 +859,8 @@
 
 /* Frame rotation animation */
 @keyframes frameRotate {
-  0% { transform: rotate(0deg) translateZ(0); }
-  100% { transform: rotate(360deg) translateZ(0); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Petal glow animation */
@@ -952,297 +872,6 @@
   100% { 
     text-shadow: 0 0 15px rgba(255,215,0,0.8), 0 0 25px rgba(242,221,124,0.5);
     filter: brightness(1.2);
-  }
-}
-
-/* Golden pulse moving along border */
-@keyframes goldenPulse {
-  0% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 0deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  6.25% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 22.5deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  12.5% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 45deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  18.75% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 67.5deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  25% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 90deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  31.25% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 112.5deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  37.5% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 135deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  43.75% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 157.5deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  50% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 180deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  56.25% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 202.5deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  62.5% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 225deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  68.75% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 247.5deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  75% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 270deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  81.25% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 292.5deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  87.5% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 315deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  93.75% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 337.5deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-  100% { 
-    background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-                conic-gradient(from 360deg, 
-                  transparent 0%, 
-                  transparent 78%, 
-                  rgba(255,215,0,0.05) 82%, 
-                  rgba(255,215,0,0.2) 86%, 
-                  rgba(255,215,0,0.5) 91%, 
-                  rgba(242,221,124,0.8) 95%, 
-                  rgba(242,221,124,1) 98%, 
-                  rgba(255,215,0,0.4) 99.5%, 
-                  transparent 100%) border-box;
-  }
-}
-
-/* Hover / focus: lift + glow */
-.proShowsMainPoster:hover,
-.proShowsMainPoster:focus {
-  transform: translateY(-12px) scale(1.03) rotateX(0.8deg);
-  box-shadow:
-    0 30px 70px rgba(0,0,0,0.6),
-    0 0 36px rgba(240, 213, 120, 0.12),
-    0 8px 30px rgba(240,213,120,0.06) inset;
-  filter: saturate(1.06) contrast(1.02);
-}
-
-.proShowsMainPoster:hover::before {
-  background: conic-gradient(from 0deg, 
-    transparent 15%, 
-    rgba(242,221,124,0.8) 20%, 
-    rgba(255,215,0,1) 25%, 
-    rgba(242,221,124,1) 30%, 
-    rgba(255,215,0,1) 35%, 
-    rgba(242,221,124,0.9) 40%, 
-    transparent 45%, 
-    rgba(242,221,124,0.8) 50%, 
-    rgba(255,215,0,1) 55%, 
-    rgba(242,221,124,1) 60%, 
-    rgba(255,215,0,1) 65%, 
-    rgba(242,221,124,0.9) 70%, 
-    transparent 75%);
-  animation-duration: 4s;
-  box-shadow: 
-    0 0 0 4px rgba(242,221,124,0.6),
-    0 0 30px rgba(255,215,0,0.5),
-    inset 0 0 30px rgba(242,221,124,0.3);
-}
-
-.proShowsMainPoster:hover::after {
-  color: rgba(242,221,124,1);
-  text-shadow: 0 0 15px rgba(255,215,0,1), 0 0 30px rgba(242,221,124,0.8);
-  animation-duration: 1.5s;
-}
-
-/* Pulsing gold outline (desktop only) */
-@media (min-width: 769px) {
-  .proShowsMainPoster { box-shadow: 0 12px 30px rgba(0,0,0,0.45); }
-  .proShowsMainPoster:hover { 
-    /* Pause floating animation on hover if desired, or keep it. 
-       Removing animation: none; to prevent jumpiness on hover unless intended */
-    /* animation: none; */ 
-    transform: scale(1.02); /* Simple scale instead */
-  }
-  .proShowsMainPoster::after {
-    content: "";
-    position: absolute;
-    inset: -6px;
-    border-radius: 22px;
-    pointer-events: none;
-    box-shadow: 0 0 0 2px rgba(240,221,180,0.06);
-    mix-blend-mode: screen;
-    animation: glowPulse 2.8s ease-in-out infinite;
-  }
-
-  @keyframes glowPulse {
-    0% { box-shadow: 0 0 0 2px rgba(240,221,180,0.04), 0 0 18px rgba(240,221,180,0.02); }
-    50% { box-shadow: 0 0 0 6px rgba(240,221,180,0.07), 0 0 30px rgba(240,221,180,0.08); }
-    100% { box-shadow: 0 0 0 2px rgba(240,221,180,0.04), 0 0 18px rgba(240,221,180,0.02); }
   }
 }
 
@@ -1611,5 +1240,205 @@
 @media (max-width: 768px) {
   .irisVideoContainer {
     width: 100%;
+  }
+}
+
+
+
+.proStage{
+  width: 100%;
+  max-width: 980px;
+  margin: 1rem auto 0;
+  display: grid;
+  grid-template-columns: 52px 1fr 52px;
+  align-items: center;
+  gap: 12px;
+}
+
+.proViewport{
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 60vw, 560px);
+  overflow: hidden;
+  perspective: 1200px;
+}
+
+.proArrow{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: rgba(0,0,0,0.55);
+  color: #f0ddb4;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease;
+}
+
+.proArrow:hover{
+  background: rgba(242,221,124,0.25);
+  transform: scale(1.06);
+}
+
+.proArrowLeft{ justify-self: end; }
+.proArrowRight{ justify-self: start; }
+
+
+.proCard{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  aspect-ratio: var(--ar);
+  height: auto;
+
+  border-radius: 22px;
+  overflow: hidden;
+  background: transparent;
+
+  border: 1px solid rgba(242,221,124,0.28);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.55);
+  transition:
+    transform 700ms cubic-bezier(.2,.9,.2,1),
+    opacity 700ms ease,
+    filter 700ms ease;
+}
+
+.proPosterBg{ display: none; }
+.proPosterOverlay{ display: none; }
+
+.proPosterImg{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+  object-position: center;
+  display: block;
+  background: transparent;
+}
+
+.proPosCenter{
+  z-index: 5;
+  transform: translate(-50%, -50%) scale(1.12);
+  opacity: 1;
+  filter: brightness(1) saturate(1.05);
+}
+
+.proPosLeft{
+  z-index: 3;
+  transform: translate(-50%, -50%) translateX(-340px) rotateY(18deg) scale(0.78);
+  opacity: 0.30;
+  filter: brightness(0.85) saturate(0.85);
+}
+
+.proPosRight{
+  z-index: 3;
+  transform: translate(-50%, -50%) translateX(340px) rotateY(-18deg) scale(0.78);
+  opacity: 0.30;
+  filter: brightness(0.85) saturate(0.85);
+}
+
+@media (max-width: 600px){
+  .proStage{
+    grid-template-columns: 44px 1fr 44px;
+    padding: 0 6px;
+  }
+
+  .proCard{
+    width: 260px;
+    aspect-ratio: var(--ar);
+    height: auto;
+  }
+
+  .proPosLeft{
+    transform: translate(-50%, -50%) translateX(-240px) rotateY(14deg) scale(0.72);
+    opacity: 0.25;
+  }
+
+  .proPosRight{
+    transform: translate(-50%, -50%) translateX(240px) rotateY(-14deg) scale(0.72);
+    opacity: 0.25;
+  }
+}
+
+@media (max-width: 600px) {
+  .proStage {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem auto 0;
+    padding: 0 14px; 
+    position: relative;
+    gap: 0 !important;
+  }
+
+  .proViewport {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .proPosLeft,
+  .proPosRight {
+    display: none !important;
+  }
+
+  .proCard {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    width: min(86vw, 320px) !important; /* better sizing */
+    aspect-ratio: var(--ar) !important;
+    height: auto !important;
+
+    margin: 0 auto !important;
+  }
+
+
+  .proPosterBg,
+  .proPosterOverlay {
+    display: none !important;
+  }
+
+  .proPosterImg {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .proArrow {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 20 !important;
+
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 999px !important;
+    background: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(4px);
+  }
+
+  .proArrowLeft {
+    left: 10px !important;
+    justify-self: unset !important;
+  }
+
+  .proArrowRight {
+    right: 10px !important;
+    justify-self: unset !important;
   }
 }
