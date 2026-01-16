@@ -12,7 +12,6 @@ interface NavLink {
 
 export default function Navigation() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
   
   // Pages with dark backgrounds that need light text
   const darkPages = ["/events", "/team", "/gallery"];
@@ -20,7 +19,6 @@ export default function Navigation() {
 
   const [isDesktop, setIsDesktop] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(1);
 
   useEffect(() => {
     const check = () => setIsDesktop(window.innerWidth >= 769);
@@ -29,21 +27,7 @@ export default function Navigation() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  useEffect(() => {
-    if (!isHome) {
-      setScrollProgress(1);
-      return;
-    }
-
-    const onScroll = () => {
-      const half = window.innerHeight / 2;
-      const progress = Math.min(window.scrollY / half, 1);
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [isHome]);
+  
 
   const navLinks: NavLink[] = [
     { href: "/", label: "HOME" },

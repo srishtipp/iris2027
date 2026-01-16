@@ -779,6 +779,101 @@
   }
 }
 
+/* Pro Shows SECTION */
+.proShowsSection {
+  padding: 1.25rem 1.5rem 2.5rem;
+  backdrop-filter: blur(6px);
+  background: rgba(26, 26, 26, 0.65);
+  text-align: center;
+  z-index: 0;
+  position: relative;
+  overflow: visible;
+  box-shadow: inset 0 0 80px rgba(242,221,124,0.02);
+  transition: box-shadow 0.6s ease;
+}
+
+.proShowsSection::before {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #f0ddb488, transparent);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/* Subtle moving spotlight */
+.proShowsSection::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  top: -20%;
+  width: 140%;
+  height: 160%;
+  pointer-events: none;
+  background: radial-gradient(600px 300px at 20% 20%, rgba(242,221,180,0.06), transparent 12%), radial-gradient(500px 250px at 80% 80%, rgba(240,221,180,0.03), transparent 12%);
+  mix-blend-mode: screen;
+  animation: spotlightMove 12s linear infinite;
+  z-index: 0;
+}
+
+@keyframes spotlightMove {
+  0% { transform: translateX(0) translateY(0) rotate(0deg); opacity: 0.85; }
+  50% { transform: translateX(-3%) translateY(2%) rotate(1deg); opacity: 1; }
+  100% { transform: translateX(0) translateY(0) rotate(0deg); opacity: 0.85; }
+}
+
+/* Row 1: Two large posters */
+.proShowsMainRow {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  /* margin-top: 3rem; */
+  flex-wrap: wrap;
+  perspective: 1200px;
+}
+
+@keyframes posterFloat {
+  0% { transform: translateY(0) rotateX(0deg); }
+  50% { transform: translateY(-6px) rotateX(0.6deg); }
+  100% { transform: translateY(0) rotateX(0deg); }
+}
+
+/* Flip animation when scrolled into view */
+@keyframes posterFlipIn {
+  0% { 
+    transform: perspective(1000px) rotateY(-180deg) scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: perspective(1000px) rotateY(-90deg) scale(0.9);
+    opacity: 0.5;
+  }
+  100% { 
+    transform: perspective(1000px) rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Frame rotation animation */
+@keyframes frameRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Petal glow animation */
+@keyframes petalGlow {
+  0% { 
+    text-shadow: 0 0 8px rgba(255,215,0,0.3), 0 0 15px rgba(242,221,124,0.2);
+    filter: brightness(0.8);
+  }
+  100% { 
+    text-shadow: 0 0 15px rgba(255,215,0,0.8), 0 0 25px rgba(242,221,124,0.5);
+    filter: brightness(1.2);
+  }
+}
 
 /* PAST STARS SECTION */
 .pastStarsSection {
@@ -1145,5 +1240,205 @@
 @media (max-width: 768px) {
   .irisVideoContainer {
     width: 100%;
+  }
+}
+
+
+
+.proStage{
+  width: 100%;
+  max-width: 980px;
+  margin: 1rem auto 0;
+  display: grid;
+  grid-template-columns: 52px 1fr 52px;
+  align-items: center;
+  gap: 12px;
+}
+
+.proViewport{
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 60vw, 560px);
+  overflow: hidden;
+  perspective: 1200px;
+}
+
+.proArrow{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: rgba(0,0,0,0.55);
+  color: #f0ddb4;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease;
+}
+
+.proArrow:hover{
+  background: rgba(242,221,124,0.25);
+  transform: scale(1.06);
+}
+
+.proArrowLeft{ justify-self: end; }
+.proArrowRight{ justify-self: start; }
+
+
+.proCard{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  aspect-ratio: var(--ar);
+  height: auto;
+
+  border-radius: 22px;
+  overflow: hidden;
+  background: transparent;
+
+  border: 1px solid rgba(242,221,124,0.28);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.55);
+  transition:
+    transform 700ms cubic-bezier(.2,.9,.2,1),
+    opacity 700ms ease,
+    filter 700ms ease;
+}
+
+.proPosterBg{ display: none; }
+.proPosterOverlay{ display: none; }
+
+.proPosterImg{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+  object-position: center;
+  display: block;
+  background: transparent;
+}
+
+.proPosCenter{
+  z-index: 5;
+  transform: translate(-50%, -50%) scale(1.12);
+  opacity: 1;
+  filter: brightness(1) saturate(1.05);
+}
+
+.proPosLeft{
+  z-index: 3;
+  transform: translate(-50%, -50%) translateX(-340px) rotateY(18deg) scale(0.78);
+  opacity: 0.30;
+  filter: brightness(0.85) saturate(0.85);
+}
+
+.proPosRight{
+  z-index: 3;
+  transform: translate(-50%, -50%) translateX(340px) rotateY(-18deg) scale(0.78);
+  opacity: 0.30;
+  filter: brightness(0.85) saturate(0.85);
+}
+
+@media (max-width: 600px){
+  .proStage{
+    grid-template-columns: 44px 1fr 44px;
+    padding: 0 6px;
+  }
+
+  .proCard{
+    width: 260px;
+    aspect-ratio: var(--ar);
+    height: auto;
+  }
+
+  .proPosLeft{
+    transform: translate(-50%, -50%) translateX(-240px) rotateY(14deg) scale(0.72);
+    opacity: 0.25;
+  }
+
+  .proPosRight{
+    transform: translate(-50%, -50%) translateX(240px) rotateY(-14deg) scale(0.72);
+    opacity: 0.25;
+  }
+}
+
+@media (max-width: 600px) {
+  .proStage {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem auto 0;
+    padding: 0 14px; 
+    position: relative;
+    gap: 0 !important;
+  }
+
+  .proViewport {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .proPosLeft,
+  .proPosRight {
+    display: none !important;
+  }
+
+  .proCard {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    width: min(86vw, 320px) !important; /* better sizing */
+    aspect-ratio: var(--ar) !important;
+    height: auto !important;
+
+    margin: 0 auto !important;
+  }
+
+
+  .proPosterBg,
+  .proPosterOverlay {
+    display: none !important;
+  }
+
+  .proPosterImg {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+
+  .proArrow {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 20 !important;
+
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 999px !important;
+    background: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(4px);
+  }
+
+  .proArrowLeft {
+    left: 10px !important;
+    justify-self: unset !important;
+  }
+
+  .proArrowRight {
+    right: 10px !important;
+    justify-self: unset !important;
   }
 }
