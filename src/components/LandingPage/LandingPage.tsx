@@ -16,13 +16,22 @@ export default function LandingPage() {
   const [isStarsPaused, setIsStarsPaused] = useState(false);
   const starsRafRef = useRef<number | null>(null);
 
-  const sponsors = [
+  type Sponsor = {
+    src: string;
+    alt: string;
+    title: string;
+    link?: string;
+  };
+
+  const sponsors: Sponsor[] = [
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s1.png", alt: "HPCL", title: "Trinity Sponsor" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s2.png", alt: "SBI", title: "Banking Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s4.png", alt: "Unstop", title: "Platform Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s5.png", alt: "Business  Standard", title: "Media Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s7.png", alt: "Safexpress", title: "Logistics Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s8.png", alt: "SheKunj", title: "Community Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s12.png", alt: "Denver", title: "Fragrance Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s14.png", alt: "Abhibus", title: "Travel Partner", link: "https://www.abhibus.com/" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s13.png", alt: "Indori Chatkare", title: "Partner" },
   ];
 
@@ -317,14 +326,33 @@ export default function LandingPage() {
                 </button>
 
                 <div ref={sponsorsRef} className={styles.sponsorsGrid}>
-                  {sponsors.map((s, idx) => (
-                    <div key={`${s.alt}-${idx}`} className={styles.sponsorItem}>
-                      <div className={styles.sponsorLogoContainer}>
-                        <img src={s.src} alt={s.alt} />
+                  {sponsors.map((s, idx) => {
+                    const content = (
+                      <>
+                        <div className={styles.sponsorLogoContainer}>
+                          <img src={s.src} alt={s.alt} />
+                        </div>
+                        <p className={styles.sponsorTitle}>{s.title}</p>
+                      </>
+                    );
+
+                    return s.link ? (
+                      <a
+                        key={`${s.alt}-${idx}`}
+                        href={s.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.sponsorItem}
+                        style={{ textDecoration: "none" }}
+                      >
+                        {content}
+                      </a>
+                    ) : (
+                      <div key={`${s.alt}-${idx}`} className={styles.sponsorItem}>
+                        {content}
                       </div>
-                      <p className={styles.sponsorTitle}>{s.title}</p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 <button
