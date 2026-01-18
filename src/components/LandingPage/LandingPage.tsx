@@ -25,14 +25,22 @@ export default function LandingPage() {
 
   const sponsors: Sponsor[] = [
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s1.png", alt: "HPCL", title: "Trinity Sponsor" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s2.png", alt: "SBI", title: "Banking Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s2.png", alt: "SBI", title: "Official Banking Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s15.png", alt: "Qoneqt", title: "Community Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s7.png", alt: "Safexpress", title: "Official Logistics Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s16.png", alt: "PNB", title: "Banking Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s12.png", alt: "Denver", title: "Official Fragrance Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s14.png", alt: "Abhibus", title: "Official Travel Partner", link: "https://www.abhibus.com/" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s4.png", alt: "Unstop", title: "Platform Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s5.png", alt: "Business  Standard", title: "Media Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s7.png", alt: "Safexpress", title: "Logistics Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s6.png", alt: "The Hindu", title: "Official Media Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s17.png", alt: "CBI", title: "Banking Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s5.png", alt: "Business Standard", title: "Official Media Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s8.png", alt: "SheKunj", title: "Community Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s12.png", alt: "Denver", title: "Fragrance Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s14.png", alt: "Abhibus", title: "Travel Partner", link: "https://www.abhibus.com/" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s13.png", alt: "Indori Chatkare", title: "Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s13.png", alt: "Indorichatkare", title: "Social Media Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s18.png", alt: "Wham Energy", title: "Official Caffeine Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s19.png", alt: "A1 Photography", title: "Photography Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s10.png", alt: "Hillary Rhoda", title: "Official Makeup Partner" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s9.png", alt: "Grant Thornton", title: "Partner" },
   ];
 
   const SCROLL_STEP = 260;
