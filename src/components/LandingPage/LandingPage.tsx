@@ -24,7 +24,7 @@ export default function LandingPage() {
   };
 
   const sponsors: Sponsor[] = [
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s1.png", alt: "HPCL", title: "Trinity Sponsor" },
+    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s1_v2.png", alt: "HPCL", title: "Trinity Sponsor" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s2.png", alt: "SBI", title: "Official Banking Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s15.png", alt: "Qoneqt", title: "Community Partner" },
     { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s7.png", alt: "Safexpress", title: "Official Logistics Partner" },
