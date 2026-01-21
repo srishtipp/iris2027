@@ -249,7 +249,55 @@ export default function LandingPage() {
               </div>
             </div>
 
-              <section className={styles.proShowsSection}>
+              
+{/* CURRENT SPEAKER */}
+<section className={styles.currentSpeakerSection}>
+  <div className={styles.currentSpeakerWrapper}>
+    <h2 className={styles.sectionTitle}>CURRENT SPEAKER</h2>
+
+    <div className={styles.currentSpeakerGrid}>
+      {/* LEFT SIDE */}
+<div className={styles.currentSpeakerLeft}>
+  <div className={styles.currentSpeakerAvatar}>
+    <img
+      src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/current-speaker.webp"
+      alt="Mr. Ashish Kumar Singh"
+      className={styles.currentSpeakerAvatarImg}
+    />
+  </div>
+
+  <div className={styles.currentSpeakerMeta}>
+    <h3 className={styles.currentSpeakerLeftName}>Mr. Ashish Kumar Singh</h3>
+    <p className={styles.currentSpeakerLeftRole}>
+      Deputy General Manager <br />
+      Indore Retail Region, HPCL
+    </p>
+  </div>
+</div>
+
+
+      {/* RIGHT SIDE */}
+      <div className={styles.currentSpeakerRight}>
+        <p className={styles.currentSpeakerPara}>
+          Mr. Ashish Kumar Singh joined HPCL in 2005 and has worked in the Retail SBU as a Marketing Officer, Sales
+          Officer, RE & Analytics, and Regional Manager. Over the last five years, he served in Siliguri and is currently
+          posted in Indore.
+        </p>
+
+        <p className={styles.currentSpeakerPara}>
+          He has worked across locations including Vijayawada, Bangalore, Lucknow, Patna, and Siliguri. He holds an ENG
+          degree from NIT Patna, an MBA from UPES, and a certification in Data Analytics from IIM Amritsar. Currently, he
+          handles 13 districts of Madhya Pradesh covering 510 retail outlets.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+              
+
+
+<section className={styles.proShowsSection}>
                 <h2 className={styles.sectionTitle}>PRO SHOWS</h2>
 
                 <div
