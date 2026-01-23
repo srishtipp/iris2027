@@ -698,6 +698,162 @@
 }
 
 /* ============================
+   JUDGES SECTION
+============================ */
+.judgesSection {
+  padding: 1.25rem 1.5rem 2.5rem;
+  backdrop-filter: blur(6px);
+  background: rgba(26, 26, 26, 0.65);
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+
+.judgesSection::before {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #f0ddb488, transparent);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.judgesGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.judgeCard {
+  width: 280px;
+  height: 380px;
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(242, 221, 124, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  background: #000;
+}
+
+.judgeCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.judgeImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.judgeCard:hover .judgeImage {
+  transform: scale(1.1);
+}
+
+.judgeNameBar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background: rgba(240, 221, 180, 0.95);
+  color: black;
+  transition: transform 0.3s ease;
+  z-index: 4; /* Above Overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.judgeName {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.judgeRole {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.2;
+}
+
+.judgeOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1.5rem 5rem; /* Extra bottom padding so text doesn't hit name/role */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  z-index: 3; 
+}
+
+.judgeCard:hover .judgeOverlay {
+  opacity: 1;
+}
+
+.judgeOverlayName {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f0ddb4;
+  margin-bottom: 0.5rem;
+}
+
+.judgeOverlayRole {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.judgeOverlayDesc {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.judgeSocials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.judgeSocialLink {
+  color: #f0ddb4;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.judgeSocialLink:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* ============================
    RESPONSIVE
 ============================ */
 

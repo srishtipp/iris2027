@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import styles from "./LandingPage.module.css";
 import CountdownTimer from "./CountdownTimer";
+import { Linkedin, Instagram } from "lucide-react";
 
 export default function LandingPage() {
   const [scrollY, setScrollY] = useState(0);
@@ -250,6 +251,45 @@ export default function LandingPage() {
             </div>
 
               
+{/* CHIEF GUEST */}
+<section className={styles.currentSpeakerSection}>
+  <div className={styles.currentSpeakerWrapper}>
+    <h2 className={styles.sectionTitle}>CHIEF GUEST</h2>
+
+    <div className={styles.currentSpeakerGrid}>
+      {/* LEFT SIDE */}
+      <div className={styles.currentSpeakerLeft}>
+        <div className={styles.currentSpeakerAvatar}>
+          <img
+            src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/Malini_Gaur.jpg"
+            alt="Malini Laxmansingh Gaur"
+            className={styles.currentSpeakerAvatarImg}
+          />
+        </div>
+
+        <div className={styles.currentSpeakerMeta}>
+          <h3 className={styles.currentSpeakerLeftName}>Smt. Malini Laxmansingh Gaur</h3>
+          <p className={styles.currentSpeakerLeftRole}>
+            MLA <br />
+            Indore
+          </p>
+        </div>
+      </div>
+
+      {/* RIGHT SIDE */}
+      <div className={styles.currentSpeakerRight}>
+        <p className={styles.currentSpeakerPara}>
+          We are honored to welcome Smt. Malini Laxmansingh Gaur as our Chief Guest for IRIS 2026. A distinguished leader and the Member of Legislative Assembly from Indore, she has been instrumental in the city&apos;s development and its recognition as the cleanest city in India.
+        </p>
+
+        <p className={styles.currentSpeakerPara}>
+           Her presence adds immense value to our festival, inspiring the youth with her dedication to public service and governance. We look forward to her address and insights.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 {/* CURRENT SPEAKER */}
 <section className={styles.currentSpeakerSection}>
   <div className={styles.currentSpeakerWrapper}>
@@ -294,8 +334,79 @@ export default function LandingPage() {
   </div>
 </section>
 
-              
+{/* JUDGES */}
+<section className={styles.judgesSection}>
+  <h2 className={styles.sectionTitle}>JUDGES</h2>
+  <div className={styles.judgesGrid}>
+    {/* Judge 1: Supply Chain Judge */}
+    <div className={styles.judgeCard}>
+      <img
+        src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/supply chain judge.jpg"
+        alt="Jitendra Das Bairagi"
+        className={styles.judgeImage}
+      />
+      <div className={styles.judgeNameBar}>
+        <h3 className={styles.judgeName}>Jitendra Das Bairagi</h3>
+        <p className={styles.judgeRole}>Grant Thornton Bharat LLP</p>
+      </div>
+      <div className={styles.judgeOverlay}>
+        <p className={styles.judgeOverlayDesc}>
+          Jitendra Das Bairagi is a Supply Chain and Transformation expert at Grant Thornton Bharat LLP with 11+ years of experience. He has led digital transformation, automation, and process excellence initiatives across BFSI, FMCG, e-commerce, manufacturing, MSMEs, and government sectors, and actively trains professionals in Lean Six Sigma and quality management practices.
+        </p>
+        <div className={styles.judgeSocials}>
+           <a href="https://www.linkedin.com/in/jitendra-das-bairagi-77346b38/" target="_blank" rel="noopener noreferrer" className={styles.judgeSocialLink} aria-label="LinkedIn">
+             <Linkedin size={20} />
+           </a>
+        </div>
+      </div>
+    </div>
 
+    {/* Judge 2: Sonia Saluja */}
+    <div className={styles.judgeCard}>
+      <img
+        src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/sonia judge - Laavanya.jpg"
+        alt="Sonia Saluja"
+        className={styles.judgeImage}
+      />
+      <div className={styles.judgeNameBar}>
+        <h3 className={styles.judgeName}>Sonia Saluja</h3>
+        <p className={styles.judgeRole}>Mrs India International 2019</p>
+      </div>
+      <div className={styles.judgeOverlay}>
+        <p className={styles.judgeOverlayDesc}>
+          Sonia Saluja is a celebrated beauty pageant personality and entrepreneur, crowned Mrs India International 2019 with the Most Talented title. Founder associated with Presto Solutions, she is admired for her modeling, leadership, and creative influence, inspiring women with confidence, grace, and empowerment.        </p>
+        <div className={styles.judgeSocials}>
+           <a href="https://www.instagram.com/mrsindia_international2019?igsh=MWdseWl0OHlycWZkdw%3D%3D" target="_blank" rel="noopener noreferrer" className={styles.judgeSocialLink} aria-label="Instagram">
+             <Instagram size={20} />
+           </a>
+        </div>
+      </div>
+    </div>
+
+    {/* Judge 3: Vipin Sharma */}
+    <div className={styles.judgeCard}>
+      <img
+        src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/Judge 2.jpg"
+        alt="Vipin Sharma"
+        className={styles.judgeImage}
+      />
+      <div className={styles.judgeNameBar}>
+        <h3 className={styles.judgeName}>Vipin Sharma</h3>
+        <p className={styles.judgeRole}>Founder of UDC (Unique Dance Crew)</p>
+      </div>
+      <div className={styles.judgeOverlay}>
+        <p className={styles.judgeOverlayDesc}>
+          Vipin Sharma is the founder of UDC (Unique Dance Crew), a prominent dance collective based in Indore. A passionate choreographer and mentor, he has built UDC into a platform for high-energy performances, professional training, and youth inspiration, fostering creativity and excellence in the performing arts.
+        </p>
+        <div className={styles.judgeSocials}>
+           <a href="https://www.instagram.com/uniquedancecrew.udc?igsh=MTZob3B0cTA0bmJkYQ%3D%3D" target="_blank" rel="noopener noreferrer" className={styles.judgeSocialLink} aria-label="Instagram">
+             <Instagram size={20} />
+           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section className={styles.proShowsSection}>
                 <h2 className={styles.sectionTitle}>PRO SHOWS</h2>
