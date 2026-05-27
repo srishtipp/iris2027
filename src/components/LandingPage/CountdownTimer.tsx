@@ -11,6 +11,10 @@ interface TimeLeft {
 }
 
 export default function CountdownTimer() {
+  /*
+    Original timer implementation commented out per request.
+    Keeping the logic here for reference in case it needs to be restored later.
+
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -42,31 +46,12 @@ export default function CountdownTimer() {
     return () => clearInterval(interval);
   }, []);
 
+  */
+
+  // Render a static coming-soon message inside the same styled container
   return (
     <div className={styles.dateCountdown}>
-      <div className={styles.timeLeft}>
-        <div className={styles.timeBlock}>
-          <span className={styles.value}>{String(timeLeft.days).padStart(2, "0")}</span>
-          <span className={styles.label}>Days</span>
-        </div>
-        <span className={styles.separator}>:</span>
-        <div className={styles.timeBlock}>
-          <span className={styles.value}>{String(timeLeft.hours).padStart(2, "0")}</span>
-          <span className={styles.label}>Hours</span>
-        </div>
-        <span className={styles.separator}>:</span>
-        <div className={styles.timeBlock}>
-          <span className={styles.value}>{String(timeLeft.minutes).padStart(2, "0")}</span>
-          <span className={styles.label}>Minutes</span>
-        </div>
-        <span className={styles.separator}>:</span>
-        <div className={styles.timeBlock}>
-          <span className={`${styles.value} ${styles.seconds}`}>
-            {String(timeLeft.seconds).padStart(2, "0")}
-          </span>
-          <span className={styles.label}>Seconds</span>
-        </div>
-      </div>
+      <div className={styles.comingSoon}>IRIS 2027 - COMING SOON</div>
     </div>
   );
 }

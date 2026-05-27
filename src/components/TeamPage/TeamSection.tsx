@@ -2,7 +2,6 @@
 
 import TeamMemberCard from "./TeamMemberCard";
 import styles from "./TeamSection.module.css";
-import clsx from "clsx";
 
 export interface Social {
   email?: string;
@@ -31,16 +30,11 @@ const TeamSection: React.FC<Props> = ({
   members,
   columns = 4,
 }) => {
-  const addCenterClass = columns === 4; // only when 4 columns do we want the "last 2 centered" behaviour
-
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>{title}</h2>
 
-      <div
-        className={clsx(styles.grid, { [styles.centerLastTwo as string]: addCenterClass })}
-        style={{ "--columns": columns } as React.CSSProperties}
-      >
+      <div className={styles.grid} style={{ "--columns": columns } as React.CSSProperties}>
         {members.map((member) => (
           <TeamMemberCard key={member.id} member={member} />
         ))}
