@@ -7,19 +7,6 @@ const TeamPage: React.FC = () => {
   const coreTeamMembers = [
     {
       id: 1,
-      name: 'Rohini Pal',
-      role: 'Overall Coordinator',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Nawang Tsering Bodh_edited.png',
-      bio: 'IRIS runs on ideas,  I make sure they turn into reality!',
-      social: {
-        email: 'ph25rohinip@iimidr.ac.in',
-        phone: '8170841618',
-        instagram: 'https://www.instagram.com/rohini_pal?igsh=MWVxNXB1dXZneHo3aA==',
-        linkedin: 'https://www.linkedin.com/in/rohini-pal-248697183?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
-      }
-    },
-    {
-      id: 2,
       name: 'Aditya Singh',
       role: 'Overall Coordinator',
       image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Shubham Sharma_edited.png',
@@ -32,7 +19,7 @@ const TeamPage: React.FC = () => {
       }
     },
     {
-      id: 3,
+      id: 2,
       name: 'Nikhil Tayade',
       role: 'Overall Coordinator',
       image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Anirudh Kumar.png',
@@ -42,6 +29,19 @@ const TeamPage: React.FC = () => {
         phone: '7218082560',
         instagram: 'https://www.instagram.com/nic._.hil?igsh=ZG5tbG5zeTZsYnVv&utm_source=qr',
         linkedin: 'https://www.linkedin.com/in/nikhil-t-b65b5410a?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
+      }
+    },
+    {
+      id: 3,
+      name: 'Rohini Pal',
+      role: 'Overall Coordinator',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Nawang Tsering Bodh_edited.png',
+      bio: 'IRIS runs on ideas,  I make sure they turn into reality!',
+      social: {
+        email: 'ph25rohinip@iimidr.ac.in',
+        phone: '8170841618',
+        instagram: 'https://www.instagram.com/rohini_pal?igsh=MWVxNXB1dXZneHo3aA==',
+        linkedin: 'https://www.linkedin.com/in/rohini-pal-248697183?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
       }
     },
   ];
@@ -116,19 +116,6 @@ const TeamPage: React.FC = () => {
     },
     {
       id: 9,
-      name: 'V Rithesh',
-      role: 'Events and Guests',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Keya Mehta.png',
-      bio: 'Knows what they’re doing… most of the time.',
-      social: {
-        email: 'p25ritheshv@iimidr.ac.in',
-        phone: '7010829452',
-        instagram: 'https://www.instagram.com/errpizzaaa?igsh=NXpwcTVrbWhvdzNy',
-        linkedin: 'https://www.linkedin.com/in/rithesh-v-a08515264?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
-      }
-    },
-    {
-      id: 10,
       name: 'Rimjhim Agrawal',
       role: 'Events and Guests',
       image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Keya Mehta.png',
@@ -141,20 +128,20 @@ const TeamPage: React.FC = () => {
       }
     },
     {
-      id: 11,
-      name: 'Pranav Paresh Chaphekar',
-      role: 'Finance',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Ronak Khandelwal.png',
-      bio: 'Enabling every idea with financial clarity.',
+      id: 10,
+      name: 'V Rithesh',
+      role: 'Events and Guests',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Keya Mehta.png',
+      bio: 'Knows what they’re doing… most of the time.',
       social: {
-        email: 'p25pranavc@iimidr.ac.in',
-        phone: '9324110281',
-        instagram: 'https://www.instagram.com/pranav_chaphekar03',
-        linkedin: 'http://www.linkedin.com/in/pranav-chaphekar-9818a3283'
+        email: 'p25ritheshv@iimidr.ac.in',
+        phone: '7010829452',
+        instagram: 'https://www.instagram.com/errpizzaaa?igsh=NXpwcTVrbWhvdzNy',
+        linkedin: 'https://www.linkedin.com/in/rithesh-v-a08515264?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
       }
     },
     {
-      id: 12,
+      id: 11,
       name: 'Avika',
       role: 'Finance',
       image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Ronak Khandelwal.png',
@@ -167,20 +154,20 @@ const TeamPage: React.FC = () => {
       }
     },
     {
-      id: 13,
-      name: 'Sanchita Jaiswal ',
-      role: 'Media & Marketing',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Khadeeja Shifana.png',
-      bio: 'Communicating the narrative & essence of IRIS through Media & Marketing ',
+      id: 12,
+      name: 'Pranav Paresh Chaphekar',
+      role: 'Finance',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Ronak Khandelwal.png',
+      bio: 'Enabling every idea with financial clarity.',
       social: {
-        email: 'p25sanchitaj@iimidr.ac.in',
-        phone: '7007208824',
-        instagram: 'https://www.instagram.com/sanchitaa_j?igsh=czNpZXJucjlhdmJ3',
-        linkedin: 'https://www.linkedin.com/in/sanchitaj09?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+        email: 'p25pranavc@iimidr.ac.in',
+        phone: '9324110281',
+        instagram: 'https://www.instagram.com/pranav_chaphekar03',
+        linkedin: 'http://www.linkedin.com/in/pranav-chaphekar-9818a3283'
       }
     },
     {
-      id: 14,
+      id: 13,
       name: 'Arpita',
       role: 'Media & Marketing',
       image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Madhumita Raghu.png',
@@ -190,6 +177,19 @@ const TeamPage: React.FC = () => {
         phone: '9818619729',
         instagram: 'https://www.instagram.com/errpizzaaa?igsh=NXpwcTVrbWhvdzNy',
         linkedin: 'https://www.linkedin.com/in/arpita-verma-'
+      }
+    },
+    {
+      id: 14,
+      name: 'Sanchita Jaiswal ',
+      role: 'Media & Marketing',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Khadeeja Shifana.png',
+      bio: 'Communicating the narrative & essence of IRIS through Media & Marketing ',
+      social: {
+        email: 'p25sanchitaj@iimidr.ac.in',
+        phone: '7007208824',
+        instagram: 'https://www.instagram.com/sanchitaa_j?igsh=czNpZXJucjlhdmJ3',
+        linkedin: 'https://www.linkedin.com/in/sanchitaj09?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
       }
     },
     {
@@ -207,19 +207,6 @@ const TeamPage: React.FC = () => {
     },
     {
       id: 16,
-      name: 'Rajan Mahajan',
-      role: 'Operations',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Pranav Agarwal.png',
-      bio: 'Turning plans into operational precision on ground.',
-      social: {
-        email: 'p25rajanm@iimidr.ac.in',
-        phone: '9325672972',
-        instagram: 'https://www.instagram.com/rajan.mahajan_',
-        linkedin: 'https://www.linkedin.com/in/rajan-mahajan-01/'
-      }
-    },
-    {
-      id: 17,
       name: 'Lakshmi Hemakumar',
       role: 'Operations',
       image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Yougshil.png',
@@ -229,6 +216,19 @@ const TeamPage: React.FC = () => {
         phone: '9744724285',
         instagram: 'https://www.instagram.com/lakshmihemakumar?igsh=OGlrNjE1ejhzNGUy',
         linkedin: 'https://www.linkedin.com/in/lakshmi-hemakumar-0b9579373?utm_source=share_via&utm_content=profile&utm_medium=member_android'
+      }
+    },
+     {
+      id: 17,
+      name: 'Rajan Mahajan',
+      role: 'Operations',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Pranav Agarwal.png',
+      bio: 'Turning plans into operational precision on ground.',
+      social: {
+        email: 'p25rajanm@iimidr.ac.in',
+        phone: '9325672972',
+        instagram: 'https://www.instagram.com/rajan.mahajan_',
+        linkedin: 'https://www.linkedin.com/in/rajan-mahajan-01/'
       }
     },
     {
@@ -246,6 +246,19 @@ const TeamPage: React.FC = () => {
     },
     {
       id: 19,
+      name: 'Antra Diksha Khalkho',
+      role: 'Participation & Hospitality',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Vibhu Sharma.png',
+      bio: '',
+      social: {
+        email: '',
+        phone: '',
+        instagram: '',
+        linkedin: ''
+      }
+    },
+    {
+      id: 20,
       name: 'Prem Kumar Udaypuria',
       role: 'Participation & Hospitality',
       image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Sahil Telrandhe.png',
@@ -258,33 +271,7 @@ const TeamPage: React.FC = () => {
       }
     },
     {
-      id: 20,
-      name: '',
-      role: 'Participation & Hospitality',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Vibhu Sharma.png',
-      bio: '',
-      social: {
-        email: '',
-        phone: '',
-        instagram: '',
-        linkedin: ''
-      }
-    },
-    {
       id: 21,
-      name: 'Vaishali Bhargava',
-      role: 'Pro Shows',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Arjav Jain.png',
-      bio: 'Curating unforgettable ProShows for IRIS 2027,from concept to crowd roaring execution ',
-      social: {
-        email: 'p25vaishalib@iimidr.ac.in',
-        phone: '7974144813',
-        instagram: 'https://www.instagram.com/_viba08?igsh=eHptcjFscmt4Yjgw',
-        linkedin: 'https://www.linkedin.com/in/vaishali-bhargava-239106269?utm_source=share_via&utm_content=profile&utm_medium=member_android'
-      }
-    },
-    {
-      id: 22,
       name: 'Ishika Nayak',
       role: 'Pro Shows',
       image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Somiya Kardam.png',
@@ -297,20 +284,20 @@ const TeamPage: React.FC = () => {
       }
     },
     {
-      id: 23,
-      name: 'Srishti Porwal',
-      role: 'Systems & IT',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Abhijeet Bhure.png',
-      bio: 'Architecting the digital backbone that brings Iris to life.',
+      id: 22,
+      name: 'Vaishali Bhargava',
+      role: 'Pro Shows',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Arjav Jain.png',
+      bio: 'Curating unforgettable ProShows for IRIS 2027,from concept to crowd roaring execution ',
       social: {
-        email: 'p25srishtip@iimidr.ac.in',
-        phone: '7670894845',
-        instagram: 'https://www.instagram.com/_sixtyyy_?igsh=NGl4c21oN3ZpN2ts',
-        linkedin: 'https://www.linkedin.com/in/srishti-porwal-670996201'
+        email: 'p25vaishalib@iimidr.ac.in',
+        phone: '7974144813',
+        instagram: 'https://www.instagram.com/_viba08?igsh=eHptcjFscmt4Yjgw',
+        linkedin: 'https://www.linkedin.com/in/vaishali-bhargava-239106269?utm_source=share_via&utm_content=profile&utm_medium=member_android'
       }
     },
     {
-      id: 24,
+      id: 23,
       name: 'Jerry',
       role: 'Systems & IT',
       image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Jyotirmoy Saha.png',
@@ -320,6 +307,19 @@ const TeamPage: React.FC = () => {
         phone: '7092622767',
         instagram: 'https://www.instagram.com/jerry_hank_6',
         linkedin: 'https://www.linkedin.com/in/jerry-j-89aa52174/'
+      }
+    },
+    {
+      id: 24,
+      name: 'Srishti Porwal',
+      role: 'Systems & IT',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Abhijeet Bhure.png',
+      bio: 'Architecting the digital backbone that brings Iris to life.',
+      social: {
+        email: 'p25srishtip@iimidr.ac.in',
+        phone: '7670894845',
+        instagram: 'https://www.instagram.com/_sixtyyy_?igsh=NGl4c21oN3ZpN2ts',
+        linkedin: 'https://www.linkedin.com/in/srishti-porwal-670996201'
       }
     },
     {
@@ -352,7 +352,7 @@ const TeamPage: React.FC = () => {
 
   return (    
     <div className={styles.container}>
-      <title>Our Team - IRIS 2026</title>
+      <title>Our Team - IRIS 2027</title>
 
       {/* Background Images */}
       <div className={styles.backgroundContainer}>
