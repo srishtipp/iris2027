@@ -365,6 +365,9 @@ export default function EventsPage() {
             alt="IRIS background"
             className={styles.landingImage}
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
 
@@ -373,6 +376,8 @@ export default function EventsPage() {
             src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_portrait.webp"
             alt="IRIS background mobile"
             className={styles.mobileMountains}
+            loading="eager"
+            decoding="async"
           />
         </div>
 

@@ -176,6 +176,9 @@ export default function LandingPage() {
             alt="Edo Mountains"
             className={styles.landingImage}
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
 
@@ -184,6 +187,8 @@ export default function LandingPage() {
             src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_portrait.webp"
             alt="Mountains"
             className={styles.mobileMountains}
+            loading="eager"
+            decoding="async"
           />
         </div>
 
@@ -192,6 +197,8 @@ export default function LandingPage() {
             src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/irislogo.png"
             alt="IRIS 2026"
             className={styles.logo}
+            loading="eager"
+            decoding="async"
           />
         </div> 
        <div className={styles.countdownContainer}>
@@ -207,7 +214,7 @@ export default function LandingPage() {
             {/* FEST THEME */}
             <div className={styles.irisThemeContainer}>
               <div className={styles.irisThemeWrapper}>
-                <h2 className={styles.sectionTitle}>IRIS'26</h2>
+                <h2 className={styles.sectionTitle}>IRIS&apos;26</h2>
 
                 <div className={styles.irisThemeGrid}>
                   <div className={styles.irisThemeImageSide}>
@@ -215,12 +222,14 @@ export default function LandingPage() {
                       src="https://iris.cdn.jyotirmoysaha.co.in/images/aboutus/indieverse.jpeg"
                       alt="INDIEVERSE"
                       className={styles.irisThemeFeatureImage}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
 
                   <div className={styles.irisThemeContentSide}>
                     <p className={styles.irisThemeDescriptionText}>
-                      Step into Indieverse - the official theme of IRIS’26! A celebration of India’s rich diversity, where
+                      Step into Indieverse - the official theme of IRIS&apos;26! A celebration of India&apos;s rich diversity, where
                       timeless culture, vibrant cinema, and modern innovation unite to showcase the many shades of one
                       nation. Join us at IIM Indore for a dynamic experience that engages students across all disciplines.
                     </p>
@@ -262,6 +271,8 @@ export default function LandingPage() {
             src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/Malini_Gaur.jpg"
             alt="Malini Laxmansingh Gaur"
             className={styles.currentSpeakerAvatarImg}
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -297,11 +308,13 @@ export default function LandingPage() {
       {/* LEFT SIDE */}
 <div className={styles.currentSpeakerLeft}>
   <div className={styles.currentSpeakerAvatar}>
-    <img
-      src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/current-speaker.webp"
-      alt="Mr. Ashish Kumar Singh"
-      className={styles.currentSpeakerAvatarImg}
-    />
+                    <img
+                      src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/current-speaker.webp"
+                      alt="Mr. Ashish Kumar Singh"
+                      className={styles.currentSpeakerAvatarImg}
+                      loading="lazy"
+                      decoding="async"
+                    />
   </div>
 
   <div className={styles.currentSpeakerMeta}>
@@ -337,11 +350,13 @@ export default function LandingPage() {
   <h2 className={styles.sectionTitle}>JUDGES</h2>
   <div className={styles.judgesGrid}>
     {/* Judge 1: Supply Chain Judge */}
-    <div className={styles.judgeCard}>
+      <div className={styles.judgeCard}>
       <img
         src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/supply chain judge.jpg"
         alt="Jitendra Das Bairagi"
         className={styles.judgeImage}
+        loading="lazy"
+        decoding="async"
       />
       <div className={styles.judgeNameBar}>
         <h3 className={styles.judgeName}>Jitendra Das Bairagi</h3>
@@ -365,6 +380,8 @@ export default function LandingPage() {
         src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/sonia judge - Laavanya.jpg"
         alt="Sonia Saluja"
         className={styles.judgeImage}
+        loading="lazy"
+        decoding="async"
       />
       <div className={styles.judgeNameBar}>
         <h3 className={styles.judgeName}>Sonia Saluja</h3>
@@ -387,6 +404,8 @@ export default function LandingPage() {
         src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/Judge 2.jpg"
         alt="Vipin Sharma"
         className={styles.judgeImage}
+        loading="lazy"
+        decoding="async"
       />
       <div className={styles.judgeNameBar}>
         <h3 className={styles.judgeName}>Vipin Sharma</h3>
@@ -453,6 +472,8 @@ export default function LandingPage() {
                             className={styles.proPosterImg}
                             src={url}
                             alt={`Pro show ${index + 1}`}
+                            loading="lazy"
+                            decoding="async"
                             onLoad={(e) => {
                               const img = e.currentTarget;
                               if (!img.naturalWidth || !img.naturalHeight) return;
@@ -495,7 +516,7 @@ export default function LandingPage() {
                     const content = (
                       <>
                         <div className={styles.sponsorLogoContainer}>
-                          <img src={s.src} alt={s.alt} />
+                            <img src={s.src} alt={s.alt} loading="lazy" decoding="async" />
                         </div>
                         <p className={styles.sponsorTitle}>{s.title}</p>
                       </>
@@ -553,8 +574,8 @@ export default function LandingPage() {
               <h2 className={styles.sectionTitle}>PAST STARS</h2>
 
               <div className={styles.starsMainRow}>
-                <img src="https://iris.cdn.jyotirmoysaha.co.in/images/stars/main1.png" alt="Main Star 1" className={styles.starMainPoster} />
-                <img src="https://iris.cdn.jyotirmoysaha.co.in/images/stars/main2.png" alt="Main Star 2" className={styles.starMainPoster} />
+                <img src="https://iris.cdn.jyotirmoysaha.co.in/images/stars/main1.png" alt="Main Star 1" className={styles.starMainPoster} loading="lazy" decoding="async" />
+                <img src="https://iris.cdn.jyotirmoysaha.co.in/images/stars/main2.png" alt="Main Star 2" className={styles.starMainPoster} loading="lazy" decoding="async" />
               </div>
 
               <div
@@ -583,7 +604,7 @@ export default function LandingPage() {
                     "https://iris.cdn.jyotirmoysaha.co.in/images/stars/p8.png",
                   ].map((src, i) => (
                     <div key={i} className={styles.starPosterItem}>
-                      <img src={src} alt={`Star Poster ${i + 1}`} />
+                      <img src={src} alt={`Star Poster ${i + 1}`} loading="lazy" decoding="async" />
                     </div>
                   ))}
                 </div>
@@ -604,32 +625,38 @@ export default function LandingPage() {
               <h2 className={styles.sectionTitle}>PAST SPEAKERS</h2>
 
               <div className={styles.speakersGrid}>
-                <div className={styles.speakerCard}>
-                  <img
-                    src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/sp1.png"
-                    alt="Rahul Gehani"
-                    className={styles.speakerImgRect}
-                  />
+                  <div className={styles.speakerCard}>
+                    <img
+                      src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/sp1.png"
+                      alt="Rahul Gehani"
+                      className={styles.speakerImgRect}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   <h3>Rahul Gehani</h3>
                   <p>Partner, Everest Group</p>
                 </div>
 
-                <div className={styles.speakerCard}>
-                  <img
-                    src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/sp2.png"
-                    alt="K Radhakrishnan"
-                    className={styles.speakerImgRect}
-                  />
+                  <div className={styles.speakerCard}>
+                    <img
+                      src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/sp2.png"
+                      alt="K Radhakrishnan"
+                      className={styles.speakerImgRect}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   <h3>K Radhakrishnan</h3>
                   <p>Former Chairman, ISRO</p>
                 </div>
 
-                <div className={styles.speakerCard}>
-                  <img
-                    src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/sp3.png"
-                    alt="Rana Kapoor"
-                    className={styles.speakerImgRect}
-                  />
+                  <div className={styles.speakerCard}>
+                    <img
+                      src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/sp3.png"
+                      alt="Rana Kapoor"
+                      className={styles.speakerImgRect}
+                      loading="lazy"
+                      decoding="async"
+                    />
                   <h3>Rana Kapoor</h3>
                   <p>Former CEO & MD, Yes Bank</p>
                 </div>

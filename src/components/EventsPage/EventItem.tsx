@@ -35,6 +35,8 @@ export default function EventItem({ event }: EventItemProps) {
             alt={event.title}
             className={styles.eventImage}
             onError={handleImageError}
+            loading="lazy"
+            decoding="async"
           />
 
           {/* Dark overlay + register on hover/tap */}

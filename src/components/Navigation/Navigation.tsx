@@ -87,6 +87,8 @@ export default function Navigation() {
                 src="/svgs/landing/moonHam.svg"
                 alt="Menu"
                 className={styles.moon}
+                loading="lazy"
+                decoding="async"
               />
             </button>
           </nav>
@@ -111,6 +113,8 @@ export default function Navigation() {
                   src="/svgs/landing/hamX.svg"
                   alt="Close"
                   className={styles.hamX}
+                  loading="lazy"
+                  decoding="async"
                 />
               </button>
 
