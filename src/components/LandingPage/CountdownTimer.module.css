@@ -13,6 +13,17 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Coming Soon message styling */
+.comingSoon {
+  width: 100%;
+  text-align: center;
+  font-family: "Langar-Regular", sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  color: #382e28;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
 /* Time Left Container */
 .timeLeft {
   display: flex;
