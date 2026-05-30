@@ -18,15 +18,19 @@ export default function Footer() {
           <h4 className={styles.contactCategory}>OVERALL COORDINATORS</h4>
           
           <div className={styles.contactPerson}>
-            <h5>Shubham Sharma</h5>
-            <a href="mailto:p24shubhams@iimidr.ac.in">p24shubhams@iimidr.ac.in</a>
-            <p>+91 7385552034</p>
+            <h5>Aditya Singh</h5>
+            <a href="mailto:p25adityasingh@iimidr.ac.in">p25adityasingh@iimidr.ac.in</a>
+            <p>+91 9695003151</p>
           </div>
-          
           <div className={styles.contactPerson}>
-            <h5>Nawang</h5>
-            <a href="mailto:p24nawangb@iimidr.ac.in">p24nawangb@iimidr.ac.in</a>
-            <p>+91 9911995537</p>
+            <h5>Nikhil tayade</h5>
+            <a href="mailto:p25nikhilt@iimidr.ac.in">p25nikhilt@iimidr.ac.in</a>
+            <p>+91 9695003151</p>
+          </div>
+          <div className={styles.contactPerson}>
+            <h5>Rohini Pal</h5>
+            <a href="mailto:ph25rohinip@iimidr.ac.in">ph25rohinip@iimidr.ac.in</a>
+            <p>+91 8170841618</p>
           </div>
         </div>
 
@@ -35,15 +39,15 @@ export default function Footer() {
           <h4 className={styles.contactCategory}>CORPORATE RELATIONS</h4>
           
           <div className={styles.contactPerson}>
-            <h5>Anirudh Kumar</h5>
-            <a href="mailto:p24anirudhk@iimidr.ac.in">p24anirudhk@iimidr.ac.in</a>
-            <p>+91 9559085353</p>
+            <h5>Nihar Ranjan Parida </h5>
+            <a href="mailto:p25niharp@iimidr.ac.in">p25niharp@iimidr.ac.in</a>
+            <p>+91 9893619544</p>
           </div>
           
           <div className={styles.contactPerson}>
-            <h5>Prachi Ekhar</h5>
-            <a href="mailto:p24prachim@iimidr.ac.in">p24prachim@iimidr.ac.in</a>
-            <p>+91 9359231527</p>
+            <h5>G Sharmada</h5>
+            <a href="mailto:p25gsharmada@iimidr.ac.in">p25gsharmada@iimidr.ac.in</a>
+            <p>+91 7708617246</p>
           </div>
         </div>
 
@@ -52,22 +56,22 @@ export default function Footer() {
           <h4 className={styles.contactCategory}>PARTICIPATION</h4>
           
           <div className={styles.contactPerson}>
-            <h5>Sahil Telrandhe</h5>
-            <a href="mailto:p24sahilt@iimidr.ac.in">p24sahilt@iimidr.ac.in</a>
-            <p>+91 9168369988</p>
+            <h5>Antra Diksha Khalkho</h5>
+            <a href="mailto:p25antrak@iimidr.ac.in">p25antrak@iimidr.ac.in</a>
+            <p>+91 7608000795</p>
+          </div>
+          <div className={styles.contactPerson}>
+            <h5>Anushka Mitra</h5>
+            <a href="mailto:p25anushkam@iimidr.ac.in">p25anushkam@iimidr.ac.in</a>
+            <p>+91 9199562454</p>
           </div>
           
           <div className={styles.contactPerson}>
-            <h5>Vibhu Sharma</h5>
-            <a href="mailto:p24vibhus@iimidr.ac.in">p24vibhus@iimidr.ac.in</a>
+            <h5>Prem Kumar Udaypuria</h5>
+            <a href="mailto:p25premu@iimidr.ac.in">p25premu@iimidr.ac.in</a>
             <p>+91 6306179572</p>
           </div>
           
-          <div className={styles.contactPerson}>
-            <h5>Anushka Vani</h5>
-            <a href="mailto:p24anushkav@iimidr.ac.in">p24anushkav@iimidr.ac.in</a>
-            <p>+91 7608000795</p>
-          </div>
         </div>
       </div>
     </div>
@@ -125,7 +129,7 @@ export default function Footer() {
 
   {/* Bottom Bar */}
   <div className={styles.bottomBar}>
-    <p>© IRIS 2026. All Rights Reserved. Made by Systems & IT team, IRIS</p>
+    <p>© IRIS 2027. All Rights Reserved. Made by Systems & IT team, IRIS</p>
   </div>
 </div>
     );

@@ -17,20 +17,14 @@
 /* ✅ Grid */
 /* ========================= */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(var(--columns, 4), 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 32px;
-  justify-items: center;
+  width: 100%;
+  max-width: calc(var(--columns, 4) * 240px + (var(--columns, 4) - 1) * 32px);
+  margin: 0 auto;
   font-family: "Poppins-SemiBold", sans-serif;
-}
-
-/* ✅ Center last two items when 4 columns */
-.centerLastTwo > :nth-last-child(2) {
-  grid-column: 2;
-}
-
-.centerLastTwo > :last-child {
-  grid-column: 3;
 }
 
 /* ========================= */
@@ -38,12 +32,7 @@
 /* ========================= */
 @media (max-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .centerLastTwo > :nth-last-child(2),
-  .centerLastTwo > :last-child {
-    grid-column: auto;
+    max-width: 100%;
   }
 }
 
@@ -62,11 +51,6 @@
   }
 
   .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .centerLastTwo > :nth-last-child(2),
-  .centerLastTwo > :last-child {
-    grid-column: auto;
+    max-width: 100%;
   }
 }
