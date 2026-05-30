@@ -207,7 +207,7 @@ export default function LandingPage() {
             {/* FEST THEME */}
             <div className={styles.irisThemeContainer}>
               <div className={styles.irisThemeWrapper}>
-                <h2 className={styles.sectionTitle}>FEST THEME</h2>
+                <h2 className={styles.sectionTitle}>IRIS'26</h2>
 
                 <div className={styles.irisThemeGrid}>
                   <div className={styles.irisThemeImageSide}>
@@ -291,7 +291,7 @@ export default function LandingPage() {
 {/* CURRENT SPEAKER */}
 <section className={styles.currentSpeakerSection}>
   <div className={styles.currentSpeakerWrapper}>
-    <h2 className={styles.sectionTitle}>CURRENT SPEAKER</h2>
+    <h2 className={styles.sectionTitle}>SPEAKER</h2>
 
     <div className={styles.currentSpeakerGrid}>
       {/* LEFT SIDE */}

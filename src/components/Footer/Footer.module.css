@@ -249,24 +249,6 @@
   50% { transform: translateY(-10px); }
 }
 
-/* Custom Scrollbar */
-:global(html::-webkit-scrollbar) {
-  width: 8px;
-}
-
-:global(html::-webkit-scrollbar-track) {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-:global(html::-webkit-scrollbar-thumb) {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 4px;
-}
-
-:global(html::-webkit-scrollbar-thumb:hover) {
-  background: rgba(255, 255, 255, 0.8);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .backButton {
