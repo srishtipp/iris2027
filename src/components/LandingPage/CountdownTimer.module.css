@@ -15,6 +15,16 @@
 
 /* Coming Soon message styling */
 .comingSoon {
+  padding: 1rem 2rem;
+  background-color: rgba(241, 234, 212, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  border-radius: 15px;
+  border: 2px solid rgba(242, 221, 124, 0.3);
+  /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), */
+    /* 0 0 30px rgba(242, 221, 124, 0.2); */
+  animation: fadeInUp 0.5s ease-in 0.5s both;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   width: 100%;
   text-align: center;
   font-family: "Langar-Regular", sans-serif;
