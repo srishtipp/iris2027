@@ -14,6 +14,9 @@ export default function AboutPage() {
             src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_landscape.webp"
             alt="Edo Mountains"
             className={styles.landingImage}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
 
@@ -28,6 +31,9 @@ export default function AboutPage() {
             src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_portrait.webp"
             alt="Mountains"
             className={styles.mobileMountains}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           // style={{ transform: `translateY(${scrollY * 0.3}px)` }}
           />
 

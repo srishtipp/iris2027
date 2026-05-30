@@ -70,6 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preload" as="image" href="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_landscape.webp" />
       </head>
       <body className={`${saman.variable} antialiased`}>
         <Navigation />

@@ -11,7 +11,7 @@ interface Props {
 const TeamMemberCard: React.FC<Props> = ({ member }) => {
   return (
     <div className={styles.card}>
-      <img src={member.image} alt={member.name} className={styles.image} />
+      <img src={member.image} alt={member.name} className={styles.image} loading="lazy" decoding="async" />
 
       {/* Always visible */}
       <div className={styles.nameBar}>{member.name}</div>

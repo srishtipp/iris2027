@@ -41,6 +41,8 @@ export default function SocialLinks() {
               src="/svgs/landing/wire.svg"
               alt=""
               className={styles.wire}
+              loading="lazy"
+              decoding="async"
             />
           )}
           
@@ -57,12 +59,16 @@ export default function SocialLinks() {
               src={link.icon}
               alt={link.name}
               className={styles.socialIcon}
+              loading="lazy"
+              decoding="async"
             />
             {/* Lamp with glow effect */}
             <img
               src={link.lamp}
               alt=""
               className={styles.socialLamp}
+              loading="lazy"
+              decoding="async"
             />
           </a>
         </div>

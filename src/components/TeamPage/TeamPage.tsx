@@ -361,6 +361,9 @@ const TeamPage: React.FC = () => {
             src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_landscape.webp"
             alt="Team Background"
             className={styles.landingImage}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
         <div className={styles.mobileBackgroundContainer}>
@@ -368,6 +371,9 @@ const TeamPage: React.FC = () => {
             src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_portrait.webp"
             alt="Team Background Mobile"
             className={styles.mobileMountains}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
       </div>

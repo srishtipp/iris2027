@@ -66,6 +66,9 @@ export default function GalleryPage() {
             alt="Edo Mountains"
             className={styles.landingImage}
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </div>
 
@@ -81,6 +84,8 @@ export default function GalleryPage() {
             alt="Mountains"
             className={styles.mobileMountains}
           // style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+            loading="eager"
+            decoding="async"
           />
         </div></div>
 
@@ -91,6 +96,8 @@ export default function GalleryPage() {
             src="/images/gallery/decorative/IRIS Black.png" 
             alt="IRIS Logo"
             className={styles.logoImage}
+            loading="lazy"
+            decoding="async"
           />
           {/* <h1 className={styles.mainTitle}>INDIVERSE</h1>
           <p className={styles.subtitle}>Gallery of Diversity</p> */}
@@ -108,48 +115,48 @@ export default function GalleryPage() {
         <div className={styles.categoriesContainer}>
           <h2 className={styles.sectionTitle}>Glimpses of Indiverse</h2>
           <div className={styles.PhotosGrid}>
-            <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/Laavanya.avif")}>
-              <img src="/images/gallery/Photos/Laavanya.avif" alt="" />
+            <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/Laavanya.avif")}> 
+              <img src="/images/gallery/Photos/Laavanya.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG1.avif")}>
-              <img src="/images/gallery/Photos/IMG1.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG1.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG2.avif")}>
-              <img src="/images/gallery/Photos/IMG2.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG2.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG3.avif")}>
-              <img src="/images/gallery/Photos/IMG3.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG3.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG4.avif")}>
-              <img src="/images/gallery/Photos/IMG4.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG4.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG5.avif")}>
-              <img src="/images/gallery/Photos/IMG5.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG5.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG6.avif")}>
-              <img src="/images/gallery/Photos/IMG6.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG6.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG7.avif")}>
-              <img src="/images/gallery/Photos/IMG7.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG7.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG8.avif")}>
-              <img src="/images/gallery/Photos/IMG8.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG8.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG7.avif")}>
-              <img src="/images/gallery/Photos/IMG7.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG7.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG7.avif")}>
-              <img src="/images/gallery/Photos/IMG7.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG7.avif" alt="" loading="lazy" decoding="async" />
             </div>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/IMG7.avif")}>
-              <img src="/images/gallery/Photos/IMG7.avif" alt="" />
+              <img src="/images/gallery/Photos/IMG7.avif" alt="" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
       </div>
       {selectedImage && (
         <div className={styles.modal} onClick={closeModal}>
-          <img src={selectedImage} alt="Enlarged" className={styles.modalImage} />
+          <img src={selectedImage} alt="Enlarged" className={styles.modalImage} loading="lazy" decoding="async" />
           <button className={styles.closeButton} onClick={closeModal}>×</button>
         </div>
       )}
