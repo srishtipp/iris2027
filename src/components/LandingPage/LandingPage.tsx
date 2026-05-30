@@ -193,13 +193,11 @@ export default function LandingPage() {
             alt="IRIS 2026"
             className={styles.logo}
           />
-        </div>
-
-        <div className={styles.countdownContainer}>
+        </div> 
+       <div className={styles.countdownContainer}>
           <CountdownTimer />
         </div>
-      </div>
-
+      </div>   
       {/* Scrollable Content */}
       <div className={styles.scrollerWrapper}>
         <div className={styles.scroller}>

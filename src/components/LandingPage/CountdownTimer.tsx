@@ -45,6 +45,7 @@ export default function CountdownTimer() {
   }, []);
 
   return (
+    /*
     <div className={styles.dateCountdown}>
       <div className={styles.timeLeft}>
         <div className={styles.timeBlock}>
@@ -73,8 +74,8 @@ export default function CountdownTimer() {
           <div className={styles.label}>Seconds</div>
         </div>
       </div>
-
+*/
       <div className={styles.comingSoon}>IRIS 2027 - COMING SOON</div>
-    </div>
+  //  </div>
   );
 }
