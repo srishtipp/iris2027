@@ -37,17 +37,15 @@ export default function Footer() {
         {/* Corporate Relations */}
         <div className={styles.contactColumn}>
           <h4 className={styles.contactCategory}>CORPORATE RELATIONS</h4>
-          
-          <div className={styles.contactPerson}>
-            <h5>Nihar Ranjan Parida </h5>
-            <a href="mailto:p25niharp@iimidr.ac.in">p25niharp@iimidr.ac.in</a>
-            <p>+91 9893619544</p>
-          </div>
-          
           <div className={styles.contactPerson}>
             <h5>G Sharmada</h5>
             <a href="mailto:p25gsharmada@iimidr.ac.in">p25gsharmada@iimidr.ac.in</a>
             <p>+91 7708617246</p>
+          </div>
+          <div className={styles.contactPerson}>
+            <h5>Nihar Ranjan Parida </h5>
+            <a href="mailto:p25niharp@iimidr.ac.in">p25niharp@iimidr.ac.in</a>
+            <p>+91 9893619544</p>
           </div>
         </div>
 
