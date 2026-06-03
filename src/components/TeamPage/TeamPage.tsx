@@ -9,7 +9,7 @@ const TeamPage: React.FC = () => {
       id: 1,
       name: 'Aditya Singh',
       role: 'Overall Coordinator',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Aditya Singh.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Shubham Sharma_edited.png',
       bio: 'Movies, Friends, and IRIS, thats all about life (till Finals).',
       social: {
         email: 'p25adityasingh@iimidr.ac.in',
@@ -22,7 +22,7 @@ const TeamPage: React.FC = () => {
       id: 2,
       name: 'Nikhil Tayade',
       role: 'Overall Coordinator',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Nikhil Tayade.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Anirudh Kumar.png',
       bio: 'Powered by spreadsheets, sponsorships, and last minute miracles.',
       social: {
         email: 'p25nikhilt@iimidr.ac.in',
@@ -35,7 +35,7 @@ const TeamPage: React.FC = () => {
       id: 3,
       name: 'Rohini Pal',
       role: 'Overall Coordinator',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Rohini Pal.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Nawang Tsering Bodh_edited.png',
       bio: 'IRIS runs on ideas,  I make sure they turn into reality!',
       social: {
         email: 'ph25rohinip@iimidr.ac.in',
@@ -53,7 +53,7 @@ const TeamPage: React.FC = () => {
       id: 4,
       name: 'Nihar Ranjan Parida',
       role: 'Corporate Relations & Partnerships',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Nihar Ranjan Parida.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Prachi Ekhar.png',
       bio: 'Strategizing, organizing, and energizing IRIS. Leader with an engineer’s precision.',
       social: {
         email: 'p25niharp@iimidr.ac.in',
@@ -66,7 +66,7 @@ const TeamPage: React.FC = () => {
       id: 5,
       name: 'G Sharmada',
       role: 'Corporate Relations & Partnerships',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Sharmada G.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Ruchita Bhoj.png',
       bio: 'Building Strategic Partnerships that Power IRIS.',
       social: {
         email: 'p24ruchitab@iimidr.ac.in',
@@ -79,7 +79,7 @@ const TeamPage: React.FC = () => {
       id: 6,
       name: 'Apoorva Jaiswal',
       role: 'Creatives & Designs',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Apoorva Jaiswal.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Sayan Mandal.png',
       bio: 'Crafting the visual identity of the fest.',
       social: {
         email: 'p25apoorvaj@iimidr.ac.in',
@@ -92,7 +92,7 @@ const TeamPage: React.FC = () => {
       id: 7,
       name: 'Ashita CM',
       role: 'Creatives and Design',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Ashita Cm.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Omkar Sahoo.png',
       bio: 'Giving the fest its face, its flair, and its unforgettable first impression.',
       social: {
         email: 'p25ashitac@iimidr.ac.in',
@@ -105,7 +105,7 @@ const TeamPage: React.FC = () => {
       id: 8,
       name: 'Aditya Saini',
       role: 'Events & Guests',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Aditya Saini.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Srijan Upadhyay.png',
       bio: 'We manage the magic (Events and Guests) of the fest ✨',
       social: {
         email: 'p25adityasaini@iimidr.ac.in',
@@ -118,7 +118,7 @@ const TeamPage: React.FC = () => {
       id: 9,
       name: 'Rimjhim Agrawal',
       role: 'Events and Guests',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Rimjhim Agrawal.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Keya Mehta.png',
       bio: 'We manage the magic (Events and Guests)of the fest ✨',
       social: {
         email: 'p25rimjhima@iimidr.ac.in',
@@ -131,7 +131,7 @@ const TeamPage: React.FC = () => {
       id: 10,
       name: 'V Rithesh',
       role: 'Events and Guests',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Ritesh V.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Keya Mehta.png',
       bio: 'Knows what they’re doing… most of the time.',
       social: {
         email: 'p25ritheshv@iimidr.ac.in',
@@ -144,7 +144,7 @@ const TeamPage: React.FC = () => {
       id: 11,
       name: 'Avika',
       role: 'Finance',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Avika Dahlan.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Ronak Khandelwal.png',
       bio: '',
       social: {
         email: '',
@@ -157,7 +157,7 @@ const TeamPage: React.FC = () => {
       id: 12,
       name: 'Pranav Paresh Chaphekar',
       role: 'Finance',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Pranav Paresh Chaphekar.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Ronak Khandelwal.png',
       bio: 'Enabling every idea with financial clarity.',
       social: {
         email: 'p25pranavc@iimidr.ac.in',
@@ -170,7 +170,7 @@ const TeamPage: React.FC = () => {
       id: 13,
       name: 'Arpita',
       role: 'Media & Marketing',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Arpita.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Madhumita Raghu.png',
       bio: 'The architect behind the buzz, the voice behind the fest.',
       social: {
         email: 'p25arpita@iimidr.ac.in',
@@ -183,7 +183,7 @@ const TeamPage: React.FC = () => {
       id: 14,
       name: 'Sanchita Jaiswal ',
       role: 'Media & Marketing',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Sanchita Jaiswal.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Khadeeja Shifana.png',
       bio: 'Communicating the narrative & essence of IRIS through Media & Marketing ',
       social: {
         email: 'p25sanchitaj@iimidr.ac.in',
@@ -196,7 +196,7 @@ const TeamPage: React.FC = () => {
       id: 15,
       name: 'Jyotisnata Pathak',
       role: 'Operations',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Jyotisnata Pathak.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Akhil Nair.png',
       bio: 'Facilitating effective on-ground execution.',
       social: {
         email: 'ph25jyotisnatap@iimidr.ac.in',
@@ -209,7 +209,7 @@ const TeamPage: React.FC = () => {
       id: 16,
       name: 'Lakshmi Hemakumar',
       role: 'Operations',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Lakshmi K Hemakumar.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Yougshil.png',
       bio: 'Leading logistics and execution strategies to achieve operational excellence.',
       social: {
         email: 'p25lakshmih@iimidr.ac.in',
@@ -222,7 +222,7 @@ const TeamPage: React.FC = () => {
       id: 17,
       name: 'Rajan Mahajan',
       role: 'Operations',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Rajan Mahesh Mahajan.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Pranav Agarwal.png',
       bio: 'Turning plans into operational precision on ground.',
       social: {
         email: 'p25rajanm@iimidr.ac.in',
@@ -235,7 +235,7 @@ const TeamPage: React.FC = () => {
       id: 18,
       name: 'Anushka Mitra',
       role: 'Participation & Hospitality',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Anushka Mitra.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Anushka Vani.png',
       bio: 'Ensuring participants feel welcomed and have a comfortable, hassle-free stay',
       social: {
         email: 'p25anushkam@iimidr.ac.in',
@@ -248,7 +248,7 @@ const TeamPage: React.FC = () => {
       id: 19,
       name: 'Antra Diksha Khalkho',
       role: 'Participation & Hospitality',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Antra Diksha Khalkho.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Vibhu Sharma.png',
       bio: '',
       social: {
         email: '',
@@ -261,7 +261,7 @@ const TeamPage: React.FC = () => {
       id: 20,
       name: 'Prem Kumar Udaypuria',
       role: 'Participation & Hospitality',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Prem Kumar Udaypuria.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Sahil Telrandhe.png',
       bio: 'High-energy achiever who blends leadership, people skills, and relentless hustle to make things happen.',
       social: {
         email: 'p25premu@iimidr.ac.in',
@@ -274,7 +274,7 @@ const TeamPage: React.FC = () => {
       id: 21,
       name: 'Ishika Nayak',
       role: 'Pro Shows',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Ishika Nayak.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Somiya Kardam.png',
       bio: 'Orchestrating chaos into unforgettable nights.',
       social: {
         email: 'p25ishikan@iimidr.ac.in',
@@ -287,7 +287,7 @@ const TeamPage: React.FC = () => {
       id: 22,
       name: 'Vaishali Bhargava',
       role: 'Pro Shows',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Vaishali Bhargava.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Arjav Jain.png',
       bio: 'Curating unforgettable ProShows for IRIS 2027,from concept to crowd roaring execution ',
       social: {
         email: 'p25vaishalib@iimidr.ac.in',
@@ -300,7 +300,7 @@ const TeamPage: React.FC = () => {
       id: 23,
       name: 'Jerry',
       role: 'Systems & IT',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Jerry J.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Jyotirmoy Saha.png',
       bio: 'Ensuring smooth Systems and data flows with IT and Infrastructure.',
       social: {
         email: 'p25jerryj@iimidr.ac.in',
@@ -313,7 +313,7 @@ const TeamPage: React.FC = () => {
       id: 24,
       name: 'Srishti Porwal',
       role: 'Systems & IT',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Srishti Porwal.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Abhijeet Bhure.png',
       bio: 'Architecting the digital backbone that brings Iris to life.',
       social: {
         email: 'p25srishtip@iimidr.ac.in',
@@ -326,7 +326,7 @@ const TeamPage: React.FC = () => {
       id: 25,
       name: 'Chinmay Kumar Mishra',
       role: 'Jagriti',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Chinmay Kumar Mishra.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Harshita Patodia.png',
       bio: 'Leading the social responsibility initiatives.',
       social: {
         email: 'p25chinmaym@iimidr.ac.in',
@@ -339,7 +339,7 @@ const TeamPage: React.FC = () => {
       id: 26,
       name: 'Devanshee Kedia',
       role: 'Jagriti',
-      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Devanshee Kedia.webp',
+      image: 'https://iris.cdn.jyotirmoysaha.co.in/images/team/Navneet Singh.png',
       bio: 'Leading the social responsibility initiatives.',
       social: {
         email: 'p24navneets@iimidr.ac.in',
