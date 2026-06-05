@@ -10,7 +10,7 @@ interface EventItemProps {
 
 export default function EventItem({ event }: EventItemProps) {
   const [imgSrc, setImgSrc] = useState(
-    event.image || "https://iris.cdn.jyotirmoysaha.co.in/images/irislogo_white.webp"
+    event.image || "/images/irislogo_white.webp"
   );
 
   const handleRegisterClick = () => {
@@ -20,7 +20,7 @@ export default function EventItem({ event }: EventItemProps) {
   };
 
   const handleImageError = () => {
-    setImgSrc("https://iris.cdn.jyotirmoysaha.co.in/images/irislogo_white.webp");
+    setImgSrc("/images/irislogo_white.webp");
   };
 
   return (
@@ -47,7 +47,8 @@ export default function EventItem({ event }: EventItemProps) {
               onClick={handleRegisterClick}
               aria-label={`Register for ${event.title}`}
             >
-              Register
+              {/* Register */}
+              Details
             </button>
           </div>
 

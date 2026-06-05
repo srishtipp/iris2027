@@ -4,8 +4,8 @@ import React from 'react';
 import EventsPage from "@/components/EventsPage";
 
 export const metadata = {
-  title: 'Explore Events - IRIS 2026',
-  description: 'Discover the exciting events lined up for IRIS 2026.',
+  title: 'Explore Events - IRIS',
+  description: 'Discover the exciting events of IRIS.',
 };
 
 export default function Events() {

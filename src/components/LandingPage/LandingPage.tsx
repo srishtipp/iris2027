@@ -25,23 +25,40 @@ export default function LandingPage() {
   };
 
   const sponsors: Sponsor[] = [
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s1_v2.png", alt: "HPCL", title: "Trinity Sponsor" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s2.png", alt: "SBI", title: "Official Banking Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s15.png", alt: "Qoneqt", title: "Community Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s7.png", alt: "Safexpress", title: "Official Logistics Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s16.png", alt: "PNB", title: "Banking Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s12.png", alt: "Denver", title: "Official Fragrance Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s14.png", alt: "Abhibus", title: "Official Travel Partner", link: "https://www.abhibus.com/" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s4.png", alt: "Unstop", title: "Platform Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s6.png", alt: "The Hindu", title: "Official Media Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s17.png", alt: "CBI", title: "Banking Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s5.png", alt: "Business Standard", title: "Official Media Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s8.png", alt: "SheKunj", title: "Community Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s13.png", alt: "Indorichatkare", title: "Social Media Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s18.png", alt: "Wham Energy", title: "Official Caffeine Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s19.png", alt: "A1 Photography", title: "Photography Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s10.png", alt: "Hillary Rhoda", title: "Official Makeup Partner" },
-    { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s9.png", alt: "Grant Thornton", title: "Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s1_v2.png", alt: "HPCL", title: "Trinity Sponsor" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s2.png", alt: "SBI", title: "Official Banking Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s15.png", alt: "Qoneqt", title: "Community Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s7.png", alt: "Safexpress", title: "Official Logistics Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s16.png", alt: "PNB", title: "Banking Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s12.png", alt: "Denver", title: "Official Fragrance Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s14.png", alt: "Abhibus", title: "Official Travel Partner", link: "https://www.abhibus.com/" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s4.png", alt: "Unstop", title: "Platform Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s6.png", alt: "The Hindu", title: "Official Media Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s17.png", alt: "CBI", title: "Banking Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s5.png", alt: "Business Standard", title: "Official Media Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s8.png", alt: "SheKunj", title: "Community Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s13.png", alt: "Indorichatkare", title: "Social Media Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s18.png", alt: "Wham Energy", title: "Official Caffeine Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s19.png", alt: "A1 Photography", title: "Photography Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s10.png", alt: "Hillary Rhoda", title: "Official Makeup Partner" },
+    // { src: "https://iris.cdn.jyotirmoysaha.co.in/images/sponsors/s9.png", alt: "Grant Thornton", title: "Partner" },
+    { src: "/images/sponsors/s1_v2.png", alt: "HPCL", title: "Trinity Sponsor" },
+    { src: "/images/sponsors/s2.png", alt: "SBI", title: "Official Banking Partner" },
+    { src: "/images/sponsors/s15.png", alt: "Qoneqt", title: "Community Partner" },
+    { src: "/images/sponsors/s7.png", alt: "Safexpress", title: "Official Logistics Partner" },
+    { src: "/images/sponsors/s16.png", alt: "PNB", title: "Banking Partner" },
+    { src: "/images/sponsors/s12.png", alt: "Denver", title: "Official Fragrance Partner" },
+    { src: "/images/sponsors/s14.png", alt: "Abhibus", title: "Official Travel Partner", link: "https://www.abhibus.com/" },
+    { src: "/images/sponsors/s4.png", alt: "Unstop", title: "Platform Partner" },
+    { src: "/images/sponsors/s6.png", alt: "The Hindu", title: "Official Media Partner" },
+    { src: "/images/sponsors/s17.png", alt: "CBI", title: "Banking Partner" },
+    { src: "/images/sponsors/s5.png", alt: "Business Standard", title: "Official Media Partner" },
+    { src: "/images/sponsors/s8.png", alt: "SheKunj", title: "Community Partner" },
+    { src: "/images/sponsors/s13.png", alt: "Indorichatkare", title: "Social Media Partner" },
+    { src: "/images/sponsors/s18.png", alt: "Wham Energy", title: "Official Caffeine Partner" },
+    { src: "/images/sponsors/s19.png", alt: "A1 Photography", title: "Photography Partner" },
+    { src: "/images/sponsors/s10.png", alt: "Hillary Rhoda", title: "Official Makeup Partner" },
+    { src: "/images/sponsors/s9.png", alt: "Grant Thornton", title: "Partner" },
   ];
 
   const SCROLL_STEP = 260;
@@ -139,9 +156,12 @@ export default function LandingPage() {
 
   const proShows = useMemo(
     () => [
-    "https://iris.cdn.jyotirmoysaha.co.in/images/landing/Underground_Authority.webp",
-    "https://iris.cdn.jyotirmoysaha.co.in/images/landing/Satv_Live.webp",
-    "https://iris.cdn.jyotirmoysaha.co.in/images/landing/Kaustubh_Agarwal.webp"
+    // "https://iris.cdn.jyotirmoysaha.co.in/images/landing/Underground_Authority.webp",
+    // "https://iris.cdn.jyotirmoysaha.co.in/images/landing/Satv_Live.webp",
+    // "https://iris.cdn.jyotirmoysaha.co.in/images/landing/Kaustubh_Agarwal.webp"
+    "/images/landing/Underground_Authority.webp",
+    "/images/landing/Satv_Live.webp",
+    "/images/landing/Kaustubh_Agarwal.webp"
     ],
     []
   );
@@ -172,7 +192,7 @@ export default function LandingPage() {
       <div className={styles.backgroundContainer}>
         <div className={styles.desktopBackground}>
           <img
-            src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_landscape.webp"
+            src="/images/landing/bg_landscape.webp"
             alt="Edo Mountains"
             className={styles.landingImage}
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
@@ -184,7 +204,7 @@ export default function LandingPage() {
 
         <div className={styles.mobileBackgroundContainer}>
           <img
-            src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_portrait.webp"
+            src="/images/landing/bg_portrait.webp"
             alt="Mountains"
             className={styles.mobileMountains}
             loading="eager"
@@ -194,7 +214,7 @@ export default function LandingPage() {
 
         <div className={styles.logoContainer}>
           <img
-            src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/irislogo.png"
+            src="/images/landing/irislogo.png"
             alt="IRIS 2026"
             className={styles.logo}
             loading="eager"
@@ -219,7 +239,7 @@ export default function LandingPage() {
                 <div className={styles.irisThemeGrid}>
                   <div className={styles.irisThemeImageSide}>
                     <img
-                      src="https://iris.cdn.jyotirmoysaha.co.in/images/aboutus/indieverse.jpeg"
+                      src="/images/aboutus/indieverse.jpeg"
                       alt="INDIEVERSE"
                       className={styles.irisThemeFeatureImage}
                       loading="lazy"
@@ -268,7 +288,7 @@ export default function LandingPage() {
       <div className={styles.currentSpeakerLeft}>
         <div className={styles.currentSpeakerAvatar}>
           <img
-            src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/Malini_Gaur.jpg"
+            src="/images/landing/Malini_Gaur.jpg"
             alt="Malini Laxmansingh Gaur"
             className={styles.currentSpeakerAvatarImg}
             loading="lazy"
@@ -309,7 +329,7 @@ export default function LandingPage() {
 <div className={styles.currentSpeakerLeft}>
   <div className={styles.currentSpeakerAvatar}>
                     <img
-                      src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/current-speaker.webp"
+                      src="/images/speakers/current-speaker.webp"
                       alt="Mr. Ashish Kumar Singh"
                       className={styles.currentSpeakerAvatarImg}
                       loading="lazy"
@@ -352,7 +372,7 @@ export default function LandingPage() {
     {/* Judge 1: Supply Chain Judge */}
       <div className={styles.judgeCard}>
       <img
-        src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/supply chain judge.jpg"
+        src="/images/landing/supply chain judge.jpg"
         alt="Jitendra Das Bairagi"
         className={styles.judgeImage}
         loading="lazy"
@@ -377,7 +397,7 @@ export default function LandingPage() {
     {/* Judge 2: Sonia Saluja */}
     <div className={styles.judgeCard}>
       <img
-        src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/sonia judge - Laavanya.jpg"
+        src="/images/landing/sonia judge - Laavanya.jpg"
         alt="Sonia Saluja"
         className={styles.judgeImage}
         loading="lazy"
@@ -401,7 +421,7 @@ export default function LandingPage() {
     {/* Judge 3: Vipin Sharma */}
     <div className={styles.judgeCard}>
       <img
-        src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/Judge 2.jpg"
+        src="/images/landing/Judge 2.jpg"
         alt="Vipin Sharma"
         className={styles.judgeImage}
         loading="lazy"
@@ -574,8 +594,8 @@ export default function LandingPage() {
               <h2 className={styles.sectionTitle}>PAST STARS</h2>
 
               <div className={styles.starsMainRow}>
-                <img src="https://iris.cdn.jyotirmoysaha.co.in/images/stars/main1.png" alt="Main Star 1" className={styles.starMainPoster} loading="lazy" decoding="async" />
-                <img src="https://iris.cdn.jyotirmoysaha.co.in/images/stars/main2.png" alt="Main Star 2" className={styles.starMainPoster} loading="lazy" decoding="async" />
+                <img src="/images/stars/main1.png" alt="Main Star 1" className={styles.starMainPoster} loading="lazy" decoding="async" />
+                <img src="/images/stars/main2.png" alt="Main Star 2" className={styles.starMainPoster} loading="lazy" decoding="async" />
               </div>
 
               <div
@@ -594,14 +614,14 @@ export default function LandingPage() {
 
                 <div ref={starsRef} className={styles.starsCarouselTrack}>
                   {[
-                    "https://iris.cdn.jyotirmoysaha.co.in/images/stars/p1.png",
-                    "https://iris.cdn.jyotirmoysaha.co.in/images/stars/p2.png",
-                    "https://iris.cdn.jyotirmoysaha.co.in/images/stars/p3.png",
-                    "https://iris.cdn.jyotirmoysaha.co.in/images/stars/p4.png",
-                    "https://iris.cdn.jyotirmoysaha.co.in/images/stars/p5.png",
-                    "https://iris.cdn.jyotirmoysaha.co.in/images/stars/p6.png",
-                    "https://iris.cdn.jyotirmoysaha.co.in/images/stars/p7.png",
-                    "https://iris.cdn.jyotirmoysaha.co.in/images/stars/p8.png",
+                    "/images/stars/p1.png",
+                    "/images/stars/p2.png",
+                    "/images/stars/p3.png",
+                    "/images/stars/p4.png",
+                    "/images/stars/p5.png",
+                    "/images/stars/p6.png",
+                    "/images/stars/p7.png",
+                    "/images/stars/p8.png",
                   ].map((src, i) => (
                     <div key={i} className={styles.starPosterItem}>
                       <img src={src} alt={`Star Poster ${i + 1}`} loading="lazy" decoding="async" />
@@ -627,7 +647,7 @@ export default function LandingPage() {
               <div className={styles.speakersGrid}>
                   <div className={styles.speakerCard}>
                     <img
-                      src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/sp1.png"
+                      src="/images/speakers/sp1.png"
                       alt="Rahul Gehani"
                       className={styles.speakerImgRect}
                       loading="lazy"
@@ -639,7 +659,7 @@ export default function LandingPage() {
 
                   <div className={styles.speakerCard}>
                     <img
-                      src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/sp2.png"
+                      src="/images/speakers/sp2.png"
                       alt="K Radhakrishnan"
                       className={styles.speakerImgRect}
                       loading="lazy"
@@ -651,7 +671,7 @@ export default function LandingPage() {
 
                   <div className={styles.speakerCard}>
                     <img
-                      src="https://iris.cdn.jyotirmoysaha.co.in/images/speakers/sp3.png"
+                      src="/images/speakers/sp3.png"
                       alt="Rana Kapoor"
                       className={styles.speakerImgRect}
                       loading="lazy"
