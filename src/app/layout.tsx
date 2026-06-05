@@ -13,10 +13,11 @@ const saman = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "IRIS 2026 | Indiverse",
+  title: "IRIS 2027",
+  // title: "IRIS 2026 | Indiverse",
   description:
-    "The official website of IRIS 2026 | Indiverse. Indias's Premier Management Student-Run College Cultural Festival returns for 2026!",
-  applicationName: "IRIS 2026",
+    "The official website of IRIS 2027. Indias's Premier Management Student-Run College Cultural Festival returns for 2026!",
+  applicationName: "IRIS 2027",
   keywords: [
     "IRIS",
     "IIM",
@@ -27,6 +28,8 @@ export const metadata: Metadata = {
     "MBA",
     "Business",
     "Master of Business Administration",
+    "IRIS 2027",
+    "2027",
     "IRIS 2026",
     "2026",
     "IRIS IIM Indore",
@@ -42,18 +45,18 @@ export const metadata: Metadata = {
     "engineering",
     "student fest India",
   ],
-  authors: [{ name: "Systems & IT team of IRIS 2026" }],
+  authors: [{ name: "Systems & IT team of IRIS 2027" }],
   openGraph: {
     type: "website",
-    title: "IRIS 2026 | Indiverse",
+    title: "IRIS 2027",
     description:
-    "The official website of IRIS 2026 | Indiverse. Indias's Premier Management Student-Run College Cultural Festival returns for 2026!",
+    "The official website of IRIS 2027. Indias's Premier Management Student-Run College Cultural Festival returns for 2027!",
     url: "https://www.iris-iimidr.com/",
-    siteName: "IRIS 2026 | Indiverse",
+    siteName: "IRIS 2027 | Indiverse",
     images: [
       {
         url: "https://www.iris-iimidr.com/",
-        alt: "IRIS 2026 Logo",
+        alt: "IRIS 2027 Logo",
       },
     ],
   },
