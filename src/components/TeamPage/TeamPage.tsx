@@ -15,7 +15,7 @@ const TeamPage: React.FC = () => {
         email: 'p25adityasingh@iimidr.ac.in',
         phone: '9695003151',
         instagram: 'https://www.instagram.com/aditya.cinemapaglu',
-        linkedin: 'https://www.linkedin.com/in/aditya-singh-76967622b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+        linkedin: 'https://www.linkedin.com/in/aditya-singh-76967622b'
       }
     },
     {
@@ -28,7 +28,7 @@ const TeamPage: React.FC = () => {
         email: 'p25nikhilt@iimidr.ac.in',
         phone: '7218082560',
         instagram: 'https://www.instagram.com/nic._.hil?igsh=ZG5tbG5zeTZsYnVv&utm_source=qr',
-        linkedin: 'https://www.linkedin.com/in/nikhil-t-b65b5410a?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
+        linkedin: 'https://www.linkedin.com/in/nikhil-t-b65b5410a'
       }
     },
     {
@@ -41,7 +41,7 @@ const TeamPage: React.FC = () => {
         email: 'ph25rohinip@iimidr.ac.in',
         phone: '8170841618',
         instagram: 'https://www.instagram.com/rohini_pal?igsh=MWVxNXB1dXZneHo3aA==',
-        linkedin: 'https://www.linkedin.com/in/rohini-pal-248697183?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+        linkedin: 'https://www.linkedin.com/in/rohini-pal-248697183'
       }
     },
   ];
@@ -85,7 +85,7 @@ const TeamPage: React.FC = () => {
         email: 'p25apoorvaj@iimidr.ac.in',
         phone: '9316616547',
         instagram: 'https://www.instagram.com/apoorva.jaiswal05?igsh=MTUxdHY0YnN2ZzBpOQ==',
-        linkedin: 'https://www.linkedin.com/in/apoorva-jaiswal05?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+        linkedin: 'https://www.linkedin.com/in/apoorva-jaiswal05'
       }
     },
     {
@@ -98,7 +98,7 @@ const TeamPage: React.FC = () => {
         email: 'p25ashitac@iimidr.ac.in',
         phone: '8921592522',
         instagram: 'https://www.instagram.com/_komorebi_28?igsh=MWo0eDFhZ2ZsMzJtaw==',
-        linkedin: 'https://www.linkedin.com/in/ashita-cm-00b6331b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+        linkedin: 'https://www.linkedin.com/in/ashita-cm-00b6331b0'
       }
     },
     {
@@ -111,7 +111,7 @@ const TeamPage: React.FC = () => {
         email: 'p25adityasaini@iimidr.ac.in',
         phone: '9324302142',
         instagram: 'https://www.instagram.com/adi.sainiiii?igsh=MTU4bmgwaHlrcG90cg%3D%3D&utm_source=qr',
-        linkedin: 'https://www.linkedin.com/in/adisaini?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
+        linkedin: 'https://www.linkedin.com/in/adisaini'
       }
     },
     {
@@ -124,7 +124,7 @@ const TeamPage: React.FC = () => {
         email: 'p25rimjhima@iimidr.ac.in',
         phone: '7217384865',
         instagram: 'https://www.instagram.com/_drizzzzzl_?igsh=ejV5dHVkYXdlNjls',
-        linkedin: 'https://www.linkedin.com/in/rimjhim-agrawal-b6a837234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+        linkedin: 'https://www.linkedin.com/in/rimjhim-agrawal-b6a837234'
       }
     },
     {
@@ -137,7 +137,7 @@ const TeamPage: React.FC = () => {
         email: 'p25ritheshv@iimidr.ac.in',
         phone: '7010829452',
         instagram: 'https://www.instagram.com/errpizzaaa?igsh=NXpwcTVrbWhvdzNy',
-        linkedin: 'https://www.linkedin.com/in/rithesh-v-a08515264?utm_source=share_via&utm_content=profile&utm_medium=member_ios'
+        linkedin: 'https://www.linkedin.com/in/rithesh-v-a08515264'
       }
     },
     {
@@ -145,12 +145,12 @@ const TeamPage: React.FC = () => {
       name: 'Avika',
       role: 'Finance',
       image: '/images/team/Avika Dahlan.webp',
-      bio: '',
+      bio: 'Funding the fun, one approval at a time',
       social: {
-        email: '',
-        phone: '',
-        instagram: '',
-        linkedin: ''
+        email: 'p25avikad@iimidr.ac.in',
+        phone: '6261600256',
+        instagram: 'https://www.instagram.com/avikadahlan',
+        linkedin: 'https://www.linkedin.com/in/avika-dahlan-203509259'
       }
     },
     {
@@ -168,6 +168,32 @@ const TeamPage: React.FC = () => {
     },
     {
       id: 13,
+      name: 'Chinmay Kumar Mishra',
+      role: 'Jagriti',
+      image: '/images/team/Chinmay Kumar Mishra.webp',
+      bio: 'Leading the social responsibility initiatives.',
+      social: {
+        email: 'p25chinmaym@iimidr.ac.in',
+        phone: '7903124158',
+        instagram: 'https://www.instagram.com/_chinmay.13_?igsh=cXRva2FwcGt2NGhx',
+        linkedin: 'https://www.linkedin.com/in/chinmay-mishra-b1b62a169'
+      }
+    },
+    {
+      id: 14,
+      name: 'Devanshee Kedia',
+      role: 'Jagriti',
+      image: '/images/team/Devanshee Kedia.webp',
+      bio: 'Leading the social responsibility initiatives.',
+      social: {
+        email: 'p25devansheek@iimidr.ac.in',
+        phone: '9903540000',
+        instagram: 'https://www.instagram.com/devansheekedia',
+        linkedin: 'https://www.linkedin.com/in/devanshee-kedia'
+      }
+    },
+    {
+      id: 15,
       name: 'Arpita',
       role: 'Media & Marketing',
       image: '/images/team/Arpita.webp',
@@ -180,7 +206,7 @@ const TeamPage: React.FC = () => {
       }
     },
     {
-      id: 14,
+      id: 16,
       name: 'Sanchita Jaiswal ',
       role: 'Media & Marketing',
       image: '/images/team/Sanchita Jaiswal.webp',
@@ -189,11 +215,11 @@ const TeamPage: React.FC = () => {
         email: 'p25sanchitaj@iimidr.ac.in',
         phone: '7007208824',
         instagram: 'https://www.instagram.com/sanchitaa_j?igsh=czNpZXJucjlhdmJ3',
-        linkedin: 'https://www.linkedin.com/in/sanchitaj09?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+        linkedin: 'https://www.linkedin.com/in/sanchitaj09'
       }
     },
     {
-      id: 15,
+      id: 17,
       name: 'Jyotisnata Pathak',
       role: 'Operations',
       image: '/images/team/Jyotisnata Pathak.webp',
@@ -202,11 +228,11 @@ const TeamPage: React.FC = () => {
         email: 'ph25jyotisnatap@iimidr.ac.in',
         phone: '9678908890',
         instagram: 'https://www.instagram.com/jyotisnata__?igsh=a2FrNjV2eXR3cTZq',
-        linkedin: 'https://www.linkedin.com/in/jyotisnata-pathak-334283216?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+        linkedin: 'https://www.linkedin.com/in/jyotisnata-pathak-334283216'
       }
     },
     {
-      id: 16,
+      id: 18,
       name: 'Lakshmi Hemakumar',
       role: 'Operations',
       image: '/images/team/Lakshmi K Hemakumar.webp',
@@ -215,11 +241,11 @@ const TeamPage: React.FC = () => {
         email: 'p25lakshmih@iimidr.ac.in',
         phone: '9744724285',
         instagram: 'https://www.instagram.com/lakshmihemakumar?igsh=OGlrNjE1ejhzNGUy',
-        linkedin: 'https://www.linkedin.com/in/lakshmi-hemakumar-0b9579373?utm_source=share_via&utm_content=profile&utm_medium=member_android'
+        linkedin: 'https://www.linkedin.com/in/lakshmi-hemakumar-0b9579373'
       }
     },
      {
-      id: 17,
+      id: 19,
       name: 'Rajan Mahajan',
       role: 'Operations',
       image: '/images/team/Rajan Mahesh Mahajan.webp',
@@ -232,7 +258,7 @@ const TeamPage: React.FC = () => {
       }
     },
     {
-      id: 18,
+      id: 20,
       name: 'Anushka Mitra',
       role: 'Participation & Hospitality',
       image: '/images/team/Anushka Mitra.webp',
@@ -245,20 +271,20 @@ const TeamPage: React.FC = () => {
       }
     },
     {
-      id: 19,
+      id: 21,
       name: 'Antra Diksha Khalkho',
       role: 'Participation & Hospitality',
       image: '/images/team/Antra Diksha Khalkho.webp',
-      bio: '',
+      bio: 'Powered by Coffee and Creativity',
       social: {
-        email: '',
-        phone: '',
-        instagram: '',
-        linkedin: ''
+        email: 'p25antrak@iimidr.ac.in',
+        phone: '6200175851',
+        instagram: 'https://www.instagram.com/antradiksha?igsh=MWhxYmp4MW5ydDd6ZQ%3D%3D&utm_source=qr',
+        linkedin: 'https://www.linkedin.com/in/antrakhalkho'
       }
     },
     {
-      id: 20,
+      id: 22,
       name: 'Prem Kumar Udaypuria',
       role: 'Participation & Hospitality',
       image: '/images/team/Prem Kumar Udaypuria.webp',
@@ -271,7 +297,7 @@ const TeamPage: React.FC = () => {
       }
     },
     {
-      id: 21,
+      id: 23,
       name: 'Ishika Nayak',
       role: 'Pro Shows',
       image: '/images/team/Ishika Nayak.webp',
@@ -280,11 +306,11 @@ const TeamPage: React.FC = () => {
         email: 'p25ishikan@iimidr.ac.in',
         phone: '8269593426',
         instagram: 'https://www.instagram.com/somiyaa_16',
-        linkedin: 'https://www.linkedin.com/in/ishika-nayak?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+        linkedin: 'https://www.linkedin.com/in/ishika-nayak'
       }
     },
     {
-      id: 22,
+      id: 24,
       name: 'Vaishali Bhargava',
       role: 'Pro Shows',
       image: '/images/team/Vaishali Bhargava .webp',
@@ -293,12 +319,12 @@ const TeamPage: React.FC = () => {
         email: 'p25vaishalib@iimidr.ac.in',
         phone: '7974144813',
         instagram: 'https://www.instagram.com/_viba08?igsh=eHptcjFscmt4Yjgw',
-        linkedin: 'https://www.linkedin.com/in/vaishali-bhargava-239106269?utm_source=share_via&utm_content=profile&utm_medium=member_android'
+        linkedin: 'https://www.linkedin.com/in/vaishali-bhargava-239106269'
       }
     },
     {
-      id: 23,
-      name: 'Jerry',
+      id: 25,
+      name: 'Jerry John',
       role: 'Systems & IT',
       image: '/images/team/Jerry J.webp',
       bio: 'Ensuring smooth Systems and data flows with IT and Infrastructure.',
@@ -310,7 +336,7 @@ const TeamPage: React.FC = () => {
       }
     },
     {
-      id: 24,
+      id: 26,
       name: 'Srishti Porwal',
       role: 'Systems & IT',
       image: '/images/team/Srishti Porwal.webp',
@@ -320,32 +346,6 @@ const TeamPage: React.FC = () => {
         phone: '7670894845',
         instagram: 'https://www.instagram.com/_sixtyyy_?igsh=NGl4c21oN3ZpN2ts',
         linkedin: 'https://www.linkedin.com/in/srishti-porwal-670996201'
-      }
-    },
-    {
-      id: 25,
-      name: 'Chinmay Kumar Mishra',
-      role: 'Jagriti',
-      image: '/images/team/Chinmay Kumar Mishra.webp',
-      bio: 'Leading the social responsibility initiatives.',
-      social: {
-        email: 'p25chinmaym@iimidr.ac.in',
-        phone: '7903124158',
-        instagram: 'https://www.instagram.com/_chinmay.13_?igsh=cXRva2FwcGt2NGhx',
-        linkedin: 'https://www.linkedin.com/in/chinmay-mishra-b1b62a169?utm_source=share_via&utm_content=profile&utm_medium=member_android'
-      }
-    },
-    {
-      id: 26,
-      name: 'Devanshee Kedia',
-      role: 'Jagriti',
-      image: '/images/team/Devanshee Kedia.webp',
-      bio: 'Leading the social responsibility initiatives.',
-      social: {
-        email: 'p24navneets@iimidr.ac.in',
-        phone: '9973791877',
-        instagram: 'https://www.instagram.com/navneet_singhhhhhh',
-        linkedin: 'https://www.linkedin.com/in/navneet-singh-3068951b2'
       }
     }
 

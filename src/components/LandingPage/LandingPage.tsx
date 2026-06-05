@@ -235,14 +235,14 @@ export default function LandingPage() {
                     </p>
 
                     <div className={styles.buttonGroup}>
-                      <a
+                      {/* <a
                         href="https://unstop.com/college-fests/iris-2026-iim-indores-flagship-fest-indian-institute-of-management-iim-indore-416510"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.newRegisterBtn}
                       >
                         Register Now
-                      </a>
+                      </a> */}
                       <a
                         href="https://drive.google.com/file/d/1iOhiOkkYy3hJjm-4EiL-rBNJiQKUthDF/view"
                         target="_blank"
@@ -288,7 +288,7 @@ export default function LandingPage() {
       {/* RIGHT SIDE */}
       <div className={styles.currentSpeakerRight}>
         <p className={styles.currentSpeakerPara}>
-          We are honored to welcome Smt. Malini Laxmansingh Gaur as our Chief Guest for IRIS 2026. A distinguished leader and the Member of Legislative Assembly from Indore, she has been instrumental in the city&apos;s development and its recognition as the cleanest city in India.
+          We were honored to welcome Smt. Malini Laxmansingh Gaur as our Chief Guest for IRIS 2026. A distinguished leader and the Member of Legislative Assembly from Indore, she has been instrumental in the city&apos;s development and its recognition as the cleanest city in India.
         </p>
 
         <p className={styles.currentSpeakerPara}>
