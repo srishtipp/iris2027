@@ -25,7 +25,7 @@ export default function Footer() {
           <div className={styles.contactPerson}>
             <h5>Nikhil tayade</h5>
             <a href="mailto:p25nikhilt@iimidr.ac.in">p25nikhilt@iimidr.ac.in</a>
-            <p>+91 9695003151</p>
+            <p>+91 7218082560</p>
           </div>
           <div className={styles.contactPerson}>
             <h5>Rohini Pal</h5>
