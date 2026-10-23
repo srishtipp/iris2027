@@ -11,7 +11,7 @@ export default function AboutPage() {
         {/* Desktop Background */}
         <div className={styles.desktopBackground}>
           <img
-            src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_landscape.webp"
+            src="/images/landing/27THEME.png"
             alt="Edo Mountains"
             className={styles.landingImage}
             loading="eager"
@@ -28,7 +28,7 @@ export default function AboutPage() {
             className={styles.mobileBackground}
           /> */}
           <img
-            src="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_portrait.webp"
+            src="/images/landing/27THEME_PORTRAIT.png"
             alt="Mountains"
             className={styles.mobileMountains}
             loading="eager"

@@ -29,7 +29,7 @@
   text-align: center;
   font-family: "Langar-Regular", sans-serif;
   font-size: clamp(1rem, 2.5vw, 1.6rem);
-  color: #382e28;
+  color: #f6f2f0;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -57,7 +57,7 @@
   font-family: "Langar-Regular", sans-serif;
   font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: 700;
-  color: #382e28;
+  color: #faf8f7;
   /* text-shadow: 0 0 20px rgba(242, 221, 124, 0.5), */
     /* 0 0 40px rgba(214, 155, 101, 0.3); */
   line-height: 1;
@@ -74,7 +74,7 @@
 .label {
   font-family: "Langar-Regular", sans-serif;
   font-size: clamp(0.7rem, 1vw, 0.5rem);
-  color: #382e28;
+  color: #f5f3f1;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
@@ -85,7 +85,7 @@
   font-family: "Langar-Regular", sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   margin-bottom: 5%;
-  color: #382e28;
+  color: #faf8f6;
   font-weight: 700;
   opacity: 0.7;
   animation: blink 2s ease-in-out infinite;

@@ -69,7 +69,7 @@
 /* Logo Container */
 .logoContainer {
   position: absolute;
-  top: 30%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -81,7 +81,7 @@
 }
 
 .logo {
-  width: clamp(350px, 60vw, 500px);
+  width: clamp(200px, 60vw, 350px);
   height: auto;
   filter: drop-shadow(0 4px 20px rgba(242, 221, 124, 0.4));
 }
@@ -487,7 +487,7 @@
   }
 
   .logoContainer {
-    top: 25% !important;
+    top: 15% !important;
     /* gap: 1rem; */
   }
 
@@ -497,7 +497,7 @@
 
   .countdownContainer {
     position: absolute;
-    top: 40%;
+    top: 80%;
     left: 50%;
   }
   /* MOBILE FIX: Background image should cover, not contain */
@@ -557,7 +557,7 @@
 
   /* MOBILE FIX: Logo at 75% on small phones */
   .logoContainer {
-    top: 25% !important;
+    top: 15% !important;
   }
 
   .registerBtnContainer {

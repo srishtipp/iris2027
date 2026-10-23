@@ -33,6 +33,7 @@ export default function Navigation() {
     { href: "/", label: "HOME" },
     { href: "/events", label: "EVENTS" },
     // { href: "/gallery", label: "GALLERY" },
+    { href: "/past", label: "EDITIONS" },
     { href: "/team", label: "TEAM" },
     { href: "/about", label: "ABOUT" }
   ];

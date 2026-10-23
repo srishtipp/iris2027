@@ -33,7 +33,7 @@
 
 /* Base link */
 .desktopLink {
-  color: var(--nav-color, #382e28);
+  color: #efeceb;
   text-decoration: none;
   font-family: "Langar-Regular";
   font-weight: 500;
@@ -55,14 +55,14 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: #8E0000;
+  background: #edc967;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
 
 /* Hover */
 .desktopLink:hover {
-  color: #8E0000;
+  color: #edc967;
   transform: translateY(-2px) skewX(-3deg);
 }
 
@@ -72,7 +72,7 @@
 
 /* ✅ ACTIVE DESKTOP LINK */
 .desktopLink.active {
-  color: #8E0000;
+  color: #edc967;
 }
 
 .desktopLink.active::after {
@@ -81,19 +81,19 @@
 
 /* Dark background pages - lighter hover/active colors */
 .darkBg .desktopLink:hover {
-  color: #e0bc84;
+  color: #edc967;
 }
 
 .darkBg .desktopLink:hover::after {
-  background: #e0bc84;
+  background: #edc967;
 }
 
 .darkBg .desktopLink.active {
-  color: #e0bc84;
+  color: #edc967;
 }
 
 .darkBg .desktopLink.active::after {
-  background: #e0bc84;
+  background: #edc967;
 }
 
 @media (max-width: 768px) {

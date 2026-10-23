@@ -359,7 +359,7 @@ const TeamPage: React.FC = () => {
       <div className={styles.backgroundContainer}>
         <div className={styles.desktopBackground}>
           <img
-            src="/images/landing/bg_landscape.webp"
+            src="/images/landing/27THEME.png"
             alt="Team Background"
             className={styles.landingImage}
             loading="eager"
@@ -369,7 +369,7 @@ const TeamPage: React.FC = () => {
         </div>
         <div className={styles.mobileBackgroundContainer}>
           <img
-            src="/images/landing/bg_portrait.webp"
+            src="/images/landing/27THEME_PORTRAIT.png"
             alt="Team Background Mobile"
             className={styles.mobileMountains}
             loading="eager"

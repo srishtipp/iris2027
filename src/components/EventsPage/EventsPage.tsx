@@ -361,7 +361,7 @@ export default function EventsPage() {
       <div className={styles.backgroundContainer}>
         <div className={styles.desktopBackground}>
           <img
-            src="/images/landing/bg_landscape.webp"
+            src="/images/landing/27THEME.png"
             alt="IRIS background"
             className={styles.landingImage}
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
@@ -373,7 +373,7 @@ export default function EventsPage() {
 
         <div className={styles.mobileBackgroundContainer}>
           <img
-            src="/images/landing/bg_portrait.webp"
+            src="/images/landing/27THEME_PORTRAIT.png"
             alt="IRIS background mobile"
             className={styles.mobileMountains}
             loading="eager"
