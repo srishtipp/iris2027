@@ -1,0 +1,6 @@
+.eye {
+  height: 34px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(12, 5, 30, 0.5));
+}

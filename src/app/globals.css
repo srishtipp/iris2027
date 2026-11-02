@@ -4,7 +4,7 @@
 /*         CUSTOM FONTS          */
 /* ============================= */
 
-/* Theme Font - Indiverse */
+/* Theme Font */
 @font-face {
   font-family: "Saman";
   src: url("/fonts/Saman.ttf") format("truetype");
@@ -27,7 +27,6 @@
   --accent-gold: rgb(208, 176, 99);
   --brown-wood: #7f5934;
 
-  --font-indiverse: "Saman", sans-serif;
   --font-title: "Langar-Regular", serif;
   --font-paragraph: "Poppins", sans-serif;
 }
@@ -54,4 +53,3 @@ body { background: var(--background); color: var(--foreground); font-family: var
 .sepia-filter { filter: sepia() saturate(4.5) hue-rotate(-10deg); }
 .glow-gold { box-shadow: 0 0 24px var(--primary-gold); border: 0.2vw solid var(--primary-gold); }
 .title { font-family: var(--font-title); }
-.indiverse { font-family: var(--font-indiverse); }

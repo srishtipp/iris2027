@@ -14,7 +14,6 @@ const saman = localFont({
 
 export const metadata: Metadata = {
   title: "IRIS 2027",
-  // title: "IRIS 2026 | Indiverse",
   description:
     "The official website of IRIS 2027. Indias's Premier Management Student-Run College Cultural Festival returns for 2026!",
   applicationName: "IRIS 2027",
@@ -40,7 +39,6 @@ export const metadata: Metadata = {
     "fest",
     "Madhya Pradesh",
     "cultural fest",
-    "Indiverse",
     "college cultural fest",
     "engineering",
     "student fest India",
@@ -52,7 +50,7 @@ export const metadata: Metadata = {
     description:
     "The official website of IRIS 2027. Indias's Premier Management Student-Run College Cultural Festival returns for 2027!",
     url: "https://www.iris-iimidr.com/",
-    siteName: "IRIS 2027 | Indiverse",
+    siteName: "IRIS 2027",
     images: [
       {
         url: "https://www.iris-iimidr.com/",
