@@ -1,10 +1,12 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Users } from "lucide-react";
 import styles from "./EventItem.module.css";
 import type { Event } from "./EventsPage";
 
 interface EventItemProps {
   event: Event;
 }
+
+const FESTIVAL_DATE = "16–18 Jan 2026";
 
 export default function EventItem({ event }: EventItemProps) {
   const categoryClass = styles[event.category.toLowerCase()];
@@ -36,6 +38,18 @@ export default function EventItem({ event }: EventItemProps) {
             View event <ArrowUpRight size={16} aria-hidden="true" />
           </a>
         )}
+        <div className={styles.eventDetails}>
+          <span className={styles.detail}>
+            <CalendarDays size={15} aria-hidden="true" />
+            <span>{event.date || FESTIVAL_DATE}</span>
+          </span>
+          {event.teamSize && (
+            <span className={styles.detail}>
+              <Users size={15} aria-hidden="true" />
+              <span>{event.teamSize}</span>
+            </span>
+          )}
+        </div>
       </div>
     </article>
   );

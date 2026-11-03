@@ -73,10 +73,11 @@
 
 .cardBody {
   min-height: 7.4rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
+  column-gap: 0.75rem;
+  row-gap: 0.7rem;
   padding: 1rem 1.1rem;
 }
 
@@ -103,6 +104,28 @@
   white-space: nowrap;
 }
 
+.eventDetails {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  color: rgba(248, 243, 233, 0.74);
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.detail svg {
+  flex: 0 0 auto;
+  color: #e6c56f;
+}
+
 .eventLink:hover {
   color: #fff0bd;
   text-decoration: underline;
@@ -117,8 +140,13 @@
 
 @media (max-width: 760px) {
   .cardBody {
-    min-height: 6rem;
+    min-height: 6.2rem;
     padding: 0.85rem;
+  }
+
+  .eventDetails {
+    gap: 0.45rem 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
