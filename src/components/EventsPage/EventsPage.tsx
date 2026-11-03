@@ -6,6 +6,7 @@ import styles from "./EventsPage.module.css";
 import SearchBar from "./SearchBar";
 import EventsList from "./EventsList";
 import EventCategorySidebar from "./EventCategorySidebar";
+import EventsDecorativeBorder from "./EventsDecorativeBorder";
 
 export type EventCategory = "Flagship" | "Cultural" | "Management" | "Sports";
 
@@ -406,9 +407,14 @@ export default function EventsPage() {
         <section className={styles.hero} aria-labelledby="events-title">
           <div>
             <p className={styles.eyebrow}>IRIS 2027 · EVENT DIRECTORY</p>
-            <h1 className={styles.eventsTitle} id="events-title">
-              Discover events
-            </h1>
+            <div className={styles.titleGroup}>
+              <h1 className={styles.eventsTitle} id="events-title">
+                Events
+              </h1>
+              <p className={styles.eventsTitleHindi} lang="hi">
+                कार्यक्रम
+              </p>
+            </div>
             <p className={styles.heroText}>
               Browse competitions, cultural showcases and sports.
             </p>
@@ -418,6 +424,8 @@ export default function EventsPage() {
             <small>events</small>
           </div>
         </section>
+
+        <EventsDecorativeBorder />
 
         <section className={styles.toolbar} aria-label="Find an event">
           <SearchBar
@@ -492,6 +500,8 @@ export default function EventsPage() {
             </p>
           </div>
         )}
+
+        <EventsDecorativeBorder />
       </div>
     </div>
   );

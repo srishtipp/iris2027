@@ -82,6 +82,13 @@
   letter-spacing: 0.16em;
 }
 
+.titleGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.9rem;
+}
+
 .eventsTitle {
   margin: 0;
   color: #fdf5e4;
@@ -90,6 +97,14 @@
   font-weight: 400;
   line-height: 1;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.42);
+}
+
+.eventsTitleHindi {
+  margin: 0;
+  color: #f2c65c;
+  font-family: "Langar-Regular", "Noto Sans Devanagari", sans-serif;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  line-height: 1.15;
 }
 
 .heroText {
@@ -394,6 +409,14 @@
 
   .eventsTitle {
     font-size: 2.5rem;
+  }
+
+  .titleGroup {
+    gap: 0.55rem;
+  }
+
+  .eventsTitleHindi {
+    font-size: 1.2rem;
   }
 
   .eventCount {
