@@ -75,7 +75,7 @@ export default function EventCategorySidebar({
 
       <div className={styles.footer}>
         <img src="/images/irislogo_white.webp" alt="" />
-        <span>IRIS &apos;26</span>
+        <span>IRIS &apos;27</span>
       </div>
     </aside>
   );
