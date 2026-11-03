@@ -2,16 +2,16 @@
 .eventsListCont {
   position: relative;
   width: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 /* Events grid */
 .eventsList {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
   width: 100%;
-  padding: 1rem;
+  padding: 0;
 
   /* KEY FIX: cards don't stretch to row height */
   align-items: start;
@@ -62,7 +62,7 @@
   .eventsList {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    padding: 0.5rem;
+    padding: 0;
   }
 }
 
@@ -73,6 +73,6 @@
 
   .eventsList {
     gap: 0.9rem;
-    padding: 0.3rem;
+    padding: 0;
   }
 }

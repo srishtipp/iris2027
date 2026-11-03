@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { ArrowUpRight } from "lucide-react";
 import styles from "./EventsPage.module.css";
 import SearchBar from "./SearchBar";
 import EventsList from "./EventsList";
@@ -324,6 +325,7 @@ export default function EventsPage() {
   const [selectedCategory, setSelectedCategory] = useState<EventCategory | "All">(
     "All",
   );
+  const [sortOrder, setSortOrder] = useState<"featured" | "name">("featured");
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -337,9 +339,11 @@ export default function EventsPage() {
 
   const filteredEvents = eventsData
     .filter((event) => {
-      const matchesSearch = event.title
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
+      const query = searchQuery.trim().toLowerCase();
+      const matchesSearch =
+        !query ||
+        event.title.toLowerCase().includes(query) ||
+        event.category.toLowerCase().includes(query);
 
       const matchesCategory =
         selectedCategory === "All" ||
@@ -348,6 +352,10 @@ export default function EventsPage() {
       return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {
+      if (sortOrder === "name") {
+        return a.title.localeCompare(b.title);
+      }
+
       const categoryOrder: Record<EventCategory, number> = {
         Flagship: 0,
         Management: 1,
@@ -356,6 +364,13 @@ export default function EventsPage() {
       };
       return categoryOrder[a.category] - categoryOrder[b.category];
     });
+
+  const featuredEvent = eventsData.find((event) => event.category === "Flagship");
+  const showFeaturedEvent =
+    selectedCategory === "All" && searchQuery.trim() === "" && !!featuredEvent;
+  const gridEvents = showFeaturedEvent
+    ? filteredEvents.filter((event) => event.id !== featuredEvent?.id)
+    : filteredEvents;
 
   return (
     <div className={styles.wrapper}>
@@ -387,20 +402,87 @@ export default function EventsPage() {
         <div className={styles.backgroundBlur} />
       </div>
 
-      {/* CONTENT */}
       <div className={styles.eventsSubContainer}>
-        <SearchBar
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
-        />
+        <section className={styles.hero} aria-labelledby="events-title">
+          <div>
+            <p className={styles.eyebrow}>IRIS 2027 · EVENT DIRECTORY</p>
+            <h1 className={styles.eventsTitle} id="events-title">
+              Discover events
+            </h1>
+            <p className={styles.heroText}>
+              Browse competitions, cultural showcases and sports.
+            </p>
+          </div>
+          <div className={styles.eventCount} aria-label={`${eventsData.length} events`}>
+            <span>{eventsData.length}</span>
+            <small>events</small>
+          </div>
+        </section>
 
-        <EventCategorySidebar
-          selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
-          events={eventsData}
-        />
+        <section className={styles.toolbar} aria-label="Find an event">
+          <SearchBar
+            searchQuery={searchQuery}
+            onSearchChange={setSearchQuery}
+          />
+          <EventCategorySidebar
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+            events={eventsData}
+          />
+          <label className={styles.sortControl}>
+            <span>Sort by</span>
+            <select
+              aria-label="Sort events"
+              value={sortOrder}
+              onChange={(event) =>
+                setSortOrder(event.target.value as "featured" | "name")
+              }
+            >
+              <option value="featured">Featured</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+        </section>
 
-        <EventsList events={filteredEvents} />
+        <div className={styles.resultsHeader} aria-live="polite">
+          <span>
+            Showing <strong>{filteredEvents.length}</strong>{" "}
+            {filteredEvents.length === 1 ? "event" : "events"}
+          </span>
+          {selectedCategory !== "All" && <span>{selectedCategory}</span>}
+        </div>
+
+        {showFeaturedEvent && featuredEvent && featuredEvent.image && (
+          <article className={styles.featuredEvent}>
+            <div className={styles.featuredMedia}>
+              <img
+                src={featuredEvent.image}
+                alt={`${featuredEvent.title} event poster`}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div className={styles.featuredBody}>
+              <div className={styles.featuredTags}>
+                <span className={styles.featuredLabel}>Featured event</span>
+                <span className={styles.categoryTag}>Flagship</span>
+              </div>
+              <h2>{featuredEvent.title}</h2>
+              {featuredEvent.link && (
+                <a
+                  className={styles.featuredLink}
+                  href={featuredEvent.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View event <ArrowUpRight size={17} aria-hidden="true" />
+                </a>
+              )}
+            </div>
+          </article>
+        )}
+
+        <EventsList events={gridEvents} />
 
         {filteredEvents.length === 0 && (
           <div className={styles.noResults}>

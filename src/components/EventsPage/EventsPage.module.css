@@ -1,4 +1,3 @@
-/* Wrapper – same idea as Team page */
 .wrapper {
   position: relative;
   width: 100%;
@@ -8,20 +7,19 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Content container */
 .eventsSubContainer {
   position: relative;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 1.5rem 3rem 15rem;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.45rem;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
 }
 
-/* BACKGROUND with painting */
+/* Keep the existing desktop and mobile festival backgrounds. */
 .backgroundContainer {
   position: fixed;
   inset: 0;
@@ -41,10 +39,9 @@
   object-fit: cover;
   will-change: transform;
   filter: blur(6px);
-  transform: scale(1.05); /* prevent blur edge artifacts */
+  transform: scale(1.05);
 }
 
-/* Mobile BG */
 .mobileBackgroundContainer {
   position: absolute;
   inset: 0;
@@ -58,63 +55,262 @@
   height: 100%;
   object-fit: cover;
   filter: blur(6px);
-  transform: scale(1.05); /* prevent blur edge artifacts */
+  transform: scale(1.05);
 }
 
-/* 👇 THIS is the grey/dark overlay */
 .backgroundBlur {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
   z-index: 1;
+  background: rgba(0, 0, 0, 0.65);
   pointer-events: none;
 }
 
-/* Heading */
-.eventsHeading {
-  width: 100%;
+.hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.25rem 0 0.45rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: #f2c65c;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
 }
 
 .eventsTitle {
-  font-family: "Langar-Regular", sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  color: #fdf5db;
-  font-weight: 700;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
-  letter-spacing: 2px;
+  margin: 0;
+  color: #fdf5e4;
+  font-family: "Langar-Regular", Georgia, serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.42);
 }
 
-/* No-results text */
-.noResults {
-  text-align: center;
-  padding: 3rem 1.5rem 1rem;
-  color: #f5e7c2;
-  font-weight: bold;
-  font-family: "Poppins-SemiBold", sans-serif;
-}
-
-.noResults p {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.noResultsHint {
+.heroText {
+  margin: 0.8rem 0 0;
+  color: rgba(245, 239, 227, 0.76);
   font-size: 1rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+.eventCount {
+  min-width: 8rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(245, 239, 227, 0.18);
+  border-radius: 0.9rem;
+  background: rgba(22, 21, 27, 0.65);
+  color: #fdf5e4;
+  backdrop-filter: blur(12px);
+}
+
+.eventCount > span {
+  color: #f2c65c;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.eventCount small {
+  color: rgba(245, 239, 227, 0.72);
+  font-size: 0.78rem;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: minmax(230px, 1fr) auto auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(245, 239, 227, 0.16);
+  border-radius: 1.15rem;
+  background: rgba(22, 21, 27, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.sortControl {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0 0.4rem;
+  color: rgba(245, 239, 227, 0.7);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.sortControl select {
+  min-height: 2.8rem;
+  padding: 0 2rem 0 0.75rem;
+  border: 1px solid rgba(245, 239, 227, 0.18);
+  border-radius: 0.7rem;
+  background: rgba(18, 18, 23, 0.8);
+  color: #fdf5e4;
+  font: inherit;
+  font-weight: 600;
+}
+
+.resultsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 1.25rem;
+  color: rgba(245, 239, 227, 0.74);
+  font-size: 0.82rem;
+}
+
+.resultsHeader strong {
+  color: #fffaf0;
+}
+
+.featuredEvent {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  gap: 1.6rem;
+  padding: 0.8rem;
+  overflow: hidden;
+  border: 1px solid rgba(245, 239, 227, 0.2);
+  border-radius: 1.4rem;
+  background: rgba(19, 20, 27, 0.82);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.featuredMedia {
+  display: grid;
+  place-items: center;
+  min-height: 16rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.featuredMedia img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 22rem;
+  object-fit: contain;
+}
+
+.featuredBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem 1.5rem 1rem 0.5rem;
+}
+
+.featuredTags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.featuredLabel,
+.categoryTag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.8rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.featuredLabel {
+  background: #f2c65c;
+  color: #241c12;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.categoryTag {
+  border: 1px solid rgba(242, 198, 92, 0.42);
+  background: rgba(242, 198, 92, 0.1);
+  color: #f6d785;
+}
+
+.featuredBody h2 {
+  margin: 1rem 0 1.4rem;
+  color: #fffaf0;
+  font-family: "Langar-Regular", Georgia, serif;
+  font-size: clamp(2.3rem, 4vw, 3.7rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.featuredLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.8rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid #f2c65c;
+  border-radius: 0.75rem;
+  background: #f2c65c;
+  color: #251d13;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.featuredLink:hover {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+}
+
+.noResults {
+  padding: 3.5rem 1.5rem;
+  border: 1px dashed rgba(245, 239, 227, 0.26);
+  border-radius: 1.2rem;
+  color: #f5e7c2;
+  text-align: center;
+}
+
+.noResults p {
+  margin: 0.4rem 0;
+}
+
+.noResultsHint {
+  color: rgba(245, 239, 227, 0.7);
+}
+
+@media (max-width: 1180px) {
+  .eventsSubContainer {
+    padding-inline: 1.5rem;
+  }
+
+  .toolbar {
+    grid-template-columns: minmax(210px, 1fr) auto;
+  }
+
+  .toolbar > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  .featuredEvent {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.8fr);
+  }
+}
+
+@media (max-width: 760px) {
   .wrapper {
     padding-top: 60px;
   }
 
   .eventsSubContainer {
-    gap: 1.1rem;
-    padding: 1.5rem 1.2rem 3rem;
+    gap: 1rem;
+    padding: 1.25rem 1rem 3rem;
   }
 
   .desktopBackground {
@@ -124,10 +320,83 @@
   .mobileBackgroundContainer {
     display: block;
   }
+
+  .hero {
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .heroText {
+    max-width: 34rem;
+    font-size: 0.9rem;
+  }
+
+  .eventCount {
+    min-width: 5.5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0.5rem;
+  }
+
+  .toolbar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.55rem;
+    padding: 0.6rem;
+  }
+
+  .toolbar > :first-child {
+    grid-column: auto;
+  }
+
+  .sortControl {
+    justify-content: space-between;
+    padding: 0.2rem 0.3rem;
+  }
+
+  .sortControl select {
+    min-width: 8rem;
+  }
+
+  .featuredEvent {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 1.1rem;
+  }
+
+  .featuredMedia {
+    min-height: 0;
+  }
+
+  .featuredMedia img {
+    max-height: 15rem;
+  }
+
+  .featuredBody {
+    padding: 0.75rem 0.5rem 0.6rem;
+  }
+
+  .featuredBody h2 {
+    margin: 0.75rem 0 1rem;
+    font-size: 2.35rem;
+  }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 420px) {
   .eventsSubContainer {
-    padding: 1.25rem 0.9rem 2rem;
+    padding-inline: 0.75rem;
+  }
+
+  .eyebrow {
+    font-size: 0.62rem;
+  }
+
+  .eventsTitle {
+    font-size: 2.5rem;
+  }
+
+  .eventCount {
+    min-width: 4.5rem;
   }
 }
