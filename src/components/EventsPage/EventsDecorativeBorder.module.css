@@ -1,14 +1,31 @@
 .border {
+  position: relative;
+  left: 50%;
   display: block;
-  width: 100%;
-  height: 3rem;
-  border: 1px solid rgba(215, 169, 54, 0.46);
-  border-radius: 0.25rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.28);
+  flex: 0 0 100vw;
+  width: 100vw;
+  max-width: none;
+  height: 1.5rem;
+  margin-left: -50vw;
+  overflow: hidden;
+  border-block: 1px solid rgba(215, 169, 54, 0.5);
+  pointer-events: none;
+}
+
+.mobileBand {
+  display: none;
 }
 
 @media (max-width: 760px) {
   .border {
-    height: 2.4rem;
+    height: 1rem;
+  }
+
+  .desktopBand {
+    display: none;
+  }
+
+  .mobileBand {
+    display: block;
   }
 }
