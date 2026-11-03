@@ -177,3 +177,10 @@
     font-size: 0.85rem;
   }
 }
+
+@media (hover: none) {
+  .eventCard:hover .cardFrame,
+  .eventCard:hover .eventImage {
+    transform: none;
+  }
+}

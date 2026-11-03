@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import styles from "./EventsPage.module.css";
 import SearchBar from "./SearchBar";
 import EventsList from "./EventsList";
+import EventCategorySidebar from "./EventCategorySidebar";
 
 export type EventCategory = "Flagship" | "Cultural" | "Management" | "Sports";
 
@@ -341,15 +342,16 @@ export default function EventsPage() {
         .includes(searchQuery.toLowerCase());
 
       const matchesCategory =
-        selectedCategory === "All" || event.category === selectedCategory;
+        selectedCategory === "All" ||
+        event.category === selectedCategory;
 
       return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {
       const categoryOrder: Record<EventCategory, number> = {
-        Cultural: 0,
-        Flagship: 1,
-        Management: 2,
+        Flagship: 0,
+        Management: 1,
+        Cultural: 2,
         Sports: 3,
       };
       return categoryOrder[a.category] - categoryOrder[b.category];
@@ -390,8 +392,12 @@ export default function EventsPage() {
         <SearchBar
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
+        />
+
+        <EventCategorySidebar
           selectedCategory={selectedCategory}
           onCategoryChange={setSelectedCategory}
+          events={eventsData}
         />
 
         <EventsList events={filteredEvents} />
