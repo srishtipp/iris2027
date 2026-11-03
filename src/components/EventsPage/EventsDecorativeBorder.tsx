@@ -7,8 +7,8 @@ export default function EventsDecorativeBorder() {
   return (
     <svg
       className={styles.border}
-      viewBox="0 0 80 48"
-      preserveAspectRatio="none"
+      width="100%"
+      height="100%"
       aria-hidden="true"
       focusable="false"
     >

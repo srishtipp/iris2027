@@ -84,9 +84,9 @@
 
 .titleGroup {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.9rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
 }
 
 .eventsTitle {
@@ -412,7 +412,7 @@
   }
 
   .titleGroup {
-    gap: 0.55rem;
+    gap: 0.1rem;
   }
 
   .eventsTitleHindi {
