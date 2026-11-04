@@ -1,290 +1,368 @@
+/* IRIS '27 navigation.
+   Desktop: split crest bar (dark wood, gold edge, centre logo badge).
+   Mobile:  logo + MENU button opening a full-screen plum and gold overlay.
+   Both carry their own background so links stay readable on every page. */
+
+.crestBar,
+.mobileBar,
+.overlay {
+  --nav-text: #f0ddb4;
+  --nav-gold: #edc967;
+  --nav-copper: #d69b65;
+  --nav-edge: rgba(237, 201, 103, 0.55);
+  --nav-wood: #1d120a;
+  --nav-wood-deep: #120a05;
+}
+
+.crestLink:focus-visible,
+.overlayLink:focus-visible,
+.menuBtn:focus-visible,
+.socialBtn:focus-visible,
+.crestBadge:focus-visible,
+.mobileLogo:focus-visible {
+  outline: 2px solid var(--nav-gold);
+  outline-offset: 3px;
+}
+
 /* ============================================= */
-/*           DESKTOP HEADER                     */
+/*           DESKTOP · SPLIT CREST BAR           */
 /* ============================================= */
-.desktopHeader {
+.crestBar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
-  padding: 0.45rem 1.5rem;
-  display: flex;
-  justify-content: center;
+  height: 62px;
+  background: linear-gradient(180deg, var(--nav-wood), var(--nav-wood-deep));
+  border-bottom: 1px solid var(--nav-edge);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-.desktopHeader::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  backdrop-filter: blur(6px);
-  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-}
-
-.desktopNav {
-  display: flex;
-  gap: 2rem;
+.crestNav {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 170px 1fr;
   align-items: center;
 }
 
-/* Base link */
-.desktopLink {
-  color: #efeceb;
-  text-decoration: none;
-  font-family: "Langar-Regular";
-  font-weight: 500;
-  font-size: 1.15rem;
-  letter-spacing: 0.08em;
-  text-transform: capitalize;
-  padding: 0.3rem 0.6rem;
-  border-radius: 8px;
-  transition:
-    color 0.2s linear,
-    transform 0.3s ease;
-  position: relative;
+.crestSide {
+  display: flex;
+  gap: 6px;
 }
 
-.desktopLink::after {
+.crestLeft {
+  justify-content: flex-end;
+  padding-right: 18px;
+}
+
+.crestRight {
+  justify-content: flex-start;
+  padding-left: 18px;
+}
+
+.crestSpacer {
+  pointer-events: none;
+}
+
+.crestBadge {
+  position: absolute;
+  left: 50%;
+  top: -1px;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+  padding-bottom: 8px;
+  background: radial-gradient(circle at 50% 30%, #3a2616, #150c07);
+  border: 1px solid var(--nav-edge);
+  border-top: 0;
+  border-radius: 0 0 80px 80px / 0 0 56px 56px;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.45),
+    inset 0 -6px 14px rgba(237, 201, 103, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.crestBadge:hover {
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(237, 201, 103, 0.35),
+    inset 0 -6px 14px rgba(237, 201, 103, 0.12);
+}
+
+.crestLink {
+  position: relative;
+  color: var(--nav-text);
+  text-decoration: none;
+  font-family: "Langar-Regular", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  padding: 8px 14px;
+  transition: color 0.25s ease;
+}
+
+/* gold diamond under the active link */
+.crestLink::after {
   content: "";
   position: absolute;
-  bottom: -4px;
   left: 50%;
-  width: 0;
-  height: 2px;
-  background: #edc967;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  bottom: -2px;
+  width: 7px;
+  height: 7px;
+  background: var(--nav-gold);
+  transform: translateX(-50%) rotate(45deg) scale(0);
+  transition: transform 0.25s ease;
 }
 
-/* Hover */
-.desktopLink:hover {
-  color: #edc967;
-  transform: translateY(-2px) skewX(-3deg);
+.crestLink:hover {
+  color: var(--nav-gold);
 }
 
-.desktopLink:hover::after {
-  width: 80%;
+.crestLink.active {
+  color: var(--nav-gold);
 }
 
-/* ✅ ACTIVE DESKTOP LINK */
-.desktopLink.active {
-  color: #edc967;
+.crestLink.active::after {
+  transform: translateX(-50%) rotate(45deg) scale(1);
 }
 
-.desktopLink.active::after {
-  width: 80%;
+@media (max-width: 960px) {
+  .crestLink {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    padding: 8px 9px;
+  }
+
+  .crestLeft {
+    padding-right: 8px;
+  }
+
+  .crestRight {
+    padding-left: 8px;
+  }
 }
 
-/* Dark background pages - lighter hover/active colors */
-.darkBg .desktopLink:hover {
-  color: #edc967;
+/* ============================================= */
+/*           MOBILE · BAR + OVERLAY              */
+/* ============================================= */
+.mobileBar,
+.overlay {
+  display: none;
 }
 
-.darkBg .desktopLink:hover::after {
-  background: #edc967;
+.mobileLogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.darkBg .desktopLink.active {
-  color: #edc967;
+.menuBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-family: var(--font-paragraph, sans-serif);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--nav-text);
+  background: rgba(21, 13, 7, 0.82);
+  border: 1px solid var(--nav-edge);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease;
 }
 
-.darkBg .desktopLink.active::after {
-  background: #edc967;
+.menuBtn svg {
+  width: 18px;
+  height: 18px;
+  color: var(--nav-gold);
+}
+
+.menuBtn:hover {
+  color: var(--nav-gold);
+  border-color: var(--nav-gold);
 }
 
 @media (max-width: 768px) {
-  .desktopHeader {
+  .crestBar {
     display: none;
   }
-}
 
-/* ============================================= */
-/*           MOBILE NAV                         */
-/* ============================================= */
+  .mobileBar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: 66px;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-.nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 9999;
-  padding: 0.6rem 0.7rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: rgba(140, 140, 140, 0.12);
-  backdrop-filter: blur(4px);
-  border-bottom-left-radius: 8px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    padding: 0 16px 24px;
+    overflow-y: auto;
+    background:
+      radial-gradient(500px 300px at 85% 8%, rgba(214, 155, 101, 0.25), transparent 65%),
+      radial-gradient(420px 300px at 0 100%, rgba(237, 90, 150, 0.14), transparent 65%),
+      linear-gradient(160deg, #3a1a4d, #1d0f28 60%, #120a05);
+    visibility: hidden;
+    clip-path: circle(0 at calc(100% - 60px) 33px);
+    transition:
+      clip-path 0.6s cubic-bezier(0.65, 0, 0.25, 1),
+      visibility 0s linear 0.6s;
+  }
 
-.hideHamburger {
-  opacity: 0;
-  transform: scale(0.8);
-  pointer-events: none;
-}
+  .overlayOpen {
+    visibility: visible;
+    clip-path: circle(150% at calc(100% - 60px) 33px);
+    transition:
+      clip-path 0.6s cubic-bezier(0.65, 0, 0.25, 1),
+      visibility 0s;
+  }
 
-.hamMenuBtn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.15rem;
-  transition: transform 0.3s ease;
-}
+  .overlayTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 66px;
+    flex-shrink: 0;
+  }
 
-.hamMenuBtn:hover {
-  transform: scale(1.03); /* ✅ smoother for smaller icon */
-}
+  .overlayNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 1rem 10px;
+  }
 
-/* ✅ REDUCED BURGER ICON SIZE */
-.moon {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-  filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.6));
-  transition: filter 0.3s ease;
-}
+  .overlayLink {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 0.35rem 0;
+    color: var(--nav-text);
+    text-decoration: none;
+    font-family: "Langar-Regular", serif;
+    font-size: clamp(1.7rem, 8.5vw, 2.2rem);
+    line-height: 1.3;
+    opacity: 0;
+    transform: translateX(-16px);
+    transition: color 0.25s ease, padding-left 0.25s ease;
+  }
 
-.hamMenuBtn:hover .moon {
-  filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.9));
-}
+  .overlayOpen .overlayLink {
+    animation: overlayLinkIn 0.5s ease forwards;
+    animation-delay: calc(0.07s * var(--i) + 0.25s);
+  }
 
-/* ============================================= */
-/*           SIDEBAR                            */
-/* ============================================= */
+  .overlayLink:hover,
+  .overlayLink:active {
+    color: var(--nav-gold);
+    padding-left: 8px;
+  }
 
-.sidebarContainer {
-  position: fixed;
-  inset: 0;
-  z-index: 9998;
-  pointer-events: none;
-}
+  .overlayLink.active {
+    color: var(--nav-gold);
+  }
 
-.sidebarContainer.sidebarOpen {
-  pointer-events: auto;
-}
+  .overlayLink.active::after {
+    content: "";
+    align-self: center;
+    width: 36px;
+    height: 2px;
+    background: var(--nav-gold);
+  }
 
-.sidebarOverlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
+  .overlayIndex {
+    font-family: var(--font-paragraph, sans-serif);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    color: var(--nav-copper);
+  }
 
-.sidebarContainer.sidebarOpen .sidebarOverlay {
-  opacity: 1;
-}
+  .overlayFoot {
+    flex-shrink: 0;
+    margin: 0 10px;
+    padding-top: 1.1rem;
+    border-top: 1px solid rgba(237, 201, 103, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 85vw;
-  max-width: 380px;
-  height: 100%;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
-  transition: right 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.5s ease;
-  transform: translateX(100%) scale(0.95);
-}
+  .followLabel {
+    font-family: var(--font-paragraph, sans-serif);
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--nav-copper);
+  }
 
-.sidebarContainer.sidebarOpen .sidebar {
-  right: 0;
-  transform: translateX(0) scale(1);
-}
+  .socialRow {
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
 
-/* Close Button */
-.sidebarClose {
-  position: absolute;
-  top: 1.2rem;
-  right: 1.2rem;
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
+  .socialBtn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--nav-text);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(237, 201, 103, 0.45);
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+  }
 
-.sidebarClose:hover {
-  background: rgba(242, 221, 124, 0.9);
-  transform: rotate(90deg) scale(1.1);
-}
+  .socialBtn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
 
-.hamX {
-  width: 24px;
-  height: 24px;
-}
-
-/* Sidebar Items */
-.sidebarNav {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  margin-top: 5rem;
-  align-items: center;
-  flex: 1;
-}
-
-.sidebarItem {
-  width: 100%;
-  max-width: 300px;
-  padding: 1.2rem 1.5rem;
-  background: rgba(255, 255, 255, 0.95);
-  border: 2px solid #000;
-  border-radius: 15px;
-  text-decoration: none;
-  color: #000;
-  font-family: "Langar-Regular", sans-serif;
-  font-size: 1.5rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s ease forwards;
-  animation-delay: calc(0.1s * var(--i));
-}
-
-.sidebarItem:hover {
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 0 20px rgba(242, 221, 124, 0.7);
-}
-
-/* ✅ ACTIVE SIDEBAR ITEM */
-.sidebarItem.active {
-  background: linear-gradient(135deg, #e0bc84 0%, #d69b65 100%);
-  box-shadow: 0 0 25px rgba(242, 221, 124, 0.8);
-  transform: scale(1.07);
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .socialBtn:hover,
+  .socialBtn:active {
+    background: var(--nav-gold);
+    color: #2a1a0f;
+    transform: translateY(-3px);
   }
 }
 
-.wrapper {
-  position: fixed;
-  inset: 0;
-  z-index: 5000;
-  pointer-events: none;
+@keyframes overlayLinkIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-.wrapper.mask {
-  backdrop-filter: blur(12px);
-  background: rgba(0, 0, 0, 0.35);
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .overlayOpen,
+  .crestLink,
+  .crestBadge,
+  .menuBtn,
+  .socialBtn {
+    transition: none;
+  }
+
+  .overlayOpen .overlayLink {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
