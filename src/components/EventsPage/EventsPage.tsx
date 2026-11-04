@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowUpRight } from "lucide-react";
 import styles from "./EventsPage.module.css";
 import SearchBar from "./SearchBar";
 import EventsList from "./EventsList";
@@ -369,7 +368,7 @@ export default function EventsPage() {
   const [selectedCategory, setSelectedCategory] = useState<EventCategory | "All">(
     "All",
   );
-  const [sortOrder, setSortOrder] = useState<"featured" | "name">("featured");
+  const [sortOrder, setSortOrder] = useState<"category" | "name">("category");
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -408,13 +407,6 @@ export default function EventsPage() {
       };
       return categoryOrder[a.category] - categoryOrder[b.category];
     });
-
-  const featuredEvent = eventsData.find((event) => event.category === "Flagship");
-  const showFeaturedEvent =
-    selectedCategory === "All" && searchQuery.trim() === "" && !!featuredEvent;
-  const gridEvents = showFeaturedEvent
-    ? filteredEvents.filter((event) => event.id !== featuredEvent?.id)
-    : filteredEvents;
 
   return (
     <div className={styles.wrapper}>
@@ -486,10 +478,10 @@ export default function EventsPage() {
               aria-label="Sort events"
               value={sortOrder}
               onChange={(event) =>
-                setSortOrder(event.target.value as "featured" | "name")
+                setSortOrder(event.target.value as "category" | "name")
               }
             >
-              <option value="featured">Featured</option>
+              <option value="category">Category order</option>
               <option value="name">Name</option>
             </select>
           </label>
@@ -503,37 +495,7 @@ export default function EventsPage() {
           {selectedCategory !== "All" && <span>{selectedCategory}</span>}
         </div>
 
-        {showFeaturedEvent && featuredEvent && featuredEvent.image && (
-          <article className={styles.featuredEvent}>
-            <div className={styles.featuredMedia}>
-              <img
-                src={featuredEvent.image}
-                alt={`${featuredEvent.title} event poster`}
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-            <div className={styles.featuredBody}>
-              <div className={styles.featuredTags}>
-                <span className={styles.featuredLabel}>Featured event</span>
-                <span className={styles.categoryTag}>Flagship</span>
-              </div>
-              <h2>{featuredEvent.title}</h2>
-              {featuredEvent.link && (
-                <a
-                  className={styles.featuredLink}
-                  href={featuredEvent.link}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View event <ArrowUpRight size={17} aria-hidden="true" />
-                </a>
-              )}
-            </div>
-          </article>
-        )}
-
-        <EventsList events={gridEvents} />
+        <EventsList events={filteredEvents} />
 
         {filteredEvents.length === 0 && (
           <div className={styles.noResults}>
