@@ -1,19 +1,19 @@
-/* Parchment footer — light paper block with a scalloped top edge.
+/* Purple footer — palette purple (#46205B) block with a scalloped top edge.
    The scallops are cut with a mask, so whatever is above the footer shows through. */
 
 .footer {
-  --ink: #2a1a0f;
-  --ink-soft: #3b2616;
-  --plum: #46205b;
+  --ink: #2a1238;        /* deep purple: strips, socials, button text */
+  --ink-soft: #e3d3f0;   /* light lilac: links */
+  --plum: #6d3a8c;       /* lighter purple: hover */
   --gold: #edc967;
   --cream: #f0ddb4;
 
   position: relative;
   padding: 3.2rem 2rem 0;
-  color: var(--ink);
+  color: #fcfcfc;
   background:
-    radial-gradient(600px 200px at 15% 0%, rgba(255, 255, 255, 0.35), transparent 70%),
-    linear-gradient(180deg, #ecd9ab, #d9bd84);
+    radial-gradient(600px 200px at 15% 0%, rgba(255, 255, 255, 0.12), transparent 70%),
+    linear-gradient(180deg, #5a2d73, #46205b 45%, #351748);
   -webkit-mask:
     radial-gradient(circle at 10px 0, transparent 9px, #000 10px) 0 0 / 20px 14px repeat-x,
     linear-gradient(#000, #000) 0 14px / 100% calc(100% - 14px) no-repeat;
@@ -23,7 +23,7 @@
 }
 
 .footer a:focus-visible {
-  outline: 2px solid var(--plum);
+  outline: 2px solid var(--gold);
   outline-offset: 2px;
 }
 
@@ -37,7 +37,7 @@
 
 /* Brand column */
 .logo {
-  filter: drop-shadow(0 3px 6px rgba(70, 32, 91, 0.35));
+  filter: drop-shadow(0 3px 10px rgba(240, 221, 180, 0.25));
 }
 
 .brand p {
@@ -45,7 +45,7 @@
   font-family: var(--font-paragraph, sans-serif);
   font-size: 0.85rem;
   line-height: 1.6;
-  color: #4a3320;
+  color: #e3d3f0;
   max-width: 30ch;
 }
 
@@ -63,6 +63,7 @@
   place-items: center;
   background: var(--ink);
   color: var(--cream);
+  border: 1px solid rgba(240, 221, 180, 0.3);
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
@@ -89,10 +90,10 @@
   font-weight: 400;
   font-size: 0.9rem;
   letter-spacing: 0.1em;
-  color: var(--plum);
+  color: var(--gold);
   margin-bottom: 0.8rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 2px solid rgba(240, 221, 180, 0.4);
 }
 
 .person {
@@ -114,7 +115,7 @@
 }
 
 .person a:hover {
-  color: var(--plum);
+  color: var(--gold);
   text-decoration: underline;
 }
 
@@ -131,6 +132,7 @@
   border-radius: 14px;
   background: var(--ink);
   color: var(--cream);
+  border: 1px solid rgba(240, 221, 180, 0.18);
 }
 
 .askTitle {
@@ -171,8 +173,8 @@
   text-align: center;
   font-family: var(--font-paragraph, sans-serif);
   font-size: 0.75rem;
-  color: #4a3320;
-  border-top: 1px solid rgba(42, 26, 15, 0.25);
+  color: #e3d3f0;
+  border-top: 1px solid rgba(240, 221, 180, 0.25);
 }
 
 /* Responsive */

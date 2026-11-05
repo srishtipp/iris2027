@@ -1,5 +1,5 @@
 /* IRIS '27 navigation.
-   Desktop: split crest bar (dark wood, gold edge, centre logo badge).
+   Desktop: split crest bar (palette purple, gold edge, centre logo badge).
    Mobile:  logo + MENU button opening a full-screen plum and gold overlay.
    Both carry their own background so links stay readable on every page. */
 
@@ -8,10 +8,10 @@
 .overlay {
   --nav-text: #f0ddb4;
   --nav-gold: #edc967;
-  --nav-copper: #d69b65;
+  --nav-copper: #cdb0e6; /* light lilac (was copper) */
   --nav-edge: rgba(237, 201, 103, 0.55);
-  --nav-wood: #1d120a;
-  --nav-wood-deep: #120a05;
+  --nav-wood: #46205b; /* palette purple (was dark brown) */
+  --nav-wood-deep: #2a1238;
 }
 
 .crestLink:focus-visible,
@@ -75,7 +75,7 @@
   display: grid;
   place-items: center;
   padding-bottom: 8px;
-  background: radial-gradient(circle at 50% 30%, #3a2616, #150c07);
+  background: radial-gradient(circle at 50% 30%, #5a2d73, #2a1238);
   border: 1px solid var(--nav-edge);
   border-top: 0;
   border-radius: 0 0 80px 80px / 0 0 56px 56px;
@@ -168,7 +168,7 @@
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   color: var(--nav-text);
-  background: rgba(21, 13, 7, 0.82);
+  background: rgba(42, 18, 56, 0.82);
   border: 1px solid var(--nav-edge);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -214,9 +214,9 @@
     padding: 0 16px 24px;
     overflow-y: auto;
     background:
-      radial-gradient(500px 300px at 85% 8%, rgba(214, 155, 101, 0.25), transparent 65%),
+      radial-gradient(500px 300px at 85% 8%, rgba(183, 21, 132, 0.28), transparent 65%),
       radial-gradient(420px 300px at 0 100%, rgba(237, 90, 150, 0.14), transparent 65%),
-      linear-gradient(160deg, #3a1a4d, #1d0f28 60%, #120a05);
+      linear-gradient(160deg, #46205b, #2a1238 60%, #1c0d26);
     visibility: hidden;
     clip-path: circle(0 at calc(100% - 60px) 33px);
     transition:
@@ -338,7 +338,7 @@
   .socialBtn:hover,
   .socialBtn:active {
     background: var(--nav-gold);
-    color: #2a1a0f;
+    color: #2a1238;
     transform: translateY(-3px);
   }
 }

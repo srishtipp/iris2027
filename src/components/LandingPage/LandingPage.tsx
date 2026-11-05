@@ -210,6 +210,7 @@ export default function LandingPage() {
           />
         </div>
 
+        {/* Background IRIS logo — commented out: the nav bar already carries the logo.
         <div className={styles.logoContainer}>
           <img
             src="/images/landing/irislogo.png"
@@ -218,7 +219,8 @@ export default function LandingPage() {
             loading="eager"
             decoding="async"
           />
-        </div> 
+        </div>
+        */}
        <div className={styles.countdownContainer}>
           <CountdownTimer />
         </div>
