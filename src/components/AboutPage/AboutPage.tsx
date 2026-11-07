@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import styles from "./AboutPage.module.css";
 
 const faqs = [
@@ -31,6 +32,15 @@ const faqs = [
 ];
 
 export default function AboutPage() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.backgroundContainer}>
@@ -39,6 +49,7 @@ export default function AboutPage() {
             src="/images/landing/27THEME.png"
             alt="Edo Mountains"
             className={styles.landingImage}
+            style={{ transform: `translateY(${scrollY * 0.5}px) scale(1.05)` }}
             loading="eager"
             decoding="async"
             fetchPriority="high"
@@ -48,13 +59,14 @@ export default function AboutPage() {
         <div className={styles.mobileBackgroundContainer}>
           <img
             src="/images/landing/27THEME_PORTRAIT.png"
-            alt="Mountains"
+            alt="IRIS background mobile"
             className={styles.mobileMountains}
             loading="eager"
             decoding="async"
-            fetchPriority="high"
           />
         </div>
+
+        <div className={styles.backgroundBlur} />
       </div>
 
       <div className={styles.aboutHeading}>
@@ -90,7 +102,9 @@ export default function AboutPage() {
       </div>
 
       <div className={styles.faqSection}>
-        <h2 className={styles.faqTitle}>Frequently Asked Questions</h2>
+        <div className={styles.faqTitleBox}>
+          <h2 className={styles.faqTitle}>Frequently Asked Questions</h2>
+        </div>
         <div className={styles.faqList}>
           {faqs.map((faq) => (
             <details key={faq.question} className={styles.faqItem}>
