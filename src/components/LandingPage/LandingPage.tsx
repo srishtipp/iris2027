@@ -44,6 +44,24 @@ export default function LandingPage() {
     { src: "/images/sponsors/s9.png", alt: "Grant Thornton", title: "Partner" },
   ];
 
+  type Highlight = {
+    src: string;
+    tag: string;
+    name: string;
+    sub?: string;
+  };
+
+  // Left panel: speakers, judges, shows etc. Edit this list to change what scrolls.
+  const highlights: Highlight[] = [
+    { src: "/images/landing/Malini_Gaur.jpg", tag: "Chief Guest", name: "Smt. Malini Gaur", sub: "MLA, Indore" },
+    { src: "/images/speakers/current-speaker.webp", tag: "Speaker", name: "Mr. Ashish Kumar Singh", sub: "HPCL" },
+    { src: "/images/landing/Underground_Authority.webp", tag: "Pro Show", name: "Underground Authority" },
+    { src: "/images/landing/supply chain judge.jpg", tag: "Judge", name: "Jitendra Das Bairagi", sub: "Grant Thornton" },
+    { src: "/images/landing/Satv_Live.webp", tag: "Pro Show", name: "SATV Live" },
+    { src: "/images/landing/sonia judge - Laavanya.jpg", tag: "Judge", name: "Sonia Saluja", sub: "Mrs India Intl. 2019" },
+    { src: "/images/landing/Kaustubh_Agarwal.webp", tag: "Pro Show", name: "Kaustubh Agarwal" },
+  ];
+
   const SCROLL_STEP = 260;
   const scrollToStart = (el: HTMLDivElement) => el.scrollTo({ left: 0, behavior: "smooth" });
   const scrollToEnd = (el: HTMLDivElement) =>
@@ -192,6 +210,7 @@ export default function LandingPage() {
           />
         </div>
 
+        {/* Background IRIS logo — commented out: the nav bar already carries the logo.
         <div className={styles.logoContainer}>
           <img
             src="/images/landing/irislogo.png"
@@ -200,7 +219,8 @@ export default function LandingPage() {
             loading="eager"
             decoding="async"
           />
-        </div> 
+        </div>
+        */}
        <div className={styles.countdownContainer}>
           <CountdownTimer />
         </div>
@@ -210,6 +230,87 @@ export default function LandingPage() {
         <div className={styles.scroller}>
           <div className={styles.landingContainer}>
             <div className={styles.bottomOverlay}></div>
+
+            {/* HERO BOTTOM BAR: highlights (left) + sponsors (right) */}
+            <div className={styles.heroBottomBar}>
+              {/* LEFT: HIGHLIGHTS */}
+              <section className={styles.barPanel} aria-label="Highlights">
+                <h2 className={styles.barTitle}>Highlights</h2>
+                <div className={styles.marquee}>
+                  <div className={styles.marqueeTrack}>
+                    {[0, 1].map((copy) =>
+                      highlights.map((h, idx) => (
+                        <div
+                          key={`${copy}-${idx}`}
+                          className={styles.highlightCard}
+                          aria-hidden={copy === 1}
+                        >
+                          <img
+                            src={h.src}
+                            alt={copy === 0 ? h.name : ""}
+                            className={styles.highlightThumb}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div className={styles.highlightText}>
+                            <span className={styles.highlightTag}>{h.tag}</span>
+                            <span className={styles.highlightName}>{h.name}</span>
+                            {h.sub && <span className={styles.highlightSub}>{h.sub}</span>}
+                          </div>
+                        </div>
+                      ))
+                    )}
+                  </div>
+                </div>
+              </section>
+
+              {/* RIGHT: SPONSORS */}
+              <section className={styles.barPanel} aria-label="Sponsors">
+                <h2 className={styles.barTitle}>Sponsors</h2>
+                <div className={styles.marquee}>
+                  <div className={`${styles.marqueeTrack} ${styles.marqueeTrackSlow}`}>
+                    {[0, 1].map((copy) =>
+                      sponsors.map((s, idx) => {
+                        const tile = (
+                          <>
+                            <span className={styles.barLogoTile}>
+                              <img
+                                src={s.src}
+                                alt={copy === 0 ? s.alt : ""}
+                                loading="lazy"
+                                decoding="async"
+                              />
+                            </span>
+                            <span className={styles.barLogoLabel}>{s.title}</span>
+                          </>
+                        );
+                        return s.link ? (
+                          <a
+                            key={`${copy}-${idx}`}
+                            href={s.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.barLogoItem}
+                            aria-hidden={copy === 1}
+                            tabIndex={copy === 1 ? -1 : undefined}
+                          >
+                            {tile}
+                          </a>
+                        ) : (
+                          <div
+                            key={`${copy}-${idx}`}
+                            className={styles.barLogoItem}
+                            aria-hidden={copy === 1}
+                          >
+                            {tile}
+                          </div>
+                        );
+                      })
+                    )}
+                  </div>
+                </div>
+              </section>
+            </div>
 
             {/* FEST THEME */}
             {/* <div className={styles.irisThemeContainer}>

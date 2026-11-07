@@ -99,8 +99,6 @@ export default function GalleryPage() {
             loading="lazy"
             decoding="async"
           />
-          {/* <h1 className={styles.mainTitle}>INDIVERSE</h1>
-          <p className={styles.subtitle}>Gallery of Diversity</p> */}
         </div>
 
         {/* Scroll Indicator */}
@@ -113,7 +111,7 @@ export default function GalleryPage() {
       {/* Content Section */}
       <div className={styles.contentContainer} ref={photosRef}>
         <div className={styles.categoriesContainer}>
-          <h2 className={styles.sectionTitle}>Glimpses of Indiverse</h2>
+          <h2 className={styles.sectionTitle}>Glimpses of IRIS</h2>
           <div className={styles.PhotosGrid}>
             <div className={styles.PhotoCard} onClick={() => openModal("/images/gallery/Photos/Laavanya.avif")}> 
               <img src="/images/gallery/Photos/Laavanya.avif" alt="" loading="lazy" decoding="async" />
@@ -164,4 +162,4 @@ export default function GalleryPage() {
 
     </div>
   );
-}
+}
