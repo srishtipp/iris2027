@@ -4,6 +4,7 @@
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  margin-bottom: -10px;
 }
 
 /* Background Container with Parallax */

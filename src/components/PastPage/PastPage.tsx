@@ -172,6 +172,8 @@ export default function LandingPage() {
   return (
     <div className={styles.wrapper}>
       {/* Fixed Parallax Background */}
+      <br></br>
+       <br></br>
       <div className={styles.backgroundContainer}>
         <div className={styles.desktopBackground}>
           <img
