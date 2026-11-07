@@ -246,6 +246,71 @@
   letter-spacing: 1px;
 }
 
+.faqSection {
+  max-width: 1000px;
+  margin: 4rem auto 5rem;
+  padding: 0 1.5rem;
+}
+
+.faqTitle {
+  font-family: "Langar-Regular", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: #f2dd7c;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.faqList {
+  display: grid;
+  gap: 1rem;
+}
+
+.faqItem {
+  background: rgba(28, 23, 20, 0.68);
+  border: 1px solid rgba(242, 221, 124, 0.25);
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 10px 30px rgba(20, 14, 9, 0.2);
+}
+
+.faqQuestion {
+  list-style: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f9f1c9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faqQuestion::-webkit-details-marker {
+  display: none;
+}
+
+.faqQuestion::after {
+  content: "+";
+  font-size: 1.5rem;
+  color: #f2dd7c;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.faqItem[open] .faqQuestion::after {
+  content: "−";
+}
+
+.faqAnswer {
+  margin: 1rem 0 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(242, 221, 124, 0.8);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .aboutContainer {
@@ -347,6 +412,20 @@
   }
 
   .statLabel {
+    font-size: 0.95rem;
+  }
+
+  .faqSection {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+  }
+
+  .faqQuestion {
+    font-size: 0.98rem;
+  }
+
+  .faqAnswer {
     font-size: 0.95rem;
   }
 }
