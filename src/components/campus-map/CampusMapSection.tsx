@@ -51,7 +51,7 @@ export function CampusMapSection() {
           Interactive Campus Map
         </h2>
         <p className="text-sm sm:text-base text-iris-white/75 leading-relaxed">
-          Explore all {verifiedLocations.length} verified IIM Indore campus landmarks plotted at their exact GPS coordinates. Click any pin or landmark tag below to pan the map and inspect venue details.
+          Explore all {verifiedLocations.length} IIM Indore campus landmarks, from lecture blocks and hostels to courts and food courts. Click any pin or landmark tag below to pan the map and inspect venue details.
         </p>
       </div>
 
@@ -81,7 +81,7 @@ export function CampusMapSection() {
             <input
               type="text"
               aria-label="Search campus landmarks"
-              placeholder="Search Stadium, HRC, Temple, Gate..."
+              placeholder="Search SR 15, mess, court, gate..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-3 py-2 rounded-xl text-xs bg-iris-navy/30 border border-iris-violet/35 text-iris-white placeholder:text-iris-white/40 focus:outline-none focus:border-iris-sky"

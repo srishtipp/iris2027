@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown, Building2, MapPin } from "lucide-react";
+import { FESTIVAL_METRICS } from "@/data/stats";
 
 export function AboutHero() {
   const shouldReduceMotion = useReducedMotion();
@@ -12,7 +13,7 @@ export function AboutHero() {
       className="relative min-h-[88vh] flex items-center justify-center px-6 pt-28 pb-16 overflow-hidden"
     >
       {/* Tasteful CSS Background using the official 6-color IRIS palette */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(70,32,91,0.65),_rgba(0,0,0,1)_70%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(70,32,91,0.65),_rgba(0,0,0,0)_70%)] pointer-events-none" />
       <div className="absolute top-20 right-10 w-80 h-80 rounded-full bg-iris-purple/20 blur-[110px] pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -86,7 +87,7 @@ export function AboutHero() {
           initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="lg:col-span-5"
+          className="lg:col-span-5 space-y-5"
         >
           <div className="relative rounded-2xl overflow-hidden border border-iris-violet/45 bg-gradient-to-br from-iris-navy/80 via-iris-navy-deep to-iris-purple/50 p-8 shadow-2xl space-y-6">
             <div className="flex items-center gap-3">
@@ -114,6 +115,30 @@ export function AboutHero() {
               <span>193-Acre Hilltop Campus</span>
             </div>
           </div>
+
+          {/* Festival figures */}
+          <dl
+            aria-label="IRIS at a glance"
+            className="grid grid-cols-2 sm:grid-cols-4 gap-3"
+          >
+            {FESTIVAL_METRICS.map((m) => (
+              <div
+                key={m.id}
+                className="rounded-xl border border-iris-violet/40 bg-iris-navy/45 px-2 py-4 text-center"
+              >
+                <dt className="sr-only">{m.label}</dt>
+                <dd className="text-2xl sm:text-3xl font-extrabold text-iris-white leading-none">
+                  {m.metric}
+                </dd>
+                <p
+                  aria-hidden="true"
+                  className="mt-2 font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-iris-sky"
+                >
+                  {m.label}
+                </p>
+              </div>
+            ))}
+          </dl>
         </motion.div>
       </div>
     </section>

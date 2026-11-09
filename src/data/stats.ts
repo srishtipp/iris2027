@@ -8,9 +8,8 @@ export interface FestivalMetric {
 }
 
 /**
- * PROVISIONAL REFERENCE FIGURES:
- * Retained in the data file as unverified placeholders (`isVerified: false`)
- * from existing reference material. Not rendered publicly until approved.
+ * FESTIVAL FIGURES shown in the About hero (requested by the team).
+ * `isVerified` stays false until the figures are officially confirmed.
  */
 export const FESTIVAL_METRICS: FestivalMetric[] = [
   {

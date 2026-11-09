@@ -53,7 +53,7 @@ export function LocationDrawer({ location, onClose }: LocationDrawerProps) {
 
         <div className="p-3 rounded-xl bg-iris-black/60 border border-iris-violet/30 space-y-1">
           <span className="text-[10px] font-mono uppercase tracking-wider text-iris-sky/70 flex items-center gap-1">
-            <Navigation className="w-3 h-3 text-iris-magenta" /> Verified GPS Coordinates
+            <Navigation className="w-3 h-3 text-iris-magenta" /> Map Coordinates
           </span>
           <p className="text-xs font-mono text-iris-white/90">
             {lat.toFixed(6)}, {lng.toFixed(6)}

@@ -62,6 +62,18 @@ export function AboutStory() {
                 Music, dance, dramatics, literary arts, and stage showcases that celebrate creative talent from participating colleges.
               </p>
             </div>
+
+            <div className="sm:col-span-2 p-6 rounded-2xl bg-iris-navy/25 border-l-2 border-[#cdb0e6] border-t border-r border-b border-iris-violet/30 space-y-2">
+              <span className="font-mono text-xs uppercase tracking-wider text-[#cdb0e6]">
+                03 / Sports Dimension
+              </span>
+              <h3 className="text-xl font-bold text-iris-white">
+                Sports & Competition
+              </h3>
+              <p className="text-sm text-iris-white/75 leading-relaxed">
+                Inter-college tournaments across indoor and outdoor sports, played on the campus courts, turf, and cricket ground.
+              </p>
+            </div>
           </div>
         </motion.div>
 

@@ -446,9 +446,6 @@ export default function EventsPage() {
               <h1 className={styles.eventsTitle} id="events-title">
                 Events
               </h1>
-              <p className={styles.eventsTitleHindi} lang="hi">
-                कार्यक्रम
-              </p>
             </div>
             <p className={styles.heroText}>
               Browse competitions, cultural showcases and sports.

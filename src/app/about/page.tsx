@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import { AboutHero } from "@/components/about/AboutHero";
 import { AboutStory } from "@/components/about/AboutStory";
-import { AboutStats } from "@/components/about/AboutStats";
 import { CampusMapSection } from "@/components/campus-map/CampusMapSection";
-import { FAQSection } from "@/components/faq/FAQSection";
-import { SectionNav } from "@/components/shared/SectionNav";
 
 export const metadata: Metadata = {
   title: "About IRIS 2027 | IIM Indore",
   description:
-    "Discover IRIS 2027 at the Indian Institute of Management Indore — cultural and management dimensions, festival figures, campus map, and FAQs.",
+    "Discover IRIS 2027 at the Indian Institute of Management Indore — cultural and management dimensions, festival figures, and an interactive campus map.",
 };
 
 /*
@@ -20,7 +17,26 @@ export const metadata: Metadata = {
  */
 export default function About() {
   return (
-    <div className="relative bg-gradient-to-b from-iris-ink via-iris-navy-deep to-iris-ink text-iris-white selection:bg-iris-magenta selection:text-iris-white overflow-x-hidden pb-24">
+    <div className="relative text-iris-white selection:bg-iris-magenta selection:text-iris-white overflow-x-clip">
+      {/* Fixed festival background with a translucent dark veil (same treatment as Events / Team / Past) */}
+      <div aria-hidden="true" className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <img
+          src="/images/landing/27THEME.png"
+          alt=""
+          className="hidden md:block absolute inset-0 h-full w-full object-cover blur-[6px] scale-105"
+          loading="eager"
+          decoding="async"
+        />
+        <img
+          src="/images/landing/27THEME_PORTRAIT.png"
+          alt=""
+          className="md:hidden absolute inset-0 h-full w-full object-cover blur-[6px] scale-105"
+          loading="eager"
+          decoding="async"
+        />
+        <div className="absolute inset-0 bg-black/65" />
+      </div>
+
       {/* Skip link for keyboard users */}
       <a
         href="#main-content"
@@ -29,17 +45,12 @@ export default function About() {
         Skip to main content
       </a>
 
-      {/* Floating section dock (Hero / About / Figures / Map / FAQ) */}
-      <SectionNav />
-
       <main id="main-content">
         <div id="about-hero" className="scroll-mt-20">
           <AboutHero />
         </div>
         <AboutStory />
-        <AboutStats />
         <CampusMapSection />
-        <FAQSection />
       </main>
     </div>
   );

@@ -25,7 +25,7 @@ export interface CategoryMeta {
 }
 
 export const CAMPUS_CATEGORIES: CategoryMeta[] = [
-  { id: "all", label: "All Landmarks (14)" },
+  { id: "all", label: "All Landmarks (21)" },
   { id: "academic", label: "Academic & Blocks" },
   { id: "sports", label: "Sports & Complexes" },
   { id: "accommodation", label: "HRC & Hostels" },
@@ -35,7 +35,7 @@ export const CAMPUS_CATEGORIES: CategoryMeta[] = [
 
 /**
  * VERIFIED IIM INDORE GPS COORDINATES:
- * Updated landmark list with Prachin Shiva Temple removed and 5 new requested landmarks added.
+ * Campus landmark list. The 7 newest pins (auditorium entrance, SR 15/17, BB court, messes, food courts) use approximate coordinates.
  */
 export const CAMPUS_LOCATIONS: CampusLocation[] = [
   {
@@ -189,21 +189,34 @@ export const CAMPUS_LOCATIONS: CampusLocation[] = [
     description:
       "Student Residence block 6 on campus.",
     coordinates: {
-      lat: 22.62504090935545,
-      lng: 75.79167295977977,
+      lat: 22.625236291472046,
+      lng: 75.79201945444595,
     },
     isVerified: true,
   },
   {
     id: "loc-sr-12",
-    name: "SR 12",
+    name: "SR 11 & 12",
     category: "accommodation",
     zone: "Student Residential Area",
     description:
-      "Student Residence block 12 on campus.",
+      "Student Residence block 11 & 12 on campus.",
     coordinates: {
-      lat: 22.624152097141835,
-      lng: 75.79282094523177,
+      lat: 22.623917642867895,
+      lng: 75.792699147989,
+    },
+    isVerified: true,
+  },
+   {
+    id: "loc-sr-13",
+    name: "SR 13 & 14",
+    category: "accommodation",
+    zone: "Student Residential Area",
+    description:
+      "Student Residence block 13 & 14 on campus.",
+    coordinates: {
+      lat: 22.624163684911363,
+      lng: 75.79330654072507,
     },
     isVerified: true,
   },
@@ -217,6 +230,111 @@ export const CAMPUS_LOCATIONS: CampusLocation[] = [
     coordinates: {
       lat: 22.62599972483397,
       lng: 75.79310301539273,
+    },
+    isVerified: true,
+  },
+  // --- Added Nov 2026. APPROXIMATE positions: confirm each pin on site / Google Maps and adjust lat/lng. ---
+  {
+    id: "loc-new-auditorium-entrance",
+    name: "New Auditorium Entrance",
+    category: "academic",
+    zone: "Auditorium Complex",
+    description:
+      "Entrance to the new auditorium, used for main-stage events and ceremonies.",
+    coordinates: {
+      lat: 22.628744568451186,
+      lng: 75.7877871405928,
+    },
+    isVerified: true,
+  },
+  {
+    id: "loc-sr-15",
+    name: "SR 15",
+    category: "accommodation",
+    zone: "Student Residential Area",
+    description:
+      "Student Residence block 15 on campus.",
+    coordinates: {
+      lat: 22.626769849742143,
+      lng: 75.78781676701752,
+    },
+    isVerified: true,
+  },
+  {
+    id: "loc-sr-17",
+    name: "SR 17",
+    category: "accommodation",
+    zone: "Student Residential Area",
+    description:
+      "Student Residence block 17 on campus.",
+    coordinates: {
+      lat: 22.62565578168934,
+      lng: 75.7877580210404,
+    },
+    isVerified: true,
+  },
+  {
+    id: "loc-bb-court",
+    name: "BB Court",
+    category: "sports",
+    zone: "Sports & Recreation Zone",
+    description:
+      "Outdoor basketball court on campus.",
+    coordinates: {
+      lat: 22.623718530214227,
+      lng: 75.7919261742807,
+    },
+    isVerified: true,
+  },
+  {
+    id: "loc-mess-1",
+    name: "Mess-1",
+    category: "facilities",
+    zone: "Dining",
+    description:
+      "Student messes serving daily meals on campus.",
+    coordinates: {
+      lat: 22.625155456994943,
+      lng: 75.79129291380545,
+    },
+    isVerified: true,
+  },
+  {
+    id: "loc-mess-3",
+    name: "Mess-3",
+    category: "facilities",
+    zone: "Dining",
+    description:
+      "Student messes serving daily meals on campus.",
+    coordinates: {
+      lat: 22.623748007814868,
+      lng: 75.79319401915622,
+    },
+    isVerified: true,
+  },
+  {
+    id: "loc-planet-i",
+    name: "Planet I Junction (Food Court)",
+    category: "facilities",
+    zone: "Dining",
+    description:
+      "Planet I junction food court, a central hangout and snack spot on campus.",
+    coordinates: {
+      lat: 22.624696185768386,
+      lng: 75.7923190001096,
+    },
+    isVerified: true,
+  },
+  {
+    id: "loc-mess-2-food-court",
+    name: "Mess 2 Food Court",
+    category: "facilities",
+    zone: "Dining",
+    description:
+      "Food court beside Mess 2.",
+    coordinates: {
+      lat: 22.6243048563895,
+      lng: 75.79172469777085,
     },
     isVerified: true,
   },

@@ -181,7 +181,7 @@ export default function LeafletCampusMap({
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-iris-navy/90 hover:bg-iris-magenta text-iris-white border border-iris-violet/45 text-xs font-mono shadow-lg backdrop-blur-md transition-colors cursor-pointer"
         >
           <Maximize2 className="w-3.5 h-3.5 text-iris-sky" />
-          <span>Fit All 14 Landmarks</span>
+          <span>Fit All {locations.length} Landmarks</span>
         </button>
       </div>
     </div>
