@@ -5,7 +5,7 @@ import styles from "./EventsPage.module.css";
 import SearchBar from "./SearchBar";
 import EventsList from "./EventsList";
 import EventCategorySidebar from "./EventCategorySidebar";
-import EventsDecorativeBorder from "./EventsDecorativeBorder";
+// import EventsDecorativeBorder from "./EventsDecorativeBorder";
 
 export type EventCategory = "Flagship" | "Cultural" | "Management" | "Sports";
 
@@ -457,7 +457,7 @@ export default function EventsPage() {
           </div>
         </section>
 
-        <EventsDecorativeBorder />
+        {/* <EventsDecorativeBorder /> */}
 
         <section className={styles.toolbar} aria-label="Find an event">
           <SearchBar
@@ -488,8 +488,11 @@ export default function EventsPage() {
           <span>
             Showing <strong>{filteredEvents.length}</strong>{" "}
             {filteredEvents.length === 1 ? "event" : "events"}
+            {selectedCategory !== "All" && <> · {selectedCategory}</>}
           </span>
-          {selectedCategory !== "All" && <span>{selectedCategory}</span>}
+          <span className={styles.registerHint}>
+            Click on <strong>View event</strong> to register
+          </span>
         </div>
 
         <EventsList events={filteredEvents} />
@@ -503,7 +506,7 @@ export default function EventsPage() {
           </div>
         )}
 
-        <EventsDecorativeBorder />
+        {/* <EventsDecorativeBorder /> */}
       </div>
     </div>
   );

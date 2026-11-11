@@ -1,9 +1,79 @@
+.wrap {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Soft edge fades that tell the user the row continues. */
+.wrap::before,
+.wrap::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  width: 3.25rem;
+  z-index: 1;
+  border-radius: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.wrap::before {
+  left: 1px;
+  background: linear-gradient(to right, rgba(22, 21, 27, 0.96), rgba(22, 21, 27, 0));
+}
+
+.wrap::after {
+  right: 1px;
+  background: linear-gradient(to left, rgba(22, 21, 27, 0.96), rgba(22, 21, 27, 0));
+}
+
+.canScrollLeft::before,
+.canScrollRight::after {
+  opacity: 1;
+}
+
+.scrollBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 1px solid rgba(244, 183, 64, 0.6);
+  border-radius: 50%;
+  background: rgba(33, 26, 49, 0.95);
+  color: #f4b740;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.scrollBtn:hover,
+.scrollBtn:focus-visible {
+  background: #f5efe3;
+  color: #211a31;
+}
+
+.scrollBtnLeft {
+  left: 0.4rem;
+}
+
+.scrollBtnRight {
+  right: 0.4rem;
+}
+
 .filters {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 0.45rem;
   padding: 0.45rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
   border: 1px solid rgba(245, 239, 227, 0.14);
   border-radius: 1rem;
   background: rgba(22, 21, 27, 0.78);
@@ -78,19 +148,10 @@
   background: rgba(36, 27, 45, 0.12);
 }
 
-@media (max-width: 760px) {
-  .filters {
-    width: auto;
-    max-width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
+.filters::-webkit-scrollbar {
+  display: none;
+}
 
-  .filters::-webkit-scrollbar {
-    display: none;
-  }
-
-  .filter {
-    flex: 0 0 auto;
-  }
+.filter {
+  flex: 0 0 auto;
 }
