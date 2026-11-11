@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { AboutHero } from "@/components/about/AboutHero";
 import { AboutStory } from "@/components/about/AboutStory";
 import { CampusMapSection } from "@/components/campus-map/CampusMapSection";
+import { FAQSection } from "@/components/faq/FAQSection";
 
 export const metadata: Metadata = {
   title: "About IRIS 2027 | IIM Indore",
   description:
-    "Discover IRIS 2027 at the Indian Institute of Management Indore — cultural and management dimensions, festival figures, and an interactive campus map.",
+    "Discover IRIS 2027 at the Indian Institute of Management Indore — cultural and management dimensions, festival figures, an interactive campus map, and FAQs.",
 };
 
 /*
@@ -51,6 +52,7 @@ export default function About() {
         </div>
         <AboutStory />
         <CampusMapSection />
+        <FAQSection />
       </main>
     </div>
   );
