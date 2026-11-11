@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import styles from "./EventsPage.module.css";
 import SearchBar from "./SearchBar";
 import EventsList from "./EventsList";
+import EventCategorySidebar from "./EventCategorySidebar";
+// import EventsDecorativeBorder from "./EventsDecorativeBorder";
 
 export type EventCategory = "Flagship" | "Cultural" | "Management" | "Sports";
 
@@ -14,6 +16,7 @@ export interface Event {
   description?: string;
   detailedDescription?: string;
   date?: string;
+  teamSize?: string;
   time?: string;
   venue?: string;
   image?: string;
@@ -26,6 +29,7 @@ const eventsData: Event[] = [
     id: "1",
     title: "Mantrana",
     category: "Management",
+    teamSize: "3 members",
     link: "https://unstop.com/competitions/mantrana-a-finance-simulation-iris-2026-iim-indores-flagship-fest-iim-indore-1597503",
     image: "/images/events/mantrana.webp",
   },
@@ -33,6 +37,7 @@ const eventsData: Event[] = [
     id: "2",
     title: "Sanrachna",
     category: "Management",
+    teamSize: "2–3 members",
     link: "https://unstop.com/competitions/sanrachna-the-hr-competition-iris-2026-iim-indores-flagship-fest-iim-indore-1597401",
     image: "/images/events/sanrachna.webp",
   },
@@ -40,6 +45,7 @@ const eventsData: Event[] = [
     id: "3",
     title: "ProdWhiz",
     category: "Management",
+    teamSize: "2–3 members",
     link: "https://unstop.com/competitions/prodwhiz26-product-management-event-iris-2026-iim-indores-flagship-fest-iim-indore-1597505",
     image: "/images/events/prodwhiz.webp",
   },
@@ -47,6 +53,7 @@ const eventsData: Event[] = [
     id: "4",
     title: "Picture Perfect: Short Film Competition",
     category: "Cultural",
+    teamSize: "3 members",
     link: "https://unstop.com/events/picture-perfect-short-film-competition-iris-2026-iim-indores-flagship-fest-iim-indore-1598058",
     image: "/images/events/picture-perfect.webp",
   },
@@ -54,6 +61,7 @@ const eventsData: Event[] = [
     id: "5",
     title: "Insight Edge",
     category: "Management",
+    teamSize: "2–3 members",
     link: "https://unstop.com/competitions/insight-edge-iris-2026-iim-indores-flagship-fest-iim-indore-1596855",
     image: "/images/events/insight-edge.webp",
   },
@@ -61,6 +69,7 @@ const eventsData: Event[] = [
     id: "6",
     title: "Hackwise",
     category: "Management",
+    teamSize: "2–4 members",
     link: "https://unstop.com/hackathons/hackwise-2026-iris-2026-iim-indores-flagship-fest-iim-indore-1597411",
     image: "/images/events/hackwise.webp",
   },
@@ -68,6 +77,7 @@ const eventsData: Event[] = [
     id: "7",
     title: "Finance League",
     category: "Management",
+    teamSize: "2–3 members",
     link: "https://unstop.com/competitions/finance-league-iris-2026-iim-indores-flagship-fest-iim-indore-1597410",
     image: "/images/events/finance-league.webp",
   },
@@ -75,6 +85,7 @@ const eventsData: Event[] = [
     id: "8",
     title: "Distortion",
     category: "Cultural",
+    teamSize: "4–10 members",
     link: "https://unstop.com/events/distortion-iris-2026-iim-indores-flagship-fest-iim-indore-1598049",
     image: "/images/events/distortion.webp",
   },
@@ -82,6 +93,7 @@ const eventsData: Event[] = [
     id: "9",
     title: "Ashwamedha",
     category: "Flagship",
+    teamSize: "Individual",
     link: "https://unstop.com/competitions/ashwamedha-a-legacy-leadership-competition-iris-2026-iim-indores-flagship-fest-iim-indore-1597351",
     image: "/images/events/ashwamedha1.webp",
   },
@@ -89,6 +101,7 @@ const eventsData: Event[] = [
     id: "10",
     title: "Klueless",
     category: "Flagship",
+    teamSize: "Individual",
     link: "https://unstop.com/quiz/klueless-iris-2026-iim-indores-flagship-fest-iim-indore-1597419",
     image: "/images/events/klueless.webp",
   },
@@ -96,6 +109,7 @@ const eventsData: Event[] = [
     id: "11",
     title: "VISHLESHAN",
     category: "Flagship",
+    teamSize: "3 members",
     link: "https://unstop.com/competitions/vishleshan-the-data-analytics-competition-iris-2026-iim-indores-flagship-fest-iim-indore-1592985",
     image: "/images/events/vishleshan.webp",
   },
@@ -103,6 +117,7 @@ const eventsData: Event[] = [
     id: "12",
     title: "Supply Chain Showdown",
     category: "Flagship",
+    teamSize: "3 members",
     link: "https://unstop.com/competitions/supply-chain-showdown-iris-2026-iim-indores-flagship-fest-iim-indore-1593071",
     image: "/images/events/supply-chain-showdown.webp",
   },
@@ -110,6 +125,7 @@ const eventsData: Event[] = [
     id: "13",
     title: "Kalpavriksha",
     category: "Management",
+    teamSize: "2–3 members",
     link: "https://unstop.com/competitions/kalpavriksha-the-social-business-plan-iris-2026-iim-indores-flagship-fest-iim-indore-1597415",
     image: "/images/events/kalpavriksha.webp",
   },
@@ -117,6 +133,7 @@ const eventsData: Event[] = [
     id: "14",
     title: "Vyapaar Sanasad",
     category: "Flagship",
+    teamSize: "2–3 members",
     link: "https://unstop.com/competitions/vyapar-sansad-the-corporate-governance-competition-iris-2026-iim-indores-flagship-fest-iim-indore-1593029",
     image: "/images/events/vyapar-sansad.webp",
   },
@@ -124,6 +141,7 @@ const eventsData: Event[] = [
     id: "15",
     title: "Laavanya",
     category: "Cultural",
+    teamSize: "1–10 members",
     link: "https://unstop.com/events/laavanya-iris-2026-iim-indores-flagship-fest-iim-indore-1593020",
     image: "/images/events/laavanya.webp",
   },
@@ -131,6 +149,7 @@ const eventsData: Event[] = [
     id: "16",
     title: "Beyond Lines",
     category: "Cultural",
+    teamSize: "Individual",
     link: "https://unstop.com/competitions/beyond-lines-article-writing-iris-2026-iim-indores-flagship-fest-iim-indore-1599407",
     image: "/images/events/beyond-lines.webp",
   },
@@ -138,6 +157,7 @@ const eventsData: Event[] = [
     id: "17",
     title: "Jam Competition",
     category: "Cultural",
+    teamSize: "Individual",
     link: "https://unstop.com/events/jam-just-a-minute-iris-2026-iim-indores-flagship-fest-iim-indore-1599439",
     image: "/images/events/jam.webp",
   },
@@ -145,6 +165,7 @@ const eventsData: Event[] = [
     id: "18",
     title: "Lasya",
     category: "Cultural",
+    teamSize: "6–20 members",
     link: "https://unstop.com/events/lasya-iris-2026-iim-indores-flagship-fest-iim-indore-1598052",
     image: "/images/events/lasya.webp",
   },
@@ -152,6 +173,7 @@ const eventsData: Event[] = [
     id: "19",
     title: "Voice Of Iris",
     category: "Cultural",
+    teamSize: "Individual",
     link: "https://unstop.com/events/voice-of-iris-iris-2026-iim-indores-flagship-fest-iim-indore-1598054",
     image: "/images/events/voice-of-iris.webp",
   },
@@ -159,6 +181,7 @@ const eventsData: Event[] = [
     id: "20",
     title: "Zero One Infinity",
     category: "Management",
+    teamSize: "2–3 members",
     link: "https://unstop.com/competitions/zero-one-infinity-it-consulting-event-iris-2026-iim-indores-flagship-fest-iim-indore-1597507",
     image: "/images/events/zero-one-infinity.webp",
   },
@@ -166,6 +189,7 @@ const eventsData: Event[] = [
     id: "21",
     title: "Jigyasa: The Quizzing Event",
     category: "Management",
+    teamSize: "2–3 members",
     link: "https://unstop.com/competitions/klueless-iris-2026-iim-indores-flagship-fest-iim-indore-1596862",
     image: "/images/events/jigyasa.webp",
   },
@@ -173,6 +197,7 @@ const eventsData: Event[] = [
     id: "22",
     title: "Asian Parliamentary Debate",
     category: "Cultural",
+    teamSize: "4 members",
     link: "https://unstop.com/events/asian-parliamentary-debate-iris-2026-iim-indores-flagship-fest-iim-indore-1602528",
     image: "/images/events/asian-parli.webp",
   },
@@ -180,6 +205,7 @@ const eventsData: Event[] = [
     id: "23",
     title: "Drona: A Day at IIM Indore",
     category: "Flagship",
+    teamSize: "Individual",
     link: "https://unstop.com/workshops-webinars/drona-a-day-at-iim-indore-iris-2026-iim-indores-flagship-fest-iim-indore-1597947",
     image: "/images/events/drona.webp",
   },
@@ -187,6 +213,7 @@ const eventsData: Event[] = [
     id: "24",
     title: "B2C: Marketing Case Competition",
     category: "Management",
+    teamSize: "2–4 members",
     link: "https://unstop.com/competitions/b2c-marketing-case-competition-iris-2026-iim-indores-flagship-fest-iim-indore-1596897",
     image: "/images/events/b2c.webp",
   },
@@ -194,6 +221,7 @@ const eventsData: Event[] = [
     id: "25",
     title: "Table Tennis (Men's Singles)",
     category: "Sports",
+    teamSize: "Individual",
     link: "https://unstop.com/events/table-tennis-mens-singles-iris-2026-iim-indores-flagship-fest-iim-indore-1599411",
     image: "/images/events/tt-men-singles.webp",
   },
@@ -201,6 +229,7 @@ const eventsData: Event[] = [
     id: "26",
     title: "Table Tennis (Men's Doubles)",
     category: "Sports",
+    teamSize: "2 members",
     link: "https://unstop.com/events/table-tennis-mens-doubles-iris-2026-iim-indores-flagship-fest-iim-indore-1599421",
     image: "/images/events/tt-men-doubles.webp",
   },
@@ -208,6 +237,7 @@ const eventsData: Event[] = [
     id: "27",
     title: "Table Tennis (Women's Singles)",
     category: "Sports",
+    teamSize: "Individual",
     link: "https://unstop.com/events/table-tennis-womens-singles-iris-2026-iim-indores-flagship-fest-iim-indore-1599418",
     image: "/images/events/tt-women-singles.webp",
   },
@@ -215,6 +245,7 @@ const eventsData: Event[] = [
     id: "28",
     title: "Lawn Tennis (Men's Doubles)",
     category: "Sports",
+    teamSize: "2 members",
     link: "https://unstop.com/events/lawn-tennis-mens-doubles-iris-2026-iim-indores-flagship-fest-iim-indore-1599426",
     image: "/images/events/lt-men-doubles.webp",
   },
@@ -222,6 +253,7 @@ const eventsData: Event[] = [
     id: "29",
     title: "Lawn Tennis (Men's Singles)",
     category: "Sports",
+    teamSize: "Individual",
     link: "https://unstop.com/events/lawn-tennis-mens-singles-iris-2026-iim-indores-flagship-fest-iim-indore-1599422",
     image: "/images/events/lt-men-singles.webp",
   },
@@ -229,6 +261,7 @@ const eventsData: Event[] = [
     id: "30",
     title: "Lawn Tennis (Women's Singles)",
     category: "Sports",
+    teamSize: "Individual",
     link: "https://unstop.com/events/lawn-tennis-womens-singles-iris-2026-iim-indores-flagship-fest-iim-indore-1599427",
     image: "/images/events/lt-women-singles.webp",
   },
@@ -236,6 +269,7 @@ const eventsData: Event[] = [
     id: "31",
     title: "Badminton (Women's Singles)",
     category: "Sports",
+    teamSize: "Individual",
     link: "https://unstop.com/events/badminton-womens-singles-iris-2026-iim-indores-flagship-fest-iim-indore-1599415",
     image: "/images/events/badminton-women-singles.webp",
   },
@@ -243,6 +277,7 @@ const eventsData: Event[] = [
     id: "32",
     title: "Badminton (Men's Doubles)",
     category: "Sports",
+    teamSize: "2 members",
     link: "https://unstop.com/events/badminton-mens-doubles-iris-2026-iim-indores-flagship-fest-iim-indore-1599414",
     image: "/images/events/badminton-men-doubles.webp",
   },
@@ -250,6 +285,7 @@ const eventsData: Event[] = [
     id: "33",
     title: "Badminton (Men's Singles)",
     category: "Sports",
+    teamSize: "Individual",
     link: "https://unstop.com/events/badminton-mens-singles-iris-2026-iim-indores-flagship-fest-iim-indore-1599409",
     image: "/images/events/badminton-men-singles.webp",
   },
@@ -257,6 +293,7 @@ const eventsData: Event[] = [
     id: "34",
     title: "Volleyball (Men’s)",
     category: "Sports",
+    teamSize: "8 members",
     link: "https://unstop.com/events/volleyball-mens-iris-2026-iim-indores-flagship-fest-iim-indore-1599403",
     image: "/images/events/volleyball-men.webp",
   },
@@ -264,6 +301,7 @@ const eventsData: Event[] = [
     id: "35",
     title: "Volleyball (Women’s)",
     category: "Sports",
+    teamSize: "8 members",
     link: "https://unstop.com/events/volleyball-womens-iris-2026-iim-indores-flagship-fest-iim-indore-1599408",
     image: "/images/events/volleyball-women.webp",
   },
@@ -271,6 +309,7 @@ const eventsData: Event[] = [
     id: "36",
     title: "Cricket (Women's)",
     category: "Sports",
+    teamSize: "12–15 members",
     link: "https://unstop.com/events/cricket-womens-iris-2026-iim-indores-flagship-fest-iim-indore-1599400",
     image: "/images/events/cricket-women.webp",
   },
@@ -278,6 +317,7 @@ const eventsData: Event[] = [
     id: "37",
     title: "Cricket (Men's)",
     category: "Sports",
+    teamSize: "12–15 members",
     link: "https://unstop.com/events/cricket-mens-iris-2026-iim-indores-flagship-fest-iim-indore-1599394",
     image: "/images/events/cricket-men.webp",
   },
@@ -285,6 +325,7 @@ const eventsData: Event[] = [
     id: "38",
     title: "Futsal (Women's)",
     category: "Sports",
+    teamSize: "6–9 members",
     link: "https://unstop.com/events/futsal-womens-iris-2026-iim-indores-flagship-fest-iim-indore-1598065",
     image: "/images/events/futsal-women.webp",
   },
@@ -292,6 +333,7 @@ const eventsData: Event[] = [
     id: "39",
     title: "Football (Men's)",
     category: "Sports",
+    teamSize: "12–15 members",
     link: "https://unstop.com/events/football-mens-iris-2026-iim-indores-flagship-fest-iim-indore-1598064",
     image: "/images/events/football-men.webp",
   },
@@ -299,6 +341,7 @@ const eventsData: Event[] = [
     id: "40",
     title: "Basketball (Women's)",
     category: "Sports",
+    teamSize: "5–13 members",
     link: "https://unstop.com/events/basketball-womens-iris-2026-iim-indores-flagship-fest-iim-indore-1599402",
     image: "/images/events/basketball-women.webp",
   },
@@ -306,6 +349,7 @@ const eventsData: Event[] = [
     id: "41",
     title: "Basketball (Men's)",
     category: "Sports",
+    teamSize: "5–13 members",
     link: "https://unstop.com/events/basketball-mens-iris-2026-iim-indores-flagship-fest-iim-indore-1599398",
     image: "/images/events/basketball-men.webp",
   },
@@ -313,6 +357,7 @@ const eventsData: Event[] = [
     id: "42",
     title: "Awaaz: The Nukkad Natak Competition",
     category: "Cultural",
+    teamSize: "6–12 members",
     link: "https://unstop.com/events/awaaz-the-nukkad-natak-competition-iris-2026-iim-indores-flagship-fest-iim-indore-1605992",
     image: "/images/events/nukkad-natak.webp",
   },
@@ -323,6 +368,7 @@ export default function EventsPage() {
   const [selectedCategory, setSelectedCategory] = useState<EventCategory | "All">(
     "All",
   );
+  const [sortOrder, setSortOrder] = useState<"category" | "name">("category");
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -336,20 +382,27 @@ export default function EventsPage() {
 
   const filteredEvents = eventsData
     .filter((event) => {
-      const matchesSearch = event.title
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase());
+      const query = searchQuery.trim().toLowerCase();
+      const matchesSearch =
+        !query ||
+        event.title.toLowerCase().includes(query) ||
+        event.category.toLowerCase().includes(query);
 
       const matchesCategory =
-        selectedCategory === "All" || event.category === selectedCategory;
+        selectedCategory === "All" ||
+        event.category === selectedCategory;
 
       return matchesSearch && matchesCategory;
     })
     .sort((a, b) => {
+      if (sortOrder === "name") {
+        return a.title.localeCompare(b.title);
+      }
+
       const categoryOrder: Record<EventCategory, number> = {
-        Cultural: 0,
-        Flagship: 1,
-        Management: 2,
+        Flagship: 0,
+        Management: 1,
+        Cultural: 2,
         Sports: 3,
       };
       return categoryOrder[a.category] - categoryOrder[b.category];
@@ -385,14 +438,62 @@ export default function EventsPage() {
         <div className={styles.backgroundBlur} />
       </div>
 
-      {/* CONTENT */}
       <div className={styles.eventsSubContainer}>
-        <SearchBar
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
-          selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
-        />
+        <section className={styles.hero} aria-labelledby="events-title">
+          <div>
+            <p className={styles.eyebrow}>IRIS 2027 · EVENT DIRECTORY</p>
+            <div className={styles.titleGroup}>
+              <h1 className={styles.eventsTitle} id="events-title">
+                Events
+              </h1>
+            </div>
+            <p className={styles.heroText}>
+              Browse competitions, cultural showcases and sports.
+            </p>
+          </div>
+          <div className={styles.eventCount} aria-label={`${eventsData.length} events`}>
+            <span>{eventsData.length}</span>
+            <small>events</small>
+          </div>
+        </section>
+
+        {/* <EventsDecorativeBorder /> */}
+
+        <section className={styles.toolbar} aria-label="Find an event">
+          <SearchBar
+            searchQuery={searchQuery}
+            onSearchChange={setSearchQuery}
+          />
+          <EventCategorySidebar
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
+            events={eventsData}
+          />
+          <label className={styles.sortControl}>
+            <span>Sort by</span>
+            <select
+              aria-label="Sort events"
+              value={sortOrder}
+              onChange={(event) =>
+                setSortOrder(event.target.value as "category" | "name")
+              }
+            >
+              <option value="category">Category order</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+        </section>
+
+        <div className={styles.resultsHeader} aria-live="polite">
+          <span>
+            Showing <strong>{filteredEvents.length}</strong>{" "}
+            {filteredEvents.length === 1 ? "event" : "events"}
+            {selectedCategory !== "All" && <> · {selectedCategory}</>}
+          </span>
+          <span className={styles.registerHint}>
+            Click on <strong>View event</strong> to register
+          </span>
+        </div>
 
         <EventsList events={filteredEvents} />
 
@@ -404,6 +505,8 @@ export default function EventsPage() {
             </p>
           </div>
         )}
+
+        {/* <EventsDecorativeBorder /> */}
       </div>
     </div>
   );

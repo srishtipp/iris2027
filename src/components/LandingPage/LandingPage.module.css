@@ -189,12 +189,12 @@
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: drop-shadow(0 10px 30px rgba(214, 155, 101, 0.5));
+  filter: drop-shadow(0 10px 30px rgba(150, 90, 200, 0.5));
 }
 
 .registerBtn:hover {
   transform: scale(1.05);
-  filter: drop-shadow(0 15px 40px rgba(214, 155, 101, 0.7));
+  filter: drop-shadow(0 15px 40px rgba(150, 90, 200, 0.7));
 }
 
 .registerBtn img {
@@ -1928,7 +1928,7 @@
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #d69b65;
+  color: #cdb0e6;
 }
 
 .highlightName {

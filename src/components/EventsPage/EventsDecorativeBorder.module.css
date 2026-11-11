@@ -1,0 +1,22 @@
+.border {
+  position: relative;
+  left: 50%;
+  display: block;
+  flex: 0 0 auto;
+  width: 100vw;
+  max-width: none;
+  height: 1.5rem;
+  margin-left: -50vw;
+  overflow: hidden;
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: 32px 24px;
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .border {
+    height: 15px;
+    background-size: 20px 15px;
+  }
+}

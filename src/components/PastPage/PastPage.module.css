@@ -31,6 +31,16 @@
   height: 100%;
   object-fit: cover;
   will-change: transform;
+  filter: blur(6px);
+}
+
+/* Translucent dark veil over the festival background (shared look across pages) */
+.backgroundBlur {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.65);
+  pointer-events: none;
 }
 
 /* Mobile Background Container */
@@ -53,7 +63,8 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  filter: blur(6px);
   /* will-change: transform; */
 }
 
@@ -141,12 +152,12 @@
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: drop-shadow(0 10px 30px rgba(214, 155, 101, 0.5));
+  filter: drop-shadow(0 10px 30px rgba(150, 90, 200, 0.5));
 }
 
 .registerBtn:hover {
   transform: scale(1.05);
-  filter: drop-shadow(0 15px 40px rgba(214, 155, 101, 0.7));
+  filter: drop-shadow(0 15px 40px rgba(150, 90, 200, 0.7));
 }
 
 .registerBtn img {
