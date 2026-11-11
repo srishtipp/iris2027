@@ -15,7 +15,7 @@ const saman = localFont({
 export const metadata: Metadata = {
   title: "IRIS 2027",
   description:
-    "The official website of IRIS 2027. Indias's Premier Management Student-Run College Cultural Festival returns for 2026!",
+    "The official website of IRIS 2027. Indias's Premier Management Student-Run College Cultural Festival returns for 2027!",
   applicationName: "IRIS 2027",
   keywords: [
     "IRIS",
@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     "college cultural fest",
     "engineering",
     "student fest India",
+    "IRIS-ZENITH",
   ],
   authors: [{ name: "Systems & IT team of IRIS 2027" }],
   openGraph: {
@@ -71,7 +72,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preload" as="image" href="https://iris.cdn.jyotirmoysaha.co.in/images/landing/bg_landscape.webp" />
+        <link rel="preload" as="image" href="/images/landing/27THEME.png" />
       </head>
       <body className={`${saman.variable} antialiased`}>
         <Navigation />

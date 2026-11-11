@@ -6,7 +6,7 @@ interface EventItemProps {
   event: Event;
 }
 
-const FESTIVAL_DATE = "16–18 Jan 2026";
+const FESTIVAL_DATE = "15–17 Jan 2027";
 
 export default function EventItem({ event }: EventItemProps) {
   const categoryClass = styles[event.category.toLowerCase()];
