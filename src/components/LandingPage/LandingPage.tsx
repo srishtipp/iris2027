@@ -190,7 +190,7 @@ export default function LandingPage() {
       <div className={styles.backgroundContainer}>
         <div className={styles.desktopBackground}>
           <img
-            src="/images/landing/27THEME.png"
+            src="/images/landing/bg_ls_alt.png"
             alt="Edo Mountains"
             className={styles.landingImage}
             style={{ transform: `translateY(${scrollY * 0.5}px)` }}
@@ -200,7 +200,7 @@ export default function LandingPage() {
           />
         </div>
 
-        <div className={styles.mobileBackgroundContainer}>
+        {/* <div className={styles.mobileBackgroundContainer}>
           <img
             src="/images/landing/27THEME_PORTRAIT.png"
             alt="Mountains"
@@ -208,9 +208,9 @@ export default function LandingPage() {
             loading="eager"
             decoding="async"
           />
-        </div>
+        </div> */}
 
-        {/* Background IRIS logo — commented out: the nav bar already carries the logo.
+        {/* Background IRIS logo — commented out: the nav bar already carries the logo. */}
         <div className={styles.logoContainer}>
           <img
             src="/images/landing/irislogo.png"
@@ -220,7 +220,7 @@ export default function LandingPage() {
             decoding="async"
           />
         </div>
-        */}
+       
        <div className={styles.countdownContainer}>
           <CountdownTimer />
         </div>

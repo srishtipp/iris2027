@@ -20,7 +20,7 @@ export default function CountdownTimer() {
 
   useEffect(() => {
     // IRIS 2026 target date - update as needed
-    const targetDate = new Date("2027-01-015T00:00:00").getTime();
+    const targetDate = new Date("2027-01-15T00:00:00").getTime();
 
     const calculateTimeLeft = () => {
       const now = new Date().getTime();
